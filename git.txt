@@ -1,0 +1,140 @@
+git
+버전관리 시스템
+svn
+중앙집중식
+기능이 완성된 형태
+
+git     
+분산형 버전 관리
+개발자 별 commit history
+개발자 저장소와 서버를 독립적 운영
+
+대부분의 명령을 로컬에서 실행
+원격 저장소의 정보가 필요할 때만 연결 (pull,push)
+오프라인 환경에서도 commit 
+
+history 관리 가능
+차이가 무엇이고 수정 이유를 로그로 남길 수 있다.
+과거파일 복원가능
+
+
+1. 깃 설치
+
+2. 사용자 정보 설정
+사용자 구분을 위한 git 설정
+--global 옵션으로 모든 푸로젝트에 설정 적용
+콘솔 실행
+git > git cdn 또는 git bash
+
+사용자 설정 
+git config --global user.name "사용자이름"
+git config --global user.email "메일 주소"
+
+설정확인
+git config --list 
+git config user.name
+
+설정 삭제
+git config --global --unset [항목]
+ex) git config --global --unset user.name
+
+저장소 Repository
+
+저장소 생성 
+로컬 저장소로 저장할 폴더 생성
+사용할 폴더 이동 (cd 디렉토리 경로)
+새로운 저장소 생성
+git init
+해당 폴더에 .git 폴더 (숨김폴더) 생성 확인
+
+.git
+프로젝트 관리를 위한 파일
+해당 프로젝트에만 적용할 config 파일 등
+
+터미널 명령어 외우기
+ls
+cd 
+cd.. 
+
+숨김 폴더 보기 커맨드 시프트 .
+
+상태확인 
+git status 
+
+on branch master or main
+master 라는 기본 가지 branch 사용
+
+No commits yet
+commit 한 내역 없음
+
+주요 명령어
+ add 커밋 할 목록에 추가 -> index에 staging 해주는 명령어
+ commit 커밋 (히스토리의 한 단위) 만들기
+
+ 작업 종료 후 ) push 현재까지의 내용을 Github(원격 저장소)에 전달
+ 작업 시작 전 ) pull 로컬 저장소를 원격 저장소에 맞춰 갱신
+
+ working directory 작업 폴더
+ index(stage) 준비 영역
+ head repository 저장소
+
+  추가 untracked files 또는 변경 modified files 하고자 하는 파일을 
+  인덱스에 기록 stage 후 staging 된 목록만 저장소에 commit 
+
+  git add . 전부 추가하기
+  git commit -m ""
+
+   git commit -a -m ""
+
+   add 취소 
+   선택한 파일 git restore --staged [파일명]
+   전체 파일 git restore -- staged .
+   또는 git rm -- cached [파일명]
+
+   commit 취소
+   선택한 파일 git reset [옵션] Head [파일명]
+   전체 파일 : git reset [옵션] Head
+
+   취소한 commit 복원
+   git reset [옵션] ORIG_HEAD
+
+   git commit 취소
+   --soft : commit 을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+   index 보존(add한 상태, stage 상태) 워킹 디렉터리의 파일 보존 (모두 보존)
+   -- mixed : commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+    add 하기 전 상태, unstaged 상태 기본 옵션
+   -- hard : commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+   add 하기 전 상태, unstaged 상태 모두 취소
+
+   commit 메시지 변경
+   git commit --amend
+   git commit -- amend -m "수정할 매시지"
+   git reset --hard
+
+git remote add origin [원격 서버 주소]
+origin : remote repository 원격 저장소 이름, 다른 이름도 무관
+
+원격저장소 확인
+git remote -v
+
+원격 저장소 이름 변경 
+git remote rename [기존이름][새로운 이름]
+원격저장소의 브랜치 이름도 변경됨
+
+원격저장소 삭제
+git remote rm[저장소 이름]
+
+push
+로컬 저장소 변경 내용을 원격 서버로 보내기
+git push [원격 저장소 이름][push할 가지 이름]
+git push origin master or main
+
+전송되지 않을 때 강제 전송
+git push origin master -f
+
+pull 로컬 저장소를 원격 저장소에 맞춰 갱신
+git pull [원격 저장소의 이름][push할 가지 이름]
+원격 저장소의 변경 내용이 로컬 작업 디렉토리에 패치되고 fetch 병합 merge
+
+master->main 명령어
+git branch -M main
