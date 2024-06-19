@@ -1,8 +1,5 @@
 @charset "utf-8";
 
-<<<<<<< HEAD
-body, header,main,footer,div,section,article,ul,li,a,span,h1,h2,h3,p,img{
-=======
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
@@ -16,7 +13,6 @@ body, header,main,footer,div,section,article,ul,li,a,span,h1,h2,h3,p,img{
 /* reset */
 /*필요한 태그 추가해서 사용해 주세요*/
 body,header,main,footer,div,section,article,dl,dd,dt,ul,li,a,span,h1,h2,h3,p,img{
->>>>>>> c4aa23d (0619 메인페이지)
 padding: 0;
 margin: 0;
 }
@@ -34,12 +30,6 @@ img{
     border: none;
 }
 
-<<<<<<< HEAD
-/*header*/
-header{
- height: 80px;
- background:#eee;   
-=======
 /* text */
 h1{
     font-size: 48px;
@@ -52,7 +42,62 @@ h2{
     font-size: bold;
 }
 
+h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-size: bold;
+}
+h4{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: bold;
+}
+h5{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: medium;
+}
+p{
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #333;
+}
+
+/* text 공통 클래스 */
+
 .title{
     font-family: "Yeseva One", serif;
->>>>>>> c4aa23d (0619 메인페이지)
 }
+
+.small{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.small_b{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;}
+
+
+/* color system */
+/* grayscale */
+.k900{color :#2E2E2E;}
+.k700{color :#333333;}
+.k500{color :#4F4F4F;}
+.k300{color :#C1C1C1;}
+.k200{color :#E8E8E8;}
+.k100{color :#FBFAFA;}
+
+/* primary color */
+.b900{color:#091F5B;}
+.b500{color:#344EAD;}
+.b100{color:#EDF0F5;}
+
+/* secondary color */
+.y900{color: #4D4239;}
+.y500{color: #746661;}
+.y200{color: #FFF9EF;}
+.y100{color: #FCFAF4;}
