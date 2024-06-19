@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body, header,main,footer,div,section,article,ul,li,a,span,h1,h2,h3,p,img{
+padding: 0;
+margin: 0;
+}
+ul,li{
+    list-style: none;
+    /*a태그 임시 공백 삭제*/
+    font-size: 0;
+}
+a{
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    border: none;
+}
+
+/*header*/
+header{
+ height: 80px;
+ background:#eee;   
+}
