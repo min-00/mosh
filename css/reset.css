@@ -8,7 +8,7 @@
     font-weight: 400;
     font-style: normal;
 }
-  * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+  body { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
 
 /* reset */
 /*필요한 태그 추가해서 사용해 주세요*/
@@ -19,7 +19,7 @@ margin: 0;
 ul,li{
     list-style: none;
     /*a태그 임시 공백 삭제*/
-    font-size: 0;
+    /* font-size: 0; */
 }
 a{
     line-height: 0;
