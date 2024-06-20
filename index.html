@@ -7,109 +7,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mosh!</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/swiper-bundle.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/swiper-bundle.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
 </head>
 
 <body>
-        <header id="header" class="header">
-        </header>
-        <main id="main" class="main">
-            <section class="slider">
-                <div class="slider_box">
-                <ul class="slider_cont">
+    <header id="header" class="header">
+        <div class="header_wrap">
+            <h1 class="logo"><a href="#none"><img src="images/logo.svg" alt="모슈"></a></h1>
+
+            <nav class="gnb">
+                <h2 class="screen_out">주요 메뉴</h2>
+                <ul>
+                    <li><a href="#none">ABOUT</a></li>
+                    <li><a href="#none">STORY</a></li>
+                    <li><a href="#none">PRODUCTS</a></li>
+                    <li><a href="#none">NOTICES</a></li>
+                </ul>
+            </nav>
+
+            <div class="top_menu">
+                <h2 class="screen_out">유틸 메뉴</h2>
+                <ul>
+                    <li><a href="#none"><img src="images/person-fill.png" alt=""></a></li>
+                    <li><a href="#none"><img src="images/bag-fill.png" alt=""></a></li>
+                    <li><a href="#none"><img src="images/search.png" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main" class="main">
+        <section class="slider">
+                <h2 class="screen_out">이미지 슬라이더</h2>
+                <div class="mainSwiper">
+                    <div class="slider_box swiper-wrapper">
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider01.jpeg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider02.jpeg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider03.jpeg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider04.jpeg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider05.jpeg" alt=""></a></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+        </section>
+        <section class="best_items">
+            <div class="best_wrap">
+                <div class="best_txt">
+                    <h2>Best items</h2>
+                    <p>바라볼 때마다 즐거워지는 mosh 텀블러<br>
+                        새로 리뉴얼된 모슈를 경험해보세요.
+                    </p>
+                    <a href="#none"><img src="https://placehold.co/132x132" alt="상품 페이지 바로가기"></a>
+                </div>
+                <ul class="best_ls">
                     <li>
-                        <a href="#none"><img src="https://placehold.co/1440x500" alt=""></a>
+                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 1"></a>
+                        <span class="item_stk">HOT</span>
                     </li>
                     <li>
-                        <a href="#none"><img src="https://placehold.co/1440x500" alt=""></a>
+                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 2"></a>
+                        <span class="item_stk">NEW</span>
                     </li>
                     <li>
-                        <a href="#none"><img src="https://placehold.co/1440x500" alt=""></a>
+                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 3"></a>
+                        <span class="item_stk">NEW</span>
                     </li>
                 </ul>
             </div>
-            </section>
-            <section class="best_items">
-                <div class="best_wrap">
-                    <div class="best_txt">
-                        <h2>Best items</h2>
-                        <p>바라볼 때마다 즐거워지는 mosh 텀블러<br>
-                            새로 리뉴얼된 모슈를 경험해보세요.
-                        </p>
-                        <a href="#none"><img src="https://placehold.co/132x132" alt="상품 페이지 바로가기"></a>
-                    </div>
-                    <ul class="best_ls">
+        </section>
+        <section class="about">
+            <div class="about_wrap">
+                <h2>About</h2>
+            </div>
+            <div class="about_txt_mov">
+                <p class="marquee"><span class="title">It's time to MOSH! &nbsp; It's time to MOSH!</span></p>
+            </div>
+        </section>
+        <section class="products">
+            <div class="products_wrap">
+                <h2>Products</h2>
+                <div class="products_ls">
+                    <ul class="pdt_cont_right">
                         <li>
-                            <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 1"></a>
-                            <span>HOT</span>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>LATTE STRAW</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 2"></a>
-                            <span>NEW</span>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>LATTE</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 3"></a>
-                            <span>NEW</span>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>LATTE FOOD JAR</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>ELECTRIC</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>TABLE</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                                <span>ACC</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="pdt_cont_left">
+                        <li>
+                            <a href="#none"><img src="https://placehold.co/295x610" alt="">
+                                <span>MILK</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
-            </section>
-            <section class="about">
-                <div class="about_wrap">
-                    <h2>About</h2>
-                </div>
-            </section>
-            <section class="products">
-                <h2>Products</h2>
-                <ul class="products_wrap">
-                    <div class="pdt_cont_right">
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>LATTE STRAW</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>LATTE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>LATTE FOOD JAR</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>ELECTRIC</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>TABLE</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/295x295" alt="">
-                            <span>ACC</span>
-                        </a>
-                    </li>
-                </div>
-                <div class="pdt_cont_left">
-                    <li>
-                        <a href="#none"><img src="https://placehold.co/292x616" alt="">
-                            <span>MILK</span>
-                        </a>
-                    </li>
-                </div>
-                </ul>
                 <a href="#none">더보기</a>
-            </section>
-            <section class="story">
-                <h2>Story</h2>
-                <div class="story_wrap">
-                    <article class="story_cont01">
+            </div>
+        </section>
+        <section class="story">
+            <h2>Story</h2>
+            <div class="story_wrap">
+                <div class="story_cont_wrap">
+                    <article class="story_cont01 str_cont_lay">
                         <img src="https://placehold.co/360x300" alt="">
-                        <h3>LATTE TABLE POT</h3>
+                        <h4>LATTE TABLE POT</h4>
                         <p>아침에 내린 차가 따뜻하게 유지된다는 것, 밤에 만든 얼음물이
                             다음날 밤까지 남아있다는 것, 써보지 않은 분들께서는 쉽게
                             이해하기 어렵습니다. 진공 주전자가 있다는 것은 실질적인
@@ -120,9 +151,9 @@
                             </a>
                         </div>
                     </article>
-                    <article class="story_cont02">
+                    <article class="story_cont02 str_cont_lay">
                         <img src="https://placehold.co/360x300" alt="">
-                        <h3>메이플 시럽 버터 토스트</h3>
+                        <h4>메이플 시럽 버터 토스트</h4>
                         <p>식빵을 오븐에 넣고 4단계로 2분 30초에서 5분 정도
                             구워주세요. 눈으로 보며 굽기 정도를 기호에 맞게 맞춰도
                             좋습니다. 다 구워진 빵에 버터와 메이플 시럽을 올려
@@ -133,20 +164,69 @@
                             </a>
                         </div>
                     </article>
-                    <a href="#none">전체보기</a>
                 </div>
-            </section>
-            <section class="sns">
-                <div class="sns_wrap">
-                    <ul class="sns_cont_ls">
-                        <li><a href="#none"><img src="https://placehold.co/710x295" alt=""></a></li>
-                        <li><a href="#none"><img src="https://placehold.co/295x295" alt=""></a></li>
-                        <li><a href="#none"><img src="https://placehold.co/295x295" alt=""></a></li>
+                <a href="#none">전체보기</a>
+            </div>
+        </section>
+        <section class="sns">
+            <div class="sns_wrap">
+                <h2>Instagram <span></span></h2>
+                <div class="snsSwiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
                     </ul>
                 </div>
-            </section>
-        </main>
-        <footer id="footer" class="footer"></footer>
+            </div>
+        </section>
+        
+    </main>
+    <footer id="footer" class="footer"></footer>
 </body>
+
+<script>
+    var swiperMain = new Swiper(".mainSwiper", {
+        centeredSlides: true,
+        loop: true,
+        speed:1000,
+        parallax : true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        watchSlidesProgress :true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        freemode: true,
+        effect : 'fade',
+    });
+
+    var swiperSns = new Swiper(".snsSwiper", {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      freeMode: true,
+      loop :true,
+    });
+    $('.marquee').marquee({
+	duration: 25000,
+	delayBeforeStart :500,
+	direction: 'left',
+    startVisible: true,
+	duplicated: true,
+    gap:40,
+    loop: true,
+});
+</script>
 
 </html>
