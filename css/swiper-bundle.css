@@ -409,8 +409,8 @@
   height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
   display: inline-block;
   border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  background: var(--swiper-pagination-bullet-inactive-color, #fff);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1);
 }
 button.swiper-pagination-bullet {
   border: none;

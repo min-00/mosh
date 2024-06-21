@@ -1,0 +1,226 @@
+@charset "utf-8";
+.txt_elips{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+h2 {font-size: 24px;
+    line-height: 40px;
+    font-size: bold;
+    font-family: "Yeseva One", serif;
+    color: #4D4239;
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+header{
+    height: 80px;
+    background:#fff;
+}
+
+.header_wrap{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+}
+.logo img {
+    width: 150px;
+}
+.gnb ul {
+    display: flex;
+    gap: 48px;
+    color: #091F5B;
+    font-weight: bold;
+}
+/* reset a css삭제시 같이 삭제 */
+.gnb ul a{font-size: 16px;}
+
+.top_menu ul {
+    display: flex;
+    gap: 15px;
+}
+
+.story{
+    padding-top: 90px;
+background: #FCFAF4;
+margin-bottom: 160px;
+}
+.story>a{
+    display: block;
+}
+.story_wrap{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.story_cont{
+    display: flex;
+    gap: 20px;
+}
+
+.story_cont dl{
+    position: relative;
+    width: 400px;
+    padding: 20px;
+    border: 2px solid #4D4239;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.story_cont dt{
+    padding: 200px 20px 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+    box-sizing: border-box;
+}
+
+.story_cont dd p{
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.view_more{
+    width:356px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    border-top: 2px solid #4D4239;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background:url(../images/plus-lg.svg) no-repeat center right 20px;
+    background-size: 20px;
+}
+
+.story_img{
+    width: 356px;
+    height: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.story_img img{
+    width: 100%;
+}
+.txtcircle{
+    width: 72px;
+    height: 72px;
+    background: url(../images/mosh_txtcircle.svg) no-repeat;
+    position: absolute;
+    right: 20px;
+    top: 214px;
+}
+
+.story_txt{
+    text-align: center;
+    padding: 80px 0;
+}
+
+.arrow_motion{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background:url(../images/down-arrow.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.recipe{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.recipe_cont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.recipe_cont li{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    margin-bottom: 60px;
+}
+
+.recipe_cont li a{
+    display: block;
+}
+
+.recipe_cont dt{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 32px;
+    color: #091F5B;
+    margin-bottom: 4px;
+    padding: 410px 0 0 20px;
+}
+.recipe_cont dd p{
+    padding: 0 20px;
+}
+
+.make_time{
+    position: absolute;
+    font-size: 12px;
+    line-height: 32px;
+    color: #4F4F4F;
+    top: 410px;
+    right: 20px;
+}
+.make_time p{
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.make_time>span{
+    display: inline-block;
+    vertical-align:middle;
+    background:url(../images/stopwatch.svg) no-repeat center;
+    background-size: cover;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+}
+
+.recipe_img{
+    position: absolute;
+    top: 0;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.recipe_img img{
+    width: 100%;
+}
+.paging_wrap{
+    width: 200px;
+    height: 24px;
+    margin: 0 auto;
+    background: #ccc;
+    margin-bottom: 160px;
+}
+footer {
+    height: 200px;
+    background: #091F5B;
+}
