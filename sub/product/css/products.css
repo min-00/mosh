@@ -36,9 +36,10 @@ header {
 }
 
 /* prod_list */
-
+.prod_list {
+    margin-bottom: 30px;
+}
 .prod_list h2 {
-    font-weight: normal;
     color: #091F5B;
     font-size: 18px;
     text-align: center;
@@ -47,22 +48,45 @@ header {
 }
 .prod_list ul {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     justify-content: center;
 }
+
 .prod_list div {
     width: 138px;
     height: 138px;
     background: #eee;
     border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.prod_list div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 .prod_list p {
     text-align: center;
-    padding: 15px 0 20px;
+    padding: 8px 0;
     font-size: 14px;
     color: #344EAD;
+    margin-top: 5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    transition: .2s;
 }
-
+.prod_list li:hover p {
+    border: 1px solid #344EAD;
+}
+.prod_list ul li.selected_menu p {
+    border: 1px solid #344EAD;
+    background: #344EAD;
+    color: #fff;
+}
 
 
 /* selected_list_box */
@@ -100,7 +124,7 @@ header {
 .selected_list_box p {
     position: relative;
     max-width: 800px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 200;
     padding: 0 100px;
     margin: 0 auto 70px;
@@ -109,9 +133,11 @@ header {
 }
 .selected_list_box .inner_logo{
     position: absolute;
-    top: 69px;
+    top: 73px;
     left: 50%;
     transform: translate(-50%, 0);
+    width: 83px;
+    opacity: .4;
 }
 
 
@@ -138,7 +164,7 @@ header {
 .filter_wrap {
     position: relative;
     cursor: pointer;
-    border: 1px solid #F1F1F1;
+    border: 1px solid #E8E8E8;
     border-radius: 28px;
     display: flex;
     justify-content: space-between;
@@ -160,7 +186,6 @@ header {
 .filter_wrap ul {
     display: none;
 }
-
 .filter_open p {
     padding: 5px 11px 5px 407px;
 }
@@ -230,16 +255,37 @@ header {
     margin: 6% auto 6%;
     display: block;
 }
-.item_img_box ul.color_list {
+.item_img_box .color_list {
     position: absolute;
     bottom: -17px;
     left: 50%;
     transform: translate(-50%, 0);
     transition: .3s;
 }
-.item_img_box:hover ul.color_list {
+.item_img_box:hover .color_list {
     bottom: 16px;
 }
+.color_list {
+    display: flex;
+    gap: 7px;
+}
+.color_list li {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #000;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.color_list .white {background: #fff; border: 1px solid #6182F9;}
+.color_list .ivory {background: #F4EBCA;}
+.color_list .pink {background: #F3CCE9;}
+.color_list .sky {background: #BFDDE5;}
+.color_list .yellow {background: #F4DA59;}
+.color_list .red {background: #DE3F3D;}
+.color_list .black {background: #404040;}
+
 
 .like_cart {
     position: absolute;
@@ -267,25 +313,7 @@ header {
     width: 25px;
 }
 
-.color_list {
-    display: flex;
-    gap: 7px;
-}
-.color_list li {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #000;
-    box-sizing: border-box;
-}
 
-.color_list .white {background: #fff; border: 1px solid #6182F9;}
-.color_list .ivory {background: #F4EBCA;}
-.color_list .pink {background: #F3CCE9;}
-.color_list .sky {background: #BFDDE5;}
-.color_list .yellow {background: #F4DA59;}
-.color_list .red {background: #DE3F3D;}
-.color_list .black {background: #404040;}
 
 
 /* paging */
@@ -315,31 +343,57 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* footer */
 
-footer {
-    height: 300px;
+.footer {
+    width: 100%;
     background: #091F5B;
+    bottom: 0;
+    position: relative;
+    height: 295px;
+    overflow: hidden;
 }
+
+.footer_wrap {
+    display: flex;
+    min-width: 1280px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: flex-start;
+    padding: 70px;
+}
+
+.footer h5,
+.footer a,
+.footer p,
+address {
+    color: white;
+}
+
+
+.logo img {
+    width: 150px;
+    /* color:white; */
+}
+
+.footer p,
+address {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.footer h5 {
+    margin: 0;
+}
+
+
+@media screen and (max-width:1280px) {
+    
+}
+
+
 
 
 @media screen and (max-width:1080px) {
@@ -349,14 +403,14 @@ footer {
         justify-content: space-between;
         margin: 0 auto;
     }
-    .prod_list li {
+    .prod_list ul li {
         width: 100%;
     }
+
     .prod_list div {
         width: 100%;
         height: 0;
         padding-top: 100%;
         background: #eee;
-        border-radius: 25px;
     }
 }
