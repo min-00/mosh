@@ -19,7 +19,7 @@ margin: 0;
 ul,li{
     list-style: none;
     /*a태그 임시 공백 삭제*/
-    font-size: 0;
+    /* font-size: 0; */
 }
 a{
     line-height: 0;
