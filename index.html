@@ -17,13 +17,13 @@
 <body>
     <header id="header" class="header">
         <div class="header_wrap">
-            <h1 class="logo"><a href="#none"><img src="images/logo.svg" alt="모슈"></a></h1>
+            <h1 class="logo"><a href="#"><img src="images/logo.svg" alt="모슈"></a></h1>
 
             <nav class="gnb">
                 <h2 class="screen_out">주요 메뉴</h2>
                 <ul>
                     <li><a href="#none">ABOUT</a></li>
-                    <li><a href="#none">STORY</a></li>
+                    <li><a href="sub/story/story.html">STORY</a></li>
                     <li><a href="#none">PRODUCTS</a></li>
                     <li><a href="#none">NOTICES</a></li>
                 </ul>
@@ -53,6 +53,7 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
+                    </div>
         </section>
         <section class="best_items">
             <div class="best_wrap">
@@ -82,9 +83,14 @@
         <section class="about">
             <div class="about_wrap">
                 <h2>About</h2>
+                <div class="about_txt">
+                    <h3>일상의 놀라움을!</h3>
+                    <div></div>
+                </div>
+                <div class="about_items"></div>
             </div>
             <div class="about_txt_mov">
-                <p class="marquee"><span class="title">It's time to MOSH! &nbsp; It's time to MOSH!</span></p>
+                <p class="marquee"><span class="title">It's time to MOSH!&nbsp;It's time to MOSH!&nbsp;It's time to MOSH!</span></p>
             </div>
         </section>
         <section class="products">
@@ -98,7 +104,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_latte.jpg" alt="">
                                 <span>LATTE</span>
                             </a>
                         </li>
@@ -190,13 +196,14 @@
 </body>
 
 <script>
+    $(function(){
     var swiperMain = new Swiper(".mainSwiper", {
         centeredSlides: true,
         loop: true,
         speed:1000,
         parallax : true,
         autoplay: {
-            delay: 4000,
+            delay: 3500,
             disableOnInteraction: false,
         },
         watchSlidesProgress :true,
@@ -219,13 +226,14 @@
       loop :true,
     });
     $('.marquee').marquee({
-	duration: 25000,
-	delayBeforeStart :500,
+	duration: 20000,
+	delayBeforeStart:500,
 	direction: 'left',
     startVisible: true,
 	duplicated: true,
-    gap:40,
+    gap:10,
     loop: true,
+});
 });
 </script>
 
