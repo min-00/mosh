@@ -1,6 +1,7 @@
 /* header */
-html, body{
-    height:100%;
+html,
+body {
+    height: 100%;
 }
 
 .screen_out {
@@ -98,7 +99,7 @@ header {
 .main_cont {
     margin: 0 auto;
     width: 86%;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     margin-bottom: 160px;
 }
 
@@ -109,18 +110,22 @@ header {
     margin-bottom: 80px;
 }
 
-
-
 .design_ex h2 {
     margin-bottom: 20px;
 }
 
 .design_ex_img {
+    width: 41%;
     position: relative;
 }
 
+.design_ex_cont1 {
+    width: 41%;
+    margin: 0 auto;
+}
+
 .design_ex_img_main {
-    width: 505px;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -139,13 +144,21 @@ header {
     margin-bottom: 80px;
 }
 
+.function_ex_img {
+    width: 41%;
+}
+
+.function_ex_cont1 {
+    width: 41%;
+    margin-left: 18%;
+}
+
 .function_ex h2 {
     margin-bottom: 20px;
 }
 
 .function_ex img {
-    width: 505px;
-    height: 505px;
+    width: 100%;
     border-radius: 20px;
 }
 
@@ -156,13 +169,19 @@ header {
     margin-bottom: 80px;
 }
 
-.lid_ex h2 {
-    margin-bottom: 20px;
+.lid_ex_img {
+    width: 41%;
+    position: relative;
 }
 
-.lid_ex_img {
-    width: 505px;
-    position: relative;
+.lid_ex_cont1 {
+    width: 41%;
+    margin: 0 auto;
+}
+
+
+.lid_ex h2 {
+    margin-bottom: 20px;
 }
 
 .lid_ex_img_main {
@@ -241,9 +260,10 @@ header {
     margin-bottom: 28px;
 }
 
-.part_bottom{
+.part_bottom {
     margin-bottom: 20px;
 }
+
 .swiper-wrapper img {
     width: 86%;
     height: 100%;
@@ -282,9 +302,10 @@ header {
 
 .footer h5,
 .footer a,
- .footer p, address {
-     color: white;
- }
+.footer p,
+address {
+    color: white;
+}
 
 .logo img {
     width: 150px;
