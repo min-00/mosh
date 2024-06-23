@@ -69,6 +69,10 @@ header {
     color: white;
 }
 
+.scroll {
+    margin-top: 150px;
+}
+
 /* mosh_ex */
 .mosh_ex {
     z-index: 11;
@@ -92,7 +96,7 @@ header {
 }
 
 .mosh_ex img {
-    width: 624px;
+    width: 50%;
 }
 
 /* main cont */
@@ -294,7 +298,7 @@ header {
     padding-top: 70px;
 }
 
-.service_num {
+.service_num{
     font-size: 24px;
     line-height: 30px;
     font-size: bold;
@@ -309,7 +313,6 @@ address {
 
 .logo img {
     width: 150px;
-    /* color:white; */
 }
 
 .footer p,
