@@ -4,40 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>about</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/about.css">
-    <style>
-
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="./css/swiper-bundle.css">
+    <script src="./js/swiper-bundle.js"></script>
     </style>
 </head>
 
 <body>
-    <header id="header" class="header">
-        <div class="header_wrap">
-            <h1 class="logo"><a href="#none"><img src="images/logo.svg" alt="모슈"></a></h1>
+    <div id="wrapper">
+        <header id="header" class="header">
+            <div class="header_wrap">
+                <h1 class="logo"><a href="../../index.html"><img src="images/logo.svg" alt="모슈"></a></h1>
 
-            <nav class="gnb">
-                <h2 class="screen_out">주요 메뉴</h2>
-                <ul>
-                    <li><a href="#none">ABOUT</a></li>
-                    <li><a href="#none">STORY</a></li>
-                    <li><a href="#none">PRODUCTS</a></li>
-                    <li><a href="#none">NOTICES</a></li>
-                </ul>
-            </nav>
+                <nav class="gnb">
+                    <h2 class="screen_out">주요 메뉴</h2>
+                    <ul>
+                        <li><a href="../about/about.html">ABOUT</a></li>
+                        <li><a href="../story/story.html">STORY</a></li>
+                        <li><a href="../product/product.html">PRODUCTS</a></li>
+                        <li><a href="#none">NOTICES</a></li>
+                    </ul>
+                </nav>
 
-            <div class="top_menu">
-                <h2 class="screen_out">유틸 메뉴</h2>
-                <ul>
-                    <li><a href="#none"><img src="images/person-fill.png" alt=""></a></li>
-                    <li><a href="#none"><img src="images/bag-fill.png" alt=""></a></li>
-                    <li><a href="#none"><img src="images/search.png" alt=""></a></li>
-                </ul>
+                <div class="top_menu">
+                    <h2 class="screen_out">유틸 메뉴</h2>
+                    <ul>
+                        <li><a href="#none"><img src="images/person-fill.png" alt=""></a></li>
+                        <li><a href="#none"><img src="images/bag-fill.png" alt=""></a></li>
+                        <li><a href="#none"><img src="images/search.png" alt=""></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </header>
-    <div class="wrap">
+        </header>
         <main>
             <section class="main_img">
                 <div class="main_img_wrap">
@@ -107,41 +108,117 @@
             </section>
 
             <section class="collaboration">
-                <div class="coll">
-                    <div class="coll_cont1">
-                        <h3>with 모슈</h3>
-                        <p>모슈 텀블러는 라인 프렌즈 디즈니 엔젤리너스 등 다양한 브랜드와 협업하여<br>
-                            독자적인 콜라보레이션 작업을 진행해왔습니다.</p>
-                    </div>
-                    <div class="coll_cont2">
-                        <img src="images/about_coll01.jpg" alt="">
-                        <img src="images/about_coll02.jpg" alt="">
-                        <img src="images/about_coll03.jpg" alt="">
-                        <img src="images/about_coll04.jpg" alt="">
-                    </div>
+                <div class="coll_cont1">
+                    <h3>with 모슈</h3>
+                    <p>모슈 텀블러는 라인 프렌즈 디즈니 엔젤리너스 등 다양한 브랜드와 협업하여<br>
+                        독자적인 콜라보레이션 작업을 진행해왔습니다.</p>
+                </div>
+                <div class="coll_cont2">
+                    <img src="images/about_coll01.jpg" alt="">
+                    <img src="images/about_coll02.jpg" alt="">
+                    <img src="images/about_coll03.jpg" alt="">
+                    <img src="images/about_coll04.jpg" alt="">
                 </div>
             </section>
 
             <section class="partner">
-                <div class="part">
-                    <p>모슈 텀블러는 그 외 더욱 다양한 수많은 파트너와 함께 하고 있습니다.<br>
-                        여러 판매처에서 모슈 텀블러를 만나보세요!</p>
-                    <img src="images/about_part01.png" alt="텐바이텐" class="part_img">
-                    <img src="images/about_part02.png" alt="교보문고" class="part_img">
-                    <img src="images/about_part03.png" alt="라인프렌즈" class="part_img">
-                    <img src="images/about_part04.png" alt="반디앤루니스" class="part_img">
-                    <img src="images/about_part05.png" alt="에이랜드" class="part_img">
-                    <img src="images/about_part06.png" alt="에스엠엔터테인먼트" class="part_img">
-                    <img src="images/about_part07.png" alt="엔젤리너스" class="part_img">
-                    <img src="images/about_part08.png" alt="더블유컨셉" class="part_img">
-                    <img src="images/about_part09.png" alt="무신사" class="part_img">
-                    <img src="images/about_part10.png" alt="예스이십사" class="part_img">
-                    <img src="images/about_part11.png" alt="카카오" class="part_img">
-                    <img src="images/about_part12.png" alt="아트박스" class="part_img">
+                <p>모슈 텀블러는 그 외 더욱 다양한 수많은 파트너와 함께 하고 있습니다.<br>
+                    여러 판매처에서 모슈 텀블러를 만나보세요!</p>
+                <div class="swiper part_bottom" dir="ltr">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/about_part01.png" alt="텐바이텐" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part02.png" alt="교보문고" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part03.png" alt="라인프렌즈" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part04.png" alt="반디앤루니스" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part05.png" alt="에이랜드" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part06.png" alt="에스엠엔터테인먼트" class="part_img">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper" dir="rtl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/about_part07.png" alt="엔젤리너스" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part08.png" alt="더블유컨셉" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part09.png" alt="무신사" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part10.png" alt="예스이십사" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part11.png" alt="카카오" class="part_img">
+                        </div>
+                        <div class="swiper-slide"><img src="images/about_part12.png" alt="아트박스" class="part_img">
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
     </div>
+    <footer id="footer" class="footer">
+        <div class="footer_wrap">
+            <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
+
+            <div class="service">
+                <h5>CUSTOMER SERVICE</h5>
+                <p class="service_num footer_bottom">070-4618-2788</p>
+                <p>MON-FRI 09:00~17:00</p>
+                <p>LUNCH 12:00~13:30</p>
+                <p>SAT/SUN/HOLIDAY CLOSED</p>
+            </div>
+
+            <div class="info">
+                <h5>COMPANY INFO</h5>
+                <p>COMPANY : 주식회사 아시컴퍼니 CEO : 김정권</p>
+                <p>BUSINESS LICENCE : [241-81-01287]</p>
+                <p>ONLINE-LICENCE : 제2021-경기하남-1883</p>
+                <p><a href="#none">[사업자정보확인]</a> CPO : 김정권</p>
+                <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
+                <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
+            </div>
+
+            <div>
+                <div class="sns">
+                    <h5>FOLLOW US</h5>
+                    <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
+                </div>
+                <div class="bank">
+                    <h5>BANK ACCOUNT</h5>
+                    <p>기업은행 130-089422-01-019</p>
+                    <p>예금주 : 주식회사 아시컴퍼니</p>
+                </div>
+            </div>
+
+            <div class="privacy">
+                <h5><a href="#none">PRIVACY</a></h5>
+                <p><a href="#none">COMPANY</a></p>
+                <p><a href="#none">AGREEMENT</a></p>
+                <p><a href="#none">GUIDE</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p>
+                <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
+<script>
+    const swiperSlides = document.querySelectorAll('.swiper');
+
+    swiperSlides.forEach(function (element, index) {
+        element.classList.add("swiper-" + index);
+        let swiper = new Swiper(".swiper-" + index, {
+            autoplay: {
+                delay: 0,
+                desableOnInteraction: false,
+            },
+            speed: 4000,
+            loop: true,
+            slidesPerView: "4"
+        });
+    });
+</script>
 
 </html>
