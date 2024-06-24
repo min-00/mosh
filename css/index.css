@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+html{
+    scroll-behavior:smooth;
+}
 
 body{
     width: 100%;
@@ -13,6 +15,14 @@ h2 {font-size: 24px;
     margin-bottom: 48px;
 }
 
+.btn{
+    padding: 20px 40px 20px 20px;
+    border: 1px solid #746661;
+    border-radius: 40px;
+    font-weight: normal;
+    background: url(../images/right-arrow.svg) no-repeat right;
+}
+
 .screen_out {
     overflow: hidden;
     position: absolute;
@@ -21,9 +31,6 @@ h2 {font-size: 24px;
     line-height: 0;
     text-indent: -9999px;
 }
-
-
-
 
 /*header*/
 header{
@@ -61,7 +68,6 @@ header{
 
 .mainSwiper {
     width: 100%;
-    height: 700px;
     position: relative;
 }
 
@@ -72,26 +78,13 @@ header{
     display: flex;
     overflow: hidden;
 }
-.swiper-slide img{
-    min-width: 100%;
-}
 
-.slider .swiper-pagination {
-    position: absolute;
-    bottom : 40px;
-    right:20%;
-    text-align: center;
-    transition: 300ms opacity;
-    transform: translate3d(0, 0, 0);
-    z-index: 10;
+.swiper-slide a{
+    font-size: 0;
 }
-.slider .swiper-pagination-bullet {
-    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 16px));
-    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
-    display: inline-block;
-    border-radius: var(--swiper-pagination-bullet-border-radius, 4px);
-    background: var(--swiper-pagination-bullet-inactive-color, var(--swiper-theme-color));
-    opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.8);
+.swiper-slide img{
+    width: 100%;
+    display: block;
 }
 
 .best_items {
@@ -119,6 +112,7 @@ header{
     position: absolute;
     bottom: 0;
 }
+
 .best_ls{
     display: flex;
     gap: 20px;
@@ -149,6 +143,7 @@ header{
     background: #FCFAF4;
     margin-bottom: 120px;
     position: relative;
+    z-index: 10;
     overflow: hidden;
 }
 
@@ -162,12 +157,13 @@ header{
 
 .about h3{
     font-size: 36px;
-    line-height: 60px;
+    line-height: 0;
     font-weight: normal;
+    color: #091F5B;
 }
 .about_txt>div{
-    height: 200px;
-    margin: 0 auto;
+    height: 180px;
+    margin: 16px auto;
     background: url(../images/logo.svg) no-repeat center;
 }
 .about_items{
@@ -176,6 +172,41 @@ header{
     height: 500px;
     margin: 0 auto;
     background: url(../images/main_about_item01.png) no-repeat center;
+}
+.about_circle{
+    width: 610px;
+    height: 610px;
+    position: absolute;
+    z-index: -1;
+    background: url(../images/Ellipse.svg) no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.about_cont{
+    width: 1280px;
+    height: 610px;
+    margin: 0 auto;
+    position: relative;
+}
+.about_design{
+    position: absolute;
+    left: 132px;
+    top: 0;
+}
+.about_function{
+    position: absolute;
+    top: 50px;
+    right: 80px;
+}
+.about_detail{
+    position: absolute;
+    left: 128px;
+}
+.about_more{
+    position: absolute;
+    bottom: 50px;
+    right: 178px;
 }
 .about_txt_mov{
     position: absolute;
@@ -190,12 +221,12 @@ header{
     color:#fff;
 }
 
-.marguee{
-    transition-timing-function: linear;
-}
 .products{
     text-align: center;
     margin-bottom: 160px; 
+}
+.products img{
+    display: block;
 }
 .products_wrap{
     width: 1280px;
@@ -234,24 +265,26 @@ header{
 
 .products_wrap>a{
     position: absolute;
-    top: 0;
+    top: 20px;
     right: 20px;
 }
 
 .story{
     text-align: center;
-    margin-bottom: 160px;
-    height: 1128px;
+    margin-bottom: 100px;
+    height: 960px;
     background: #FCFAF4;
+    position: relative;
 }
 .story_wrap{
     width: 1280px;
+    height: 700px;
     margin: 0 auto;
     position: relative;
 }
 
 .story h2{
-    padding-top: 60px;
+    padding-top: 120px;
     box-sizing: border-box;
 }
 
@@ -264,7 +297,7 @@ header{
 }
 .str_cont_lay{
     width: 400px;
-    height: 580px;
+    height: 420px;
     border: 2px solid #4D4239;
     border-radius: 20px;
     padding: 20px;
@@ -272,35 +305,84 @@ header{
     text-align: left;
     position: relative;
 }
-.str_cont_lay img{
-    margin-bottom: 20px;
-}
+
 .str_cont_lay h4{
     margin: 0 0 8px 0;
     color: #333;
 }
-
-.show_plus{
-    width: 90%;
-    border-top: 2px solid #4D4239;
-    padding-top: 20px;
-    position: absolute;
-    bottom: 24px;
+.str_cont_lay p{
+    width: 360px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.story_cont01{
-}
 .story_cont02{
     position: absolute;
     right: 0;
-    bottom: -168px;
+    bottom: -128px;
+}
+.art_img_wrap{
+    width: 356px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.art_img_wrap img{
+    width: 100%;
+    display: block;
+}
+
+.recipe_circle{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -88px;
+    right: -50%;
+    transform: translateX(-50%);
+}
+
+.cook_with {
+    width: 650px;
+    height: 150px;
+    position: absolute;
+    bottom: 160px;
+    right: 50%;
+    background:url(../images/Cook_with.svg) no-repeat;
 }
 
 .story_wrap>a{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -80px;
+    right: 20px;
 }
+
+.circle_img{
+    width: 200px;
+    height: 200px;
+    background: url(../images/mosh_txtcircle_brown.svg);
+    animation: rotate_image 10s linear infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate_image{
+	100% {
+    transform: rotate(360deg);
+    }
+}
+
+.view_more{
+    width:356px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    border-top: 2px solid #746661;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background:url(../images/plus-lg.svg) no-repeat center right 20px;
+    background-size: 20px;
+}
+
 .sns{
     margin-bottom: 160px;
     text-align: center;
@@ -315,10 +397,24 @@ header{
 .sns .swiper-slide{
     width: 210px;
     height: 210px;
+    border-radius: 20px;
+    overflow: hidden;
 }
+
+.sns .swiper-slide img{
+    width: 100%;
+    display: block;
+}
+
 
 footer {
     height: 200px;
     background: #091F5B;
 }
 
+/*반응형*/
+@media screen and (min-width: 1280px) {
+    .mainSwiper {
+        height: 700px;
+    }
+  }
