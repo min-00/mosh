@@ -12,20 +12,21 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/swiper-bundle.js"></script>
     <script src="js/jquery.marquee.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/index.js"></script>
 </head>
 
 <body>
     <header id="header" class="header">
         <div class="header_wrap">
             <h1 class="logo"><a href="#"><img src="images/logo.svg" alt="모슈"></a></h1>
-
             <nav class="gnb">
                 <h2 class="screen_out">주요 메뉴</h2>
                 <ul>
-                    <li><a href="#none">ABOUT</a></li>
+                    <li><a href="sub/about/about.html">ABOUT</a></li>
                     <li><a href="sub/story/story.html">STORY</a></li>
-                    <li><a href="#none">PRODUCTS</a></li>
-                    <li><a href="#none">NOTICES</a></li>
+                    <li><a href="sub/products/products.html">PRODUCTS</a></li>
+                    <li class="notice"><a href="#none">NOTICES</a></li>
                 </ul>
             </nav>
 
@@ -49,32 +50,33 @@
                         <div class="swiper-slide"><a href="#none"><img src="images/main_slider03.jpeg" alt=""></a></div>
                         <div class="swiper-slide"><a href="#none"><img src="images/main_slider04.jpeg" alt=""></a></div>
                         <div class="swiper-slide"><a href="#none"><img src="images/main_slider05.jpeg" alt=""></a></div>
+                        <div class="swiper-slide"><a href="#none"><img src="images/main_slider06.jpeg" alt=""></a></div>
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                     </div>
         </section>
-        <section class="best_items">
+        <section class="best_items rev_scroll">
             <div class="best_wrap">
                 <div class="best_txt">
                     <h2>Best items</h2>
                     <p>바라볼 때마다 즐거워지는 mosh 텀블러<br>
                         새로 리뉴얼된 모슈를 경험해보세요.
                     </p>
-                    <a href="#none"><img src="https://placehold.co/132x132" alt="상품 페이지 바로가기"></a>
+                    <a href="#none" class="circle_img"><img src="images/mosh_txtcircle.svg" alt="상품 페이지 바로가기"></a>
                 </div>
                 <ul class="best_ls">
                     <li>
-                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 1"></a>
+                        <a href="#"><img src="images/best_item_01.jpg" alt="베스트 아이템 1"></a>
                         <span class="item_stk">HOT</span>
                     </li>
                     <li>
-                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 2"></a>
+                        <a href="#"><img src="images/best_item_02.jpg" alt="베스트 아이템 2"></a>
                         <span class="item_stk">NEW</span>
                     </li>
                     <li>
-                        <a href="#"><img src="https://placehold.co/295x400" alt="베스트 아이템 3"></a>
+                        <a href="#"><img src="images/best_item_03.jpg" alt="베스트 아이템 3"></a>
                         <span class="item_stk">NEW</span>
                     </li>
                 </ul>
@@ -83,23 +85,41 @@
         <section class="about">
             <div class="about_wrap">
                 <h2>About</h2>
-                <div class="about_txt">
+                <div class="about_txt rev_scroll">
                     <h3>일상의 놀라움을!</h3>
                     <div></div>
                 </div>
-                <div class="about_items"></div>
+                <div class="about_cont">
+                        <div class="about_items"></div>
+                        <div class="about_circle rev_scroll">
+                        </div>
+                        <ul>
+                            <li class="about_design rev_scroll">
+                                <a href="#none"><img src="images/about_01.svg" alt=""></a>
+                            </li>
+                            <li class="about_function rev_scroll">
+                                <a href="#none"><img src="images/about_02.svg" alt=""></a>
+                            </li>
+                            <li class="about_detail rev_scroll">
+                                <a href="#none"><img src="images/about_03.svg" alt=""></a>
+                            </li>
+                            <li class="about_more rev_scroll">
+                                <a href="#none"><img src="images/about_btn.svg" alt=""></a>
+                            </li>
+                        </ul>
+                </div>
             </div>
             <div class="about_txt_mov">
-                <p class="marquee"><span class="title">It's time to MOSH!&nbsp;It's time to MOSH!&nbsp;It's time to MOSH!</span></p>
+                <p class="marquee title">It's time to mosh! &nbsp; It's time to mosh! It's time to mosh! &nbsp; It's time to mosh!</p>
             </div>
         </section>
         <section class="products">
             <div class="products_wrap">
                 <h2>Products</h2>
-                <div class="products_ls">
+                <div class="products_ls rev_scroll">
                     <ul class="pdt_cont_right">
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_st.jpg" alt="">
                                 <span>LATTE STRAW</span>
                             </a>
                         </li>
@@ -109,83 +129,90 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_jar.jpg" alt="">
                                 <span>LATTE FOOD JAR</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_ect.jpg" alt="">
                                 <span>ELECTRIC</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_table.jpg" alt="">
                                 <span>TABLE</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x295" alt="">
+                            <a href="#none"><img src="images/product_acc.jpg" alt="">
                                 <span>ACC</span>
                             </a>
                         </li>
                     </ul>
                     <ul class="pdt_cont_left">
                         <li>
-                            <a href="#none"><img src="https://placehold.co/295x610" alt="">
+                            <a href="#none"><img src="images/product_milk_blue.jpg" alt="">
                                 <span>MILK</span>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <a href="#none">더보기</a>
+                <a href="#none" class="btn">전체보기</a>
             </div>
         </section>
         <section class="story">
             <h2>Story</h2>
             <div class="story_wrap">
                 <div class="story_cont_wrap">
-                    <article class="story_cont01 str_cont_lay">
-                        <img src="https://placehold.co/360x300" alt="">
+                    <article class="story_cont01 str_cont_lay rev_scroll">
+                        <div class="art_img_wrap">
+                        <img src="images/story_cont01.jpg" alt="">
+                        </div>
                         <h4>LATTE TABLE POT</h4>
-                        <p>아침에 내린 차가 따뜻하게 유지된다는 것, 밤에 만든 얼음물이
+                        <p>아침에 내린 차가 따뜻하게 유지된다는 것, <br>밤에 만든 얼음물이
                             다음날 밤까지 남아있다는 것, 써보지 않은 분들께서는 쉽게
                             이해하기 어렵습니다. 진공 주전자가 있다는 것은 실질적인
                             생활의 질 개선으로 이어집니다. </p>
-                        <div class="show_plus">
-                            <a href="#none">
-                                더보기<span>+</span>
+                            <a href="sub/story/story.html#story">
+                                <span class="view_more">더보기</span>
                             </a>
-                        </div>
                     </article>
-                    <article class="story_cont02 str_cont_lay">
-                        <img src="https://placehold.co/360x300" alt="">
+                    <article class="story_cont02 str_cont_lay rev_scroll">
+                        <div class="art_img_wrap">
+                        <img src="images/recipe_cont01.jpg" alt="">
+                        </div>
                         <h4>메이플 시럽 버터 토스트</h4>
                         <p>식빵을 오븐에 넣고 4단계로 2분 30초에서 5분 정도
                             구워주세요. 눈으로 보며 굽기 정도를 기호에 맞게 맞춰도
                             좋습니다. 다 구워진 빵에 버터와 메이플 시럽을 올려
-                            놓아주세요. </p>
-                        <div class="show_plus">
-                            <a href="#none">
-                                더보기<span>+</span>
+                            놓아주세요.</p>
+                            <a href="sub/story/story.html#recipe">
+                                <span class="view_more">더보기</span>
                             </a>
-                        </div>
+                            <div class="recipe_circle">
+                                <div class="circle_img"></div>
+                            </div>
                     </article>
                 </div>
-                <a href="#none">전체보기</a>
+                <a href="sub/story/story.html" class="btn">전체보기</a>
             </div>
+            <div class="cook_with rev_scroll"></div>
         </section>
         <section class="sns">
             <div class="sns_wrap">
                 <h2>Instagram <span></span></h2>
-                <div class="snsSwiper">
+                <div class="snsSwiper rev_scroll">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="https://placehold.co/210x210" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_01.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_02.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_03.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_04.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_05.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_06.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_07.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_08.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_09.jpg" alt=""></a></li>
+                    <li class="swiper-slide"><a href="#none"><img src="images/sns_10.jpg" alt=""></a></li>
                     </ul>
                 </div>
             </div>
@@ -194,47 +221,5 @@
     </main>
     <footer id="footer" class="footer"></footer>
 </body>
-
-<script>
-    $(function(){
-    var swiperMain = new Swiper(".mainSwiper", {
-        centeredSlides: true,
-        loop: true,
-        speed:1000,
-        parallax : true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        },
-        watchSlidesProgress :true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        freemode: true,
-        effect : 'fade',
-    });
-
-    var swiperSns = new Swiper(".snsSwiper", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-      freeMode: true,
-      loop :true,
-    });
-    $('.marquee').marquee({
-	duration: 20000,
-	delayBeforeStart:500,
-	direction: 'left',
-    startVisible: true,
-	duplicated: true,
-    gap:10,
-    loop: true,
-});
-});
-</script>
 
 </html>
