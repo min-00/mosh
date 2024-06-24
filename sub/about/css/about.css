@@ -298,7 +298,7 @@ header {
     padding-top: 70px;
 }
 
-.service_num{
+.service_num {
     font-size: 24px;
     line-height: 30px;
     font-size: bold;
@@ -330,4 +330,134 @@ address {
 .sns,
 .footer_bottom {
     margin-bottom: 36px;
+}
+
+/* 1080 */
+@media screen and (max-width:1080px) {
+    .mosh_ex h2 {
+        font-size: 24px;
+        line-height: 30px;
+        font-size: bold;
+        margin-bottom: 20px;
+    }
+
+    .banner {
+        background-size: cover;
+    }
+
+    .banner_wrap {
+        top: 10%;
+        left: 10%;
+        position: absolute;
+    }
+
+    .banner img {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    /* main */
+    .mo {
+        display: none;
+    }
+
+    .main_cont {
+        margin-bottom: 80px;
+    }
+
+    .design_ex {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .design_ex h2 {
+        font-size: 24px;
+        line-height: 30px;
+        font-size: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .design_ex p {
+        text-align: center;
+    }
+
+    .design_ex_img {
+        width: 86%;
+    }
+
+    .design_ex_cont1 {
+        width: 100%;
+    }
+
+
+    .design_ex_img_sub {
+        display: none;
+    }
+
+    .function_ex {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .function_ex_img {
+        width: 100%;
+    }
+
+    .function_ex_cont1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .function_ex h2 {
+        font-size: 24px;
+        line-height: 30px;
+        font-size: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .function_ex p {
+        text-align: center;
+    }
+
+    .function_ex_img {
+        width: 86%;
+    }
+
+    .function_ex img {
+        width: 100%;
+    }
+
+    .lid_ex {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .lid_ex_img {
+        width: 86%;
+    }
+
+    .lid_ex_cont1 {
+        width: 100%;
+    }
+
+    .lid_ex h2 {
+        font-size: 24px;
+        line-height: 30px;
+        font-size: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .lid_ex p {
+        text-align: center;
+    }
+
+    .lid_ex_img_sub {
+        display: none;
+    }
+
 }
