@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+.yeseva-one-regular {
+    font-family: "Yeseva One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  * { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
+/* reset */
+/*필요한 태그 추가해서 사용해 주세요*/
+body,header,main,footer,div,section,article,dl,dd,dt,ul,li,a,span,h1,h2,h3,p,img{
+padding: 0;
+margin: 0;
+}
+ul,li{
+    list-style: none;
+    /*a태그 임시 공백 삭제*/
+    /* font-size: 0; */
+}
+a{
+    line-height: 0;
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    border: none;
+}
+
+/* text */
+h1{
+    font-size: 48px;
+    line-height: 80px;
+    font-weight: bold;
+}
+h2{
+    font-size: 36px;
+    line-height: 60px;
+    font-size: bold;
+}
+
+h3{
+    font-size: 24px;
+    line-height: 30px;
+    font-size: bold;
+}
+h4{
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: bold;
+}
+h5{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: medium;
+}
+p{
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #333;
+}
+
+/* text 공통 클래스 */
+
+.title{
+    font-family: "Yeseva One", serif;
+}
+
+.small{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.small_b{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;}
+
+
+/* color system */
+/* grayscale */
+.k900{color :#2E2E2E;}
+.k700{color :#333333;}
+.k500{color :#4F4F4F;}
+.k300{color :#C1C1C1;}
+.k200{color :#E8E8E8;}
+.k100{color :#FBFAFA;}
+
+/* primary color */
+.b900{color:#091F5B;}
+.b500{color:#344EAD;}
+.b100{color:#EDF0F5;}
+
+/* secondary color */
+.y900{color: #4D4239;}
+.y500{color: #746661;}
+.y200{color: #FFF9EF;}
+.y100{color: #FCFAF4;}
