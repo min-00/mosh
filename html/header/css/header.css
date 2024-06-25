@@ -1,0 +1,48 @@
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+header {
+    background: #fff;
+}
+.header_wrap{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+}
+.gnb ul {
+    display: flex;
+    gap: 48px;
+    color: #091F5B;
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: bold;
+}
+.top_menu ul {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.top_menu li {
+    display: flex;
+}
+.top_menu img {
+    width: 18px;
+}
+.top_menu li:first-child img {
+    width: 16px;
+}
+
+@media screen and (max-width:768px) {
+
+}
