@@ -11,6 +11,7 @@
 
 header {
     background: #fff;
+    border-bottom: 1px solid #EDF0F5;
 }
 .header_wrap{
     display: flex;
@@ -101,6 +102,28 @@ header {
     background-size: cover;
     opacity: 0.6;
 }
+.selected_list_tumbler::before {
+    background: url(../images/selected_list_tumbler.jpg) no-repeat center;
+}
+.selected_list_foodjar::before {
+    background: url(../images/selected_list_foodjar.jpg) no-repeat center;
+}
+.selected_list_table::before {
+    background: url(../images/selected_list_table.jpg) no-repeat center;
+}
+.selected_list_electric::before {
+    background: url(../images/selected_list_electric.jpg) no-repeat center;
+}
+.selected_list_etc::before {
+    background: url(../images/selected_list_etc.jpg) no-repeat center;
+}
+.selected_list_acc::before {
+    background: url(../images/selected_list_acc.jpg) no-repeat center;
+}
+.selected_list_parts::before {
+    background: url(../images/selected_list_parts.jpg) no-repeat center;
+}
+
 .selected_list_box {
     position: relative;
     background: #000;
@@ -214,7 +237,12 @@ header {
     justify-content: space-between;
     flex-wrap: wrap;
 }
+.prod_items > ul:after {
+    content: "";
+    width: 33%;
+}
 .prod_items > ul > li {
+    position: relative;
     width: 33%;
 }
 .prod_name {
@@ -243,6 +271,20 @@ header {
     color: #bdbdbd;
     font-weight: 300;
 }
+.sold_out {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #FF6563;
+    border-radius: 30px;
+}
+.sold_out p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 3px 13px;
+}
+
 
 .item_img_box {
     position: relative;
@@ -257,7 +299,7 @@ header {
 }
 .item_img_box .color_list {
     position: absolute;
-    bottom: -17px;
+    bottom: -42px;
     left: 50%;
     transform: translate(-50%, 0);
     transition: .3s;
@@ -267,7 +309,10 @@ header {
 }
 .color_list {
     display: flex;
-    gap: 7px;
+    gap: 5px;
+    width: 220px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .color_list li {
     width: 16px;
@@ -278,13 +323,24 @@ header {
     cursor: pointer;
 }
 
-.color_list .white {background: #fff; border: 1px solid #6182F9;}
+.color_list .white {background: #fff; border: 1px solid #E8E8E8;}
 .color_list .ivory {background: #F4EBCA;}
 .color_list .pink {background: #F3CCE9;}
 .color_list .sky {background: #BFDDE5;}
 .color_list .yellow {background: #F4DA59;}
 .color_list .red {background: #DE3F3D;}
 .color_list .black {background: #404040;}
+.color_list .cocoa {background: #685E54;}
+.color_list .moka {background: #D6C4AE;}
+.color_list .green {background: #004D2F;}
+.color_list .mint {background: #B3DEC9;}
+.color_list .blue {background: #334A9A;}
+.color_list .silver {background: #C1C1C1;}
+.color_list .gold {background: #E2CA8B;}
+.color_list .brown {background: #857B71;}
+.color_list .w_white {background: #FCFAED; border: 1px solid #E8E8E8;}
+.color_list .p_pink {background: #CEBAB9;}
+
 
 
 .like_cart {
@@ -316,29 +372,6 @@ header {
 
 
 
-/* paging */
-.paging {
-    display: flex;
-    gap: 28px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-.paging button img{
-    display: block;
-}
-.paging ul {
-    display: flex;
-    gap:  13px;
-    color: #B3B3B3;
-}
-.paging ul a {
-    font-size: 14px;
-    line-height: 14px;
-}
-.selected_number{
-    color: #505050;
-}
 
 
 
