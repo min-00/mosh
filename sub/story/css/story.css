@@ -1,4 +1,18 @@
 @charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 295px;
+}
 
 .screen_out {
     overflow: hidden;
@@ -10,12 +24,12 @@
 }
 
 h2 {
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 18px;
+    line-height: 18px;
     font-size: bold;
     font-family: "Yeseva One", serif;
     color: #4D4239;
-    margin-bottom: 48px;
+    margin-bottom: 55px;
     text-align: center;
 }
 
@@ -54,7 +68,7 @@ header {
 }
 
 .story {
-    padding-top: 90px;
+    padding-top: 55px;
     background: #FCFAF4;
     margin-bottom: 160px;
 }
@@ -151,6 +165,7 @@ header {
     width: 1240px;
     margin: 0 auto;
     position: relative;
+    z-index: 5;
 }
 
 .recipe_list {
@@ -225,6 +240,7 @@ header {
 
 .recipe_pop {
     position: fixed;
+    z-index: 50;
     top: 0;
     left: 0;
     right: 0;
@@ -314,8 +330,8 @@ header {
     background: #091F5B;
     overflow: hidden;
     height: 295px;
-    /* position: relative;
-      transform: translateY(-100%); */
+    position: relative;
+    transform: translateY(-100%);
 }
 
 .footer_wrap {

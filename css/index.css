@@ -4,8 +4,16 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
     width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 295px;
 }
 
 h2 {
@@ -152,7 +160,7 @@ header {
 }
 
 .about {
-    height: 1240px;
+    height: 1160px;
     background: #FCFAF4;
     margin-bottom: 120px;
     position: relative;
@@ -167,6 +175,7 @@ header {
 .about h2 {
     padding-top: 60px;
     box-sizing: border-box;
+    margin-bottom: 80px;
 }
 
 .about h3 {
@@ -176,72 +185,82 @@ header {
     color: #091F5B;
 }
 
-.about_txt>div {
-    height: 180px;
-    margin: 16px auto;
-    background: url(../images/logo.svg) no-repeat center;
-}
-
-.about_items {
-    position: static;
-    width: 400px;
-    height: 500px;
-    margin: 0 auto;
-    background: url(../images/main_about_item01.png) no-repeat center;
-}
-
-.about_circle {
-    width: 610px;
-    height: 610px;
-    position: absolute;
-    z-index: -1;
-    background: url(../images/Ellipse.svg) no-repeat;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .about_cont {
     width: 1280px;
     height: 610px;
     margin: 0 auto;
     position: relative;
 }
+.about_cont>ul>li>img{
+    width: 100%;
+}
+.about_txt>div {
+    width: 450px;
+    height: 120px;
+    margin: 16px auto;
+    background: url(../images/logo_about.svg) no-repeat center;
+    background-size:cover;
+}
+
+.about_items {
+    position: static;
+    width: 548px;
+    height: 548px;
+    margin: 20px auto;
+    background: url(../images/main_about_item01.png) no-repeat center;
+}
+
+.about_circle {
+    width: 580px;
+    height: 580px;
+    position: absolute;
+    z-index: -1;
+    background: url(../images/Ellipse.svg) no-repeat;
+    top: 50%;
+    left: 50%;
+    background-size: cover;
+    transform: translate(-50%,-50%);
+}
 
 .about_design {
+    width: 100px;
     position: absolute;
-    left: 132px;
+    left: 206px;
     top: 0;
 }
 
 .about_function {
+    width: 100px;
     position: absolute;
-    top: 50px;
-    right: 80px;
+    top: 150px;
+    right: 264px;
 }
 
 .about_detail {
+    width: 100px;
     position: absolute;
-    left: 128px;
+    left: 188px;
+    bottom: 50px;
 }
 
 .about_more {
     position: absolute;
-    bottom: 50px;
-    right: 178px;
+    bottom: 26px;
+    right: 260px;
 }
 
 .about_txt_mov {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 120px;
+    height: 100px;
     background: #344EAD;
 }
 
 .about_txt_mov p {
-    font-size: 56px;
-    padding: 20px 0;
+    font-size: 48px;
+    line-height: 48px;
+    padding: 26px 0;
     color: #fff;
 }
 
@@ -295,14 +314,14 @@ header {
 
 .products_wrap>a {
     position: absolute;
-    top: 20px;
+    top: 0px;
     right: 20px;
 }
 
 .story {
     text-align: center;
-    margin-bottom: 100px;
-    height: 960px;
+    margin-bottom: 120px;
+    height: 920px;
     background: #FCFAF4;
     position: relative;
 }
@@ -382,14 +401,14 @@ header {
     width: 650px;
     height: 150px;
     position: absolute;
-    bottom: 160px;
+    bottom: 120px;
     right: 50%;
     background: url(../images/Cook_with.svg) no-repeat;
 }
 
 .story_wrap>a {
     position: absolute;
-    top: -80px;
+    top: -90px;
     right: 20px;
 }
 
@@ -456,8 +475,8 @@ header {
     background: #091F5B;
     overflow: hidden;
     height: 295px;
-    /* position: relative;
-      transform: translateY(-100%); */
+    position: relative;
+    transform: translateY(-100%);
 }
 
 .footer_wrap {

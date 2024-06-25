@@ -69,6 +69,15 @@ ScrollReveal().reveal('',);
         spaceBetween: 20,
         freeMode: true,
         loop :true,
+        watchSlidesProgress :true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
     });
 
 });
