@@ -51,6 +51,7 @@ function getFile(url, callbackFunc){
     req.send();
 }
 
+/* 관심상품 아이콘 */
 $(document).ready(function(){
     const mtHeart = "images/like.png";
     const fullHeart = "images/full_like.png";

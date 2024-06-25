@@ -372,29 +372,6 @@ header {
 
 
 
-/* paging */
-.paging {
-    display: flex;
-    gap: 28px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-.paging button img{
-    display: block;
-}
-.paging ul {
-    display: flex;
-    gap:  13px;
-    color: #B3B3B3;
-}
-.paging ul a {
-    font-size: 14px;
-    line-height: 14px;
-}
-.selected_number{
-    color: #505050;
-}
 
 
 
