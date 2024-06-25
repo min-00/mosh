@@ -1,10 +1,4 @@
 @charset "utf-8";
-.txt_elips{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .screen_out {
     overflow: hidden;
     position: absolute;
@@ -36,7 +30,7 @@ header{
     align-items: center;
 }
 .logo img {
-    width: 150px;
+    width:150px;
 }
 .gnb ul {
     display: flex;
@@ -74,7 +68,7 @@ margin-bottom: 160px;
     position: relative;
     width: 400px;
     padding: 20px;
-    border: 2px solid #4D4239;
+    border: 2px solid #746661;
     box-sizing: border-box;
     border-radius: 20px;
     margin-bottom: 18px;
@@ -100,7 +94,7 @@ margin-bottom: 160px;
     position: absolute;
     bottom: 0;
     left: 20px;
-    border-top: 2px solid #4D4239;
+    border-top: 2px solid #746661;
     padding: 30px 20px;
     box-sizing: border-box;
     background:url(../images/plus-lg.svg) no-repeat center right 20px;
@@ -146,6 +140,7 @@ margin-bottom: 160px;
 .recipe{
     width: 1240px;
     margin: 0 auto;
+    position: relative;
 }
 
 .recipe_cont{
@@ -212,6 +207,20 @@ margin-bottom: 160px;
 
 .recipe_img img{
     width: 100%;
+}
+
+.recipe_pop{
+    width: 800px;
+    height: 500px;
+    background: tomato;
+    position: absolute;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 .paging_wrap{
     width: 200px;
