@@ -103,7 +103,7 @@ header {
 .main_cont {
     margin: 0 auto;
     width: 86%;
-    /* max-width: 1240px; */
+    max-width: 1240px;
     margin-bottom: 160px;
 }
 
@@ -134,9 +134,9 @@ header {
 }
 
 .design_ex_img_sub {
-    left: -102px;
-    top: 97px;
-    width: 162px;
+    left: -20%;
+    top: 19%;
+    width: 32%;
     position: absolute;
 }
 
@@ -193,9 +193,9 @@ header {
 }
 
 .lid_ex_img_sub {
-    top: 150px;
-    left: -126px;
-    width: 182px;
+    top: 30%;
+    left: -25%;
+    width: 36%;
     position: absolute;
 }
 
@@ -203,7 +203,7 @@ header {
 .banner {
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/about_banner05.jpg) no-repeat center;
     margin: auto;
-    background-size: 100%;
+    background-size: 110%;
     width: 86%;
     height: 625px;
     border-radius: 40px;
@@ -248,9 +248,20 @@ header {
     max-width: 1240px;
 }
 
-.coll_cont2 img {
-    width: 24%;
+.coll_img {
+    width: 23.7%;
+    overflow: hidden;
     border-radius: 20px;
+}
+.coll_img img{
+    width: 100%;
+    height: 100%;
+    transform:scale(1.0);        
+    transition: transform .5s; 
+}
+.coll_img img:hover{
+    transform:scale(1.2);
+    transition: transform .5s;
 }
 
 /* part */
@@ -334,30 +345,30 @@ address {
 
 /* 1080 */
 @media screen and (max-width:1080px) {
-    .mosh_ex h2 {
-        font-size: 24px;
-        line-height: 30px;
-        font-size: bold;
-        margin-bottom: 20px;
-    }
-
+    
     .banner {
         background-size: cover;
     }
-
+    
     .banner_wrap {
         top: 10%;
         left: 10%;
         position: absolute;
     }
-
+    
     .banner img {
         width: 25%;
     }
 }
 
 @media screen and (max-width:768px) {
-
+    .mosh_ex h2 {
+        font-size: 24px;
+        line-height: 30px;
+        font-size: bold;
+        margin-bottom: 20px;
+    }
+    
     /* main */
     .mo {
         display: none;
