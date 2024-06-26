@@ -25,12 +25,31 @@
             <div class="top_menu">
                 <h2 class="screen_out">유틸 메뉴</h2>
                 <ul>
-                    <li><a href="#none"><img src="images/person-fill.png" alt=""></a></li>
-                    <li><a href="#none"><img src="images/bag-fill.png" alt=""></a></li>
-                    <li><a href="#none"><img src="images/search.png" alt=""></a></li>
+                    <li><a href="#none"><img src="images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
+                    <li><a href="#none"><img src="images/bag-fill.png" alt="장바구니">장바구니</a></li>
+                    <li>
+                        <a href="#none">
+                            <img src="images/search.png" alt="검색">
+                        </a>
+                    </li>
+                    <li class="search_box">
+                        <label for="search" class="screen_out">검색</label>
+                            <input type="search" id="search" name="search">
+                            <button type="submit"><img src="images/search.png" alt=""></button>
+                    </li>
                 </ul>
             </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="bg"><img src="images/logo_white.svg" alt=""></div>
         </div>
     </header>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
