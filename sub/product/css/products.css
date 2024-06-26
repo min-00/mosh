@@ -9,6 +9,7 @@
 
 /* header */
 
+<<<<<<< HEAD
 .screen_out {
     overflow: hidden;
     position: absolute;
@@ -36,6 +37,12 @@
     transform: translateY(-100%);
 }
 
+=======
+header {
+    background: #fff;
+    border-bottom: 1px solid #EDF0F5;
+}
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 .header_wrap{
     display: flex;
     justify-content: space-between;
@@ -44,7 +51,10 @@
     margin: 0 auto;
     align-items: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 .logo img {
     width: 150px;
 }
@@ -52,6 +62,7 @@
     display: flex;
     gap: 48px;
     color: #091F5B;
+<<<<<<< HEAD
     font-weight: bold;
 }
 .gnb li::after {
@@ -101,6 +112,15 @@ li.search_box {
     display: none;
 }
 
+=======
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: bold;
+}
+.top_menu ul {
+    display: flex;
+    gap: 15px;
+}
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 
 /* prod_list */
 .prod_list {
@@ -512,6 +532,7 @@ address {
         padding-top: 100%;
         background: #eee;
     }
+<<<<<<< HEAD
 }
 
 @media screen and (max-width:768px) {
@@ -693,4 +714,6 @@ address {
         height: calc(100vh - 81px);
     }
 
+=======
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }

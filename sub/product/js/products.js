@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* header */
 $(document).ready(function(){
     $(".hamburger").click(function(){
@@ -24,6 +25,8 @@ $(document).ready(function(){
 });
 
 
+=======
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 /* 제품 이미지 컬러 변경 */
 document.querySelectorAll('.item_img_box').forEach(product => {
     const mainImage = product.querySelector('.mainImage');
