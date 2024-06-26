@@ -1,4 +1,6 @@
 @charset "utf-8";
+<<<<<<< HEAD
+=======
 html {
     scroll-behavior: smooth;
 }
@@ -13,6 +15,7 @@ body {
     min-height: 100%;
     padding-bottom: 295px;
 }
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 
 .screen_out {
     overflow: hidden;
@@ -24,12 +27,21 @@ body {
 }
 
 h2 {
+<<<<<<< HEAD
+    font-size: 24px;
+    line-height: 40px;
+    font-size: bold;
+    font-family: "Yeseva One", serif;
+    color: #4D4239;
+    margin-bottom: 48px;
+=======
     font-size: 18px;
     line-height: 18px;
     font-size: bold;
     font-family: "Yeseva One", serif;
     color: #4D4239;
     margin-bottom: 55px;
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     text-align: center;
 }
 
@@ -68,7 +80,11 @@ header {
 }
 
 .story {
+<<<<<<< HEAD
+    padding-top: 90px;
+=======
     padding-top: 55px;
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     background: #FCFAF4;
     margin-bottom: 160px;
 }
@@ -165,7 +181,10 @@ header {
     width: 1240px;
     margin: 0 auto;
     position: relative;
+<<<<<<< HEAD
+=======
     z-index: 5;
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .recipe_list {
@@ -240,7 +259,10 @@ header {
 
 .recipe_pop {
     position: fixed;
+<<<<<<< HEAD
+=======
     z-index: 50;
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     top: 0;
     left: 0;
     right: 0;
@@ -330,8 +352,13 @@ header {
     background: #091F5B;
     overflow: hidden;
     height: 295px;
+<<<<<<< HEAD
+    /* position: relative;
+      transform: translateY(-100%); */
+=======
     position: relative;
     transform: translateY(-100%);
+>>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .footer_wrap {
