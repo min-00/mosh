@@ -10,6 +10,13 @@
     <script src="./js/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <script src="./js/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        ScrollReveal({ reset: true });
+        </script>
     </style>
 </head>
 
@@ -52,16 +59,16 @@
 
             <section class="mosh_ex">
                 <h2>"바라볼 때마다 즐거운 디자인”</h2>
-                <p>모슈를 가로지르는 세 가지 단어 디자인/기능/마감<br>
+                <p class="item1">모슈를 가로지르는 세 가지 단어 디자인/기능/마감<br>
                     그중 "바라볼 때마다 즐거운 디자인을 가장 소중한 가치로 여깁니다.</p>
                 <div class="scrollimg_box">
-                    <img src="images/about_detail_main.png" alt="디자인 기능 마감" id="scrollimg">
+                    <img src="images/about_detail_main.png" alt="디자인 기능 마감" id="scrollimg" class="item2">
                 </div>
             </section>
 
             <section class="main_cont">
                 <div class="design_ex">
-                    <div class="design_ex_cont1">
+                    <div class="design_ex_cont1"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
                         <h2>모슈만의<br><span class="blue_text">독보적인<br class="mo"> 제품 디자인</span></h2>
                         <p>최초의 우유병 디자인으로 독보적인 브랜드 컨셉을 자랑합니다.<br>
                             유니크하고 눈길을 끄는 압도적 디자인과 그 컬러감으로<br>
@@ -75,9 +82,9 @@
                         <img src="images/about_detail01.jpg" alt="" class="design_ex_img_main">
                     </div>
                 </div>
-
+                <hr>
                 <div class="function_ex">
-                    <div class="function_ex_cont1">
+                    <div class="function_ex_cont1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
                         <h2>이중 진공 처리로<br><span class="blue_text">뛰어난 보온<br class="mo">보냉 기능</span></h2>
                         <p>모슈의 모든 제품은 스테인리스 진공 이중구조로 겉과 속 사이<br>
                             진공층이 있어 표면 온도가 변하지 않고, 결로현상이 없습니다.<br>
@@ -86,12 +93,12 @@
                         </p>
                     </div>
                     <div class="function_ex_img">
-                        <img src="images/about_detail02.jpg" alt="">
+                        <img src="images/about_detail02.jpg" alt="" >
                     </div>
                 </div>
-
+                <hr>
                 <div class="lid_ex">
-                    <div class="lid_ex_cont1">
+                    <div class="lid_ex_cont1" data-aos="fade-left"  data-aos-duration="1000" data-aos-delay="50">
                         <h2>어떤 내용물도<span class="blue_text"><br>절대 새거나 <br class="mo">흐르지 않는 마감</span></h2>
                         <p>내부에 어떤 내용물이 있어도, 뒤집어서 오랜기간<br>
                             보관하더라도 내용물이 절대 새거나 흐르지 않습니다.<br>
@@ -219,25 +226,27 @@
             return false;
             stop
         });
-    });
 
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            if ($(this).scrollTop() < 500) {
-                $('#scrollimg').fadeOut("slow");
-            } else {
-                $('#scrollimg').fadeIn("slow");
-            }
-            stop
-        });
-
-        // 스크롤 시 나타나는 이미지
+        // 버튼 누르면 600px 밑으로 이동
         $('#scroll').click(function () {
             $('html, body').animate({ scrollTop: 600 }, 800);
             return false;
             stop
         });
 
+        ScrollReveal().reveal('.item1', {
+            delay: 275,
+            duration: 900,
+            reset: true
+        })
+
+        ScrollReveal().reveal('.item2', {
+            delay: 475,
+            duration: 900,
+            reset: true
+        })
+
+        AOS.init();
     });
 
     //옆으로 흐르는 이미지

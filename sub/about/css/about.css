@@ -101,17 +101,26 @@ header {
 
 /* main cont */
 .main_cont {
-    margin: 0 auto;
-    width: 86%;
-    max-width: 1240px;
+    width: 100%;
     margin-bottom: 160px;
 }
 
+.main_cont hr{
+    border: 0;
+    height: 8px;
+    background: #FBFAFA;
+    margin-bottom: 76px;
+}
+
 .design_ex {
+    width: 86%;
+    max-width: 1240px;
+    margin: 0 auto;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 76px;
 }
 
 .design_ex h2 {
@@ -141,11 +150,14 @@ header {
 }
 
 .function_ex {
+    margin: 0 auto;
+    width: 86%;
+    max-width: 1240px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 76px;
 }
 
 .function_ex_img {
@@ -167,6 +179,9 @@ header {
 }
 
 .lid_ex {
+    width: 86%;
+    max-width: 1240px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
