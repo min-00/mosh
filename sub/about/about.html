@@ -13,10 +13,10 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         ScrollReveal({ reset: true });
-        </script>
+    </script>
     </style>
 </head>
 
@@ -68,7 +68,7 @@
 
             <section class="main_cont">
                 <div class="design_ex">
-                    <div class="design_ex_cont1"  data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
+                    <div class="design_ex_cont1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                         <h2>모슈만의<br><span class="blue_text">독보적인<br class="mo"> 제품 디자인</span></h2>
                         <p>최초의 우유병 디자인으로 독보적인 브랜드 컨셉을 자랑합니다.<br>
                             유니크하고 눈길을 끄는 압도적 디자인과 그 컬러감으로<br>
@@ -84,7 +84,7 @@
                 </div>
                 <hr>
                 <div class="function_ex">
-                    <div class="function_ex_cont1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="50">
+                    <div class="function_ex_cont1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                         <h2>이중 진공 처리로<br><span class="blue_text">뛰어난 보온<br class="mo">보냉 기능</span></h2>
                         <p>모슈의 모든 제품은 스테인리스 진공 이중구조로 겉과 속 사이<br>
                             진공층이 있어 표면 온도가 변하지 않고, 결로현상이 없습니다.<br>
@@ -93,12 +93,12 @@
                         </p>
                     </div>
                     <div class="function_ex_img">
-                        <img src="images/about_detail02.jpg" alt="" >
+                        <img src="images/about_detail02.jpg" alt="">
                     </div>
                 </div>
                 <hr>
                 <div class="lid_ex">
-                    <div class="lid_ex_cont1" data-aos="fade-left"  data-aos-duration="1000" data-aos-delay="50">
+                    <div class="lid_ex_cont1" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
                         <h2>어떤 내용물도<span class="blue_text"><br>절대 새거나 <br class="mo">흐르지 않는 마감</span></h2>
                         <p>내부에 어떤 내용물이 있어도, 뒤집어서 오랜기간<br>
                             보관하더라도 내용물이 절대 새거나 흐르지 않습니다.<br>
@@ -171,6 +171,13 @@
                     </div>
                 </div>
             </section>
+
+            <section class="company_map">
+                <h3>찾아오시는 길</h3>
+                <p> 경기도 하남시 광암동 407-2 (주)아시컴퍼니</p>
+                <div id="map" class="map_size">
+                </div>
+            </section>
         </main>
     </div>
     <footer id="footer" class="footer">
@@ -234,6 +241,7 @@
             stop
         });
 
+        // 서서히 나타나는 효과
         ScrollReveal().reveal('.item1', {
             delay: 275,
             duration: 900,
@@ -247,6 +255,7 @@
         })
 
         AOS.init();
+
     });
 
     //옆으로 흐르는 이미지
@@ -263,6 +272,51 @@
             loop: true,
             slidesPerView: "4"
         });
+    });
+</script>
+
+<!-- 카카오지도 -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=79565390cc5e9d4363b2a7a560d18660"></script>
+<script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+        mapOption = {
+            center: new kakao.maps.LatLng(37.526159, 127.172601), // 지도의 중심좌표
+            level: 4 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var imageSrc = 'images/about_map_marker.png', // 마커이미지의 주소
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
+        imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+        markerPosition = new kakao.maps.LatLng(37.526159, 127.172601); // 마커가 표시될 위치입니다
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        position: markerPosition,
+        image: markerImage // 마커이미지 설정 
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+
+    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    var content = '<div class="customoverlay">' +
+        '    <span class="title">아시컴퍼니</span>' +
+        '</div>';
+
+    // 커스텀 오버레이가 표시될 위치입니다 
+    var position = new kakao.maps.LatLng(37.526159, 127.172601);
+
+    // 커스텀 오버레이를 생성합니다
+    var customOverlay = new kakao.maps.CustomOverlay({
+        map: map,
+        position: position,
+        content: content,
+        yAnchor: 1
     });
 </script>
 
