@@ -94,3 +94,14 @@ $(document).ready(function(){
         
     });
 });
+
+
+/*제품 상세페이지 동시 스크롤*/
+$(document).ready(function(){
+    $(".left").on("scroll", function(){
+        $(".right").scrollTop($(this).scrollTop());
+    });
+    $(".right").on("scroll", function(){
+        $(".left").scrollTop($(this).scrollTop());
+    });
+});
