@@ -81,6 +81,14 @@ p{
     line-height: 20px;
     font-weight: bold;}
 
+    .screen_out {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
 
 /* color system */
 /* grayscale */
