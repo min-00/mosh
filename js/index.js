@@ -69,8 +69,6 @@ ScrollReveal().reveal('',);
         spaceBetween: 20,
         freeMode: true,
         loop :true,
-<<<<<<< HEAD
-=======
         watchSlidesProgress :true,
         pagination: {
             el: ".swiper-pagination",
@@ -80,7 +78,6 @@ ScrollReveal().reveal('',);
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     });
 
 });

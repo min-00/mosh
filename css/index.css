@@ -4,10 +4,6 @@ html {
     scroll-behavior: smooth;
 }
 
-<<<<<<< HEAD
-body {
-    width: 100%;
-=======
 html,
 body {
     width: 100%;
@@ -18,7 +14,6 @@ body {
     height: auto;
     min-height: 100%;
     padding-bottom: 295px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 h2 {
@@ -165,11 +160,7 @@ header {
 }
 
 .about {
-<<<<<<< HEAD
-    height: 1240px;
-=======
     height: 1160px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     background: #FCFAF4;
     margin-bottom: 120px;
     position: relative;
@@ -184,10 +175,7 @@ header {
 .about h2 {
     padding-top: 60px;
     box-sizing: border-box;
-<<<<<<< HEAD
-=======
     margin-bottom: 80px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .about h3 {
@@ -197,46 +185,12 @@ header {
     color: #091F5B;
 }
 
-<<<<<<< HEAD
-.about_txt>div {
-    height: 180px;
-    margin: 16px auto;
-    background: url(../images/logo.svg) no-repeat center;
-}
-
-.about_items {
-    position: static;
-    width: 400px;
-    height: 500px;
-    margin: 0 auto;
-    background: url(../images/main_about_item01.png) no-repeat center;
-}
-
-.about_circle {
-    width: 610px;
-    height: 610px;
-    position: absolute;
-    z-index: -1;
-    background: url(../images/Ellipse.svg) no-repeat;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-=======
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 .about_cont {
     width: 1280px;
     height: 610px;
     margin: 0 auto;
     position: relative;
 }
-<<<<<<< HEAD
-
-.about_design {
-    position: absolute;
-    left: 132px;
-=======
 .about_cont>ul>li>img{
     width: 100%;
 }
@@ -272,21 +226,10 @@ header {
     width: 100px;
     position: absolute;
     left: 206px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     top: 0;
 }
 
 .about_function {
-<<<<<<< HEAD
-    position: absolute;
-    top: 50px;
-    right: 80px;
-}
-
-.about_detail {
-    position: absolute;
-    left: 128px;
-=======
     width: 100px;
     position: absolute;
     top: 150px;
@@ -298,41 +241,26 @@ header {
     position: absolute;
     left: 188px;
     bottom: 50px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .about_more {
     position: absolute;
-<<<<<<< HEAD
-    bottom: 50px;
-    right: 178px;
-=======
     bottom: 26px;
     right: 260px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .about_txt_mov {
     position: absolute;
     bottom: 0;
     width: 100%;
-<<<<<<< HEAD
-    height: 120px;
-=======
     height: 100px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     background: #344EAD;
 }
 
 .about_txt_mov p {
-<<<<<<< HEAD
-    font-size: 56px;
-    padding: 20px 0;
-=======
     font-size: 48px;
     line-height: 48px;
     padding: 26px 0;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     color: #fff;
 }
 
@@ -386,23 +314,14 @@ header {
 
 .products_wrap>a {
     position: absolute;
-<<<<<<< HEAD
-    top: 20px;
-=======
     top: 0px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     right: 20px;
 }
 
 .story {
     text-align: center;
-<<<<<<< HEAD
-    margin-bottom: 100px;
-    height: 960px;
-=======
     margin-bottom: 120px;
     height: 920px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     background: #FCFAF4;
     position: relative;
 }
@@ -482,22 +401,14 @@ header {
     width: 650px;
     height: 150px;
     position: absolute;
-<<<<<<< HEAD
-    bottom: 160px;
-=======
     bottom: 120px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     right: 50%;
     background: url(../images/Cook_with.svg) no-repeat;
 }
 
 .story_wrap>a {
     position: absolute;
-<<<<<<< HEAD
-    top: -80px;
-=======
     top: -90px;
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
     right: 20px;
 }
 
@@ -564,13 +475,8 @@ header {
     background: #091F5B;
     overflow: hidden;
     height: 295px;
-<<<<<<< HEAD
-    /* position: relative;
-      transform: translateY(-100%); */
-=======
     position: relative;
     transform: translateY(-100%);
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 }
 
 .footer_wrap {
