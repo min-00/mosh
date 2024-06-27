@@ -1,32 +1,3 @@
-<<<<<<< HEAD
-/* header */
-$(document).ready(function(){
-    $(".hamburger").click(function(){
-        $(".hamburger").toggleClass("x_hamburger");
-        $(".bg").toggleClass("bg_on");
-        $(".top_menu").toggleClass("top_menu_on");
-        $(".gnb").toggleClass("gnb_on");
-    });
-
-    var header = $('#header');
-    var headerOffset = header.outerHeight();
-
-    $(window).scroll(function() {
-
-        if ($(window).scrollTop() > headerOffset) {
-            header.addClass('fixed');
-            $("body").css({"padding-top": headerOffset})
-        } else {
-            header.removeClass('fixed');
-            $("body").css({"padding-top": ""})
-        }
-        
-    });
-});
-
-
-=======
->>>>>>> a8f2ebc9230563a1607b302b0230604f8e6cae00
 /* 제품 이미지 컬러 변경 */
 document.querySelectorAll('.item_img_box').forEach(product => {
     const mainImage = product.querySelector('.mainImage');
