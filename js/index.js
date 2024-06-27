@@ -7,12 +7,6 @@
             alert("준비중인 페이지입니다.");
         }
     );
-    $('.notice').click(
-        function(){
-            alert("준비중인 페이지입니다.");
-        }
-    );
-    
         // main slider
     var swiperMain = new Swiper(".mainSwiper", {
         slidesPerView : 1,

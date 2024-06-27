@@ -2,25 +2,15 @@
 html {
     scroll-behavior: smooth;
 }
-
+/*footer 바닥에 붙게*/
 html,
 body {
     height: 100%;
 }
-
 #wrapper {
     height: auto;
     min-height: 100%;
     padding-bottom: 295px;
-}
-
-.screen_out {
-    overflow: hidden;
-    position: absolute;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    text-indent: -9999px;
 }
 
 h2 {
@@ -55,11 +45,6 @@ header {
     gap: 48px;
     color: #091F5B;
     font-weight: bold;
-}
-
-/* reset a css삭제시 같이 삭제 */
-.gnb ul a {
-    font-size: 16px;
 }
 
 .top_menu ul {
@@ -159,6 +144,15 @@ header {
     background: url(../images/down-arrow.svg) no-repeat;
     background-size: cover;
     cursor: pointer;
+    animation: down_arrow 2s linear infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes down_arrow {
+    25%{transform:translate(0,8px);}
+    50%{transform:translate(0,0);}
+    75%{transform:translate(0,8px);}
+    100%{transform:translate(0,0);}
 }
 
 .recipe {
@@ -166,6 +160,7 @@ header {
     margin: 0 auto;
     position: relative;
     z-index: 5;
+    margin-bottom: 120px;
 }
 
 .recipe_list {
@@ -238,6 +233,7 @@ header {
     width: 100%;
 }
 
+/* 팝업창 */
 .recipe_pop {
     position: fixed;
     z-index: 50;
@@ -247,83 +243,100 @@ header {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     display: none;
-}
-
-.recipe_slider_wrap {
-    position: absolute;
-    width: 1200px;
-    height: 660px;
-    background: #fff;
-    border: 1px solid tomato;
-    border-radius: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-
-.recipe_slider>li>dl {
-    width: 1200px;
-    height: 660px;
-    padding: 20px;
-    box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 .recipe_pop .btn {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    border: none;
-    background-color: white;
+    border: 1px solid #344EAD;
     cursor: pointer;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 9;
+    z-index: 30;
 }
 
 .pre_btn {
+    background: url(../images/left-arrow.svg) no-repeat center;
     left: 12%;
 }
 
 .next_btn {
     right: 12%;
+    background: url(../images/right-arrow.svg)no-repeat center;
 }
 
 .closed_btn {
     position: absolute;
-    top: 4%;
-    right: 2%;
+    top: 10px;
+    right: 10px;
     z-index: 10;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    width: 24px;
+    height: 24px;
     border: none;
-    background-color: white;
+    background:url(../images/x-circle.svg) no-repeat center;
+    background-size: cover;
     cursor: pointer;
+}
+.recipe_lay {
+    position: absolute;
+    background: #fff;
+    border: 2px solid #344EAD;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.recipe_slider_wrap{
+    width: 1000px;
+    height: 600px;
+    overflow: hidden; 
+}
+.recipe_slider>li {
+    width: 1000px;
+    height: 600px;
+    display: none;
+    overflow: hidden;
+    position: absolute;
+}
+.recipe_slider>li>dl{
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.food_title{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-top: 4px double #344EAD;
+    border-bottom: 4px double #344EAD;
+    padding: 16px 0;
+    box-sizing: border-box;
 }
 
 .food_img {
-    width: 400px;
-    height: 400px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 428px;
+    height: 428px;
     margin: 0 auto;
     border-radius: 20px;
     overflow: hidden;
-    background: #000;
+}
+.food_cont{
+    width: 460px;
+    height: 428px;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
 }
 
 .recipe_slider>li>dl>dd>img {
     width: 100%;
 }
-
-.paging_wrap {
-    width: 200px;
-    height: 24px;
-    margin: 0 auto;
-    background: #ccc;
-    margin-bottom: 160px;
-}
-
 
 .footer {
     width: 100%;
