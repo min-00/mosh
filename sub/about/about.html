@@ -14,6 +14,7 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
     <script>
         ScrollReveal({ reset: true });
     </script>
@@ -49,12 +50,11 @@
         <main>
             <section class="main_img">
                 <div class="main_img_wrap">
-                    <h2><img src="images/logo_white.svg" alt="mosh" class="main_img_logo"></h2>
+                    <h2><img src="images/logo_white.svg" alt="모슈 소개" class="main_img_logo"></h2>
                     <p>모슈는 2014년부터 진공 기능 기반의 다양한 키친웨어를 선보이고 있습니다.<br>
                         삶의 양식이 변화함에 따라 뛰어난 기능과 더불어 더욱 새로운 모습으로<br>
                         깊은 감동과 놀라움을 드리도록 노력하고 있습니다.</p>
                 </div>
-                <img src="../about/images/scrolldown.png" alt="" id="scroll" class="scroll">
             </section>
 
             <section class="mosh_ex">
@@ -64,6 +64,8 @@
                 <div class="scrollimg_box">
                     <img src="images/about_detail_main.png" alt="디자인 기능 마감" id="scrollimg" class="item2">
                 </div>
+                <div id="scroll" class="scroll"></div>
+                <!-- <img src="../about/images/scrolldown.png" alt="" id="scroll" class="scroll"> -->
             </section>
 
             <section class="main_cont">
@@ -229,17 +231,11 @@
     $(document).ready(function () {
         // 스크롤 아이콘 클릭 시 원하는 위치로 이동
         $('#scroll').click(function () {
-            $('html, body').animate({ scrollTop: 600 }, 800);
+            $('html, body').animate({ scrollTop: 800 }, 1000);
             return false;
             stop
         });
 
-        // 버튼 누르면 600px 밑으로 이동
-        $('#scroll').click(function () {
-            $('html, body').animate({ scrollTop: 600 }, 800);
-            return false;
-            stop
-        });
 
         // 서서히 나타나는 효과
         ScrollReveal().reveal('.item1', {
@@ -256,6 +252,14 @@
 
         AOS.init();
 
+        // 로띠 애니메이션
+        var lottieAni = bodymovin.loadAnimation({
+            container: document.getElementById('scroll'), // 필수, 애니메이션 들어가는 곳 
+            path: 'https://lottie.host/140aa8a5-1790-4201-bfef-4cfa70c29723/oM6OES6hdA.json', // 필수(url 또는 json파일 다운로드 경로)
+            renderer: 'svg', // 필수
+            loop: true, // 반복재생
+            autoplay: true // 자동재생
+        });
     });
 
     //옆으로 흐르는 이미지

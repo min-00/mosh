@@ -49,16 +49,20 @@ header {
 
 /* main img */
 .main_img {
-    height: 540px;
+    height: 740px;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/about_mainimg01.jpg) no-repeat center fixed;
     background-size: cover;
     z-index: 10;
+    transition-property: height;
+      transition-duration: 2s, 2s;
 }
 
 .main_img_wrap {
-    padding-top: 160px;
+    padding-top: 235px;
     box-sizing: border-box;
+    transition-property: padding-top;
+    transition-duration: 1s, 1s;
 }
 
 .main_img_logo {
@@ -69,9 +73,6 @@ header {
     color: white;
 }
 
-.scroll {
-    margin-top: 150px;
-}
 
 /* mosh_ex */
 .mosh_ex {
@@ -95,10 +96,18 @@ header {
     margin-bottom: 56px;
 }
 
-.mosh_ex img {
+.item2{
     width: 50%;
 }
 
+.scroll{
+    position: absolute;
+    top: -40px;
+    width: 32px;
+    height: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* main cont */
 .main_cont {
     width: 100%;
@@ -425,6 +434,27 @@ address {
 }
 
 @media screen and (max-width:768px) {
+    .main_img {
+        height: 500px;
+        transition-property: height;
+          transition-duration: 1s, 1s;
+    }
+
+    .main_img_wrap {
+        padding-top: 175px;
+        transition-property: padding-top;
+        transition-duration: 1s, 1s;
+    }
+
+    .scroll{
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
+    }
+
     .mosh_ex h2 {
         font-size: 24px;
         line-height: 30px;
