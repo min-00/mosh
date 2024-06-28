@@ -315,7 +315,10 @@ header {
     text-align: center;
     margin-bottom: 160px;
 }
-.company_map h3, p {
+.company_map h3 {
+    margin-bottom: 28px;
+}
+.company_map p {
     margin-bottom: 28px;
 }
 
