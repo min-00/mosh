@@ -30,11 +30,10 @@ $(document).ready(function () {
             // hide 코드가 빠질 경우 0번 인덱스만 보임
             recipeCont.hide();
             recipeCont.eq(cont).stop().fadeIn();
-
     /*다음*/
         $('.next_btn').on('click',
         function(){
-            console.log(cont);
+            //console.log(cont);
             recipeCont.eq(cont).stop().fadeOut();
             if(cont>recipeList.length-1){
             cont = 0;}
@@ -52,8 +51,11 @@ $(document).ready(function () {
             recipeCont.eq(cont).stop().fadeOut();
             if(cont<0){
                 cont+1;
-            };
-            i=cont--;
+            }
+            else{
+                cont-1;
+            }
+            i=(cont--)*-1;
             recipeCont.hide();
             recipeCont.eq(i).stop().fadeIn();
         });
