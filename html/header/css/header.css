@@ -11,12 +11,13 @@
 #header {
     background: #fff;
     transition: .3s;
+    border-bottom: 1px solid #EDF0F5;
 }
 .fixed {
     position: fixed;
     top: 0;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #EDF0F5;
     transition: .3s;
 }
@@ -91,6 +92,9 @@ li.search_box {
 @media screen and (max-width:768px) {
     /*header*/
     
+    #header {
+        border-bottom: 1px solid #EDF0F5;
+    }
     #header.fixed {
         position: fixed;
         top: 0;
@@ -98,9 +102,14 @@ li.search_box {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
     h1.logo {
         position: relative;
@@ -242,11 +251,10 @@ li.search_box {
     
     
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;

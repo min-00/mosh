@@ -25,18 +25,20 @@ $(document).ready(function(){
 
 
 /* 제품 이미지 컬러 변경 */
-document.querySelectorAll('.item_img_box').forEach(product => {
-    const mainImage = product.querySelector('.mainImage');
-    const originalSrc = mainImage.src;
+$('.item_img_box').each(function() {
+    var product = $(this);
+    var mainImage = product.find('.mainImage');
+    var originalSrc = mainImage.attr('src');
 
-    product.querySelectorAll('.color-option').forEach(option => {
-      option.addEventListener('mouseover', () => {
-        const color = option.getAttribute('data-color');
-        mainImage.src = `images/products_${color}.png`;
-      });
-      option.addEventListener('mouseout', () => {
-        mainImage.src = originalSrc; //원본 이미지로 복원
-      });
+    product.find('.color-option').each(function() {
+        var option = $(this);
+        option.on('mouseover', function() {
+            var color = option.data('color');
+            mainImage.attr('src', 'images/products_' + color + '.png');
+        });
+        option.on('mouseout', function() {
+            mainImage.attr('src', originalSrc); // 원본 이미지로 복원
+        });
     });
 });
 
