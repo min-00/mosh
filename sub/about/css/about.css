@@ -4,44 +4,6 @@ body {
     height: 100%;
 }
 
-.screen_out {
-    overflow: hidden;
-    position: absolute;
-    width: 0;
-    height: 0;
-    line-height: 0;
-    text-indent: -9999px;
-}
-
-header {
-    background: #fff;
-}
-
-.header_wrap {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.logo img {
-    width: 150px;
-}
-
-.gnb ul {
-    display: flex;
-    gap: 48px;
-    color: #091F5B;
-    font-family: 'Spoqa Han Sans Neo';
-    font-weight: bold;
-}
-
-.top_menu ul {
-    display: flex;
-    gap: 15px;
-}
-
 /* 공통 */
 .blue_text {
     color: #344EAD;
@@ -360,6 +322,11 @@ header {
 }
 
 /* footer  */
+html,
+body {
+    height: 100%;
+}
+
 #wrapper {
     height: auto;
     min-height: 100%;
@@ -372,16 +339,18 @@ header {
     overflow: hidden;
     height: 295px;
     position: relative;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
 }
 
 .footer_wrap {
     display: flex;
     width: 86%;
+    max-width: 1280px;
     justify-content: space-between;
     margin: 0 auto;
     align-items: flex-start;
-    padding-top: 70px;
+    padding: 70px 0;
+    box-sizing: border-box;
 }
 
 .service_num {
@@ -396,6 +365,7 @@ header {
 address {
     color: white;
 }
+
 
 .logo img {
     width: 150px;
@@ -418,6 +388,54 @@ address {
     margin-bottom: 36px;
 }
 
+@media screen and (max-width:1080px) { 
+#wrapper {
+    padding-bottom: 600px;
+}
+
+.logo{
+    margin-bottom: 10px;
+}
+.footer {
+    height:600px;
+}
+
+    footer p {
+         display: inline-block;
+    }
+
+    footer h5 {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: bold;
+    }
+
+    .service_num {
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: medium;
+    }
+
+    .footer_wrap {
+    padding: 35px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.service, .info, .sns_bank_wrap{
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 0.5px solid white;
+}
+
+
+.sns,
+.footer_bottom {
+    margin-bottom: 15px;
+}
+}
 /* 1080 */
 @media screen and (max-width:1080px) {
 

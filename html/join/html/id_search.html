@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"admin" 검색결과</title>
+    <link rel="stylesheet" href="../css/join.css">
+    <style>
+        body{
+            font-size: 18px;
+        }
+        .suc_message {
+            margin-top: 2px;
+            font-size: 18px;
+            color: #4876ef;
+            font-weight: 500;
+        }
+
+        .fail_message {
+            margin-top: 2px;
+            font-size: 18px;
+            color: #ef4848;
+            font-weight: 500;
+        }
+
+    </style>
+    <script>
+        function return_id(){
+            opener.document.getElementById("login").value = "admin";
+            window.close();
+        }
+    </script>
+</head>
+
+<body>
+    <h3>"admin" 검색결과</h3>
+    <p>입력한 아이디는 사용할 수
+        <span class="fail_message">없는</span>
+        <span class="suc_message">있는</span>
+        아이디입니다.
+    </p>
+
+    <a href="#none" class="btn" onclick="return_id()">사용하기</a>
+    <a href="#none" class="btn" onclick="history.back()">다시검색</a>
+</body>
+
+</html>

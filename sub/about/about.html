@@ -7,10 +7,12 @@
     <title>about</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/header.css">
     <script src="./js/jquery-3.7.1.min.js"></script>
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <script src="./js/swiper-bundle.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/header.js"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -25,26 +27,42 @@
     <div id="wrapper">
         <header id="header" class="header">
             <div class="header_wrap">
-                <h1 class="logo"><a href="../../index.html"><img src="images/logo.svg" alt="모슈"></a></h1>
-
+                <h1 class="logo"><a href="../../index.html"><img src="./images/logo.svg" alt="모슈"></a></h1>
+                
                 <nav class="gnb">
                     <h2 class="screen_out">주요 메뉴</h2>
                     <ul>
-                        <li><a href="../about/about.html">ABOUT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                         <li><a href="../story/story.html">STORY</a></li>
                         <li><a href="../product/product.html">PRODUCTS</a></li>
-                        <li><a href="#none">NOTICES</a></li>
+                        <li><a href="../notice/notice.html">NOTICES</a></li>
                     </ul>
                 </nav>
-
+    
                 <div class="top_menu">
                     <h2 class="screen_out">유틸 메뉴</h2>
                     <ul>
-                        <li><a href="#none"><img src="images/person-fill.png" alt=""></a></li>
-                        <li><a href="#none"><img src="images/bag-fill.png" alt=""></a></li>
-                        <li><a href="#none"><img src="images/search.png" alt=""></a></li>
+                        <li><a href="../../html/join/join.html"><img src="./images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
+                        <li><a href="#none"><img src="./images/bag-fill.png" alt="장바구니">장바구니</a></li>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/search.png" alt="검색">
+                            </a>
+                        </li>
+                        <li class="search_box">
+                            <label for="search" class="screen_out">검색</label>
+                                <input type="search" id="search" name="search">
+                                <button type="submit"><img src="./images/search.png" alt=""></button>
+                        </li>
                     </ul>
                 </div>
+    
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="bg"><img src="./images/logo_white.svg" alt=""></div>
             </div>
         </header>
         <main>
@@ -203,8 +221,7 @@
                 <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
                 <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
             </div>
-
-            <div>
+            <div class="sns_bank_wrap">
                 <div class="sns">
                     <h5>FOLLOW US</h5>
                     <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
@@ -221,9 +238,10 @@
                 <p><a href="#none">COMPANY</a></p>
                 <p><a href="#none">AGREEMENT</a></p>
                 <p><a href="#none">GUIDE</a></p>
-                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="">
                 <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
             </div>
+
         </div>
     </footer>
 </body>

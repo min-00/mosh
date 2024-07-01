@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id 검색</title>
+    <link rel="stylesheet" href="../css/join.css">
+    <script>
+                function id_check(){
+            document.getElementById("input_id").value = "admin";
+        }
+    </script>
+</head>
+<body>
+    <form action="id_search_result" method="get">
+        <fieldset>
+            <legend>아이디검색</legend>
+            <label for="input_id" class="hide">입력</label>
+            <input type="text" value="admin" name="" id="input_id" class="input_box_login" type="text"
+            placeholder="4 ~ 20자의 영문, 숫자만 사용가능" style="margin-bottom: 5px;">
+            <a href="id_search.html" type="submit"  class="btn" style="width: 310px;" >검색</a>
+        </fieldset>
+    </form>
+</body>
+</html>

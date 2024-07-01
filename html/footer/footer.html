@@ -35,12 +35,13 @@
             overflow: hidden;
             height: 295px;
             position: relative;
-            transform: translateY(-100%);
+            /* transform: translateY(-100%); */
         }
 
         .footer_wrap {
             display: flex;
             width: 86%;
+            max-width: 1280px;
             justify-content: space-between;
             margin: 0 auto;
             align-items: flex-start;
@@ -49,14 +50,15 @@
         }
 
         .service_num {
-            font-size: 24px ;
+            font-size: 24px;
             line-height: 30px;
             font-size: bold;
         }
 
         .footer h5,
-       .footer a,
-        .footer p, address {
+        .footer a,
+        .footer p,
+        address {
             color: white;
         }
 
@@ -80,6 +82,55 @@
         .sns,
         .footer_bottom {
             margin-bottom: 36px;
+        }
+
+        @media screen and (max-width:1080px) { 
+        #wrapper {
+            padding-bottom: 600px;
+        }
+
+        .logo{
+            margin-bottom: 10px;
+        }
+        .footer {
+            height:600px;
+        }
+
+            footer p {
+                 display: inline-block;
+            }
+
+            footer h5 {
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: bold;
+            }
+
+            .service_num {
+                font-size: 16px;
+                line-height: 32px;
+                font-weight: medium;
+            }
+
+            .footer_wrap {
+            padding: 35px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service, .info, .sns_bank_wrap{
+            width: 100%;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 0.5px solid white;
+        }
+
+  
+        .sns,
+        .footer_bottom {
+            margin-bottom: 15px;
+        }
         }
     </style>
 </head>
@@ -106,8 +157,7 @@
                 <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
                 <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
             </div>
-
-            <div>
+            <div class="sns_bank_wrap">
                 <div class="sns">
                     <h5>FOLLOW US</h5>
                     <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
@@ -124,7 +174,7 @@
                 <p><a href="#none">COMPANY</a></p>
                 <p><a href="#none">AGREEMENT</a></p>
                 <p><a href="#none">GUIDE</a></p>
-                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="">
                 <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
             </div>
 
