@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    ScrollReveal().reveal('.story_cont>div',{
+        delay: 500,
+        duration : 1400,
+        distance : '60px',
+        interval : 120,
+});
+
     const recipeList = $("#recipeList>li");
     const recipeCont = $("#recipeCont>li");
     let cont =0;
@@ -20,7 +27,7 @@ $(document).ready(function () {
 
 
     // 레시피 팝업
-    recipeList.on('click',
+    recipeList.off('click').on('click',
         function(){
             // 배경+버튼 보이기
             $('.recipe_pop').stop().fadeIn();
@@ -31,7 +38,7 @@ $(document).ready(function () {
             recipeCont.hide();
             recipeCont.eq(cont).stop().fadeIn();
     /*다음*/
-        $('.next_btn').on('click',
+        $('.next_btn').off('click').on('click',
         function(){
             //console.log(cont);
             recipeCont.eq(cont).stop().fadeOut();
@@ -45,17 +52,16 @@ $(document).ready(function () {
             recipeCont.eq(i).stop().fadeIn();
         });
     
-    $('.pre_btn').on('click',
+    $('.pre_btn').off('click').on('click',
         function () {
-            console.log(cont);
             recipeCont.eq(cont).stop().fadeOut();
             if(cont<0){
-                cont+1;
+                cont = recipeList.length-1;
             }
             else{
-                cont-1;
+                cont+2;
             }
-            i=(cont--)*-1;
+            i =cont--;
             recipeCont.hide();
             recipeCont.eq(i).stop().fadeIn();
         });

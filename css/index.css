@@ -16,22 +16,6 @@ body {
     padding-bottom: 295px;
 }
 
-h2 {
-    font-size: 24px;
-    line-height: 40px;
-    font-size: bold;
-    font-family: "Yeseva One", serif;
-    color: #4D4239;
-    margin-bottom: 48px;
-}
-
-.btn {
-    padding: 20px 40px 20px 20px;
-    border: 1px solid #746661;
-    border-radius: 40px;
-    font-weight: normal;
-    background: url(../images/right-arrow.svg) no-repeat right;
-}
 
 .screen_out {
     overflow: hidden;
@@ -41,15 +25,18 @@ h2 {
     line-height: 0;
     text-indent: -9999px;
 }
+/* header */
+
 #header {
     background: #fff;
     transition: .3s;
+    border-bottom: 1px solid #EDF0F5;
 }
 .fixed {
     position: fixed;
     top: 0;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #EDF0F5;
     transition: .3s;
 }
@@ -124,6 +111,9 @@ li.search_box {
 @media screen and (max-width:768px) {
     /*header*/
     
+    #header {
+        border-bottom: 1px solid #EDF0F5;
+    }
     #header.fixed {
         position: fixed;
         top: 0;
@@ -131,9 +121,14 @@ li.search_box {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
     h1.logo {
         position: relative;
@@ -275,11 +270,10 @@ li.search_box {
     
     
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;
@@ -297,7 +291,6 @@ li.search_box {
     .bg_on {
         height: calc(100vh - 81px);
     }
-
 }
 
 .slider {
@@ -365,6 +358,29 @@ li.search_box {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
+}
+
+.item_txt{
+    width:295px;
+    height: 400px;
+    background:rgba(366,366,366,0.2);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+}
+.item_txt i{
+    color: #091F5B;
+    font-style: normal;
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.best_ls li:hover .item_txt{
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .item_stk {
@@ -639,7 +655,7 @@ li.search_box {
     width: 200px;
     height: 200px;
     background: url(../images/mosh_txtcircle_brown.svg);
-    animation: rotate_image 10s linear infinite;
+    animation: rotate_image 8s linear infinite;
     transform-origin: 50% 50%;
 }
 
@@ -685,13 +701,46 @@ li.search_box {
     display: block;
 }
 
-/*반응형*/
-@media screen and (min-width: 1280px) {
-    .mainSwiper {
-        height: 700px;
-    }
+h2 {
+    font-size: 24px;
+    line-height: 40px;
+    font-size: bold;
+    font-family: "Yeseva One", serif;
+    color: #4D4239;
+    margin-bottom: 48px;
 }
 
+.btn{
+    padding: 20px 40px 20px 20px;
+    border: 1px solid #746661;
+    border-radius: 40px;
+    width: 88px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btn span:after {
+    content:">>";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    right: 0;
+}
 
 .footer {
     width: 100%;
@@ -745,4 +794,11 @@ address {
 .sns,
 .footer_bottom {
     margin-bottom: 36px;
+}
+
+/*반응형*/
+@media screen and (min-width: 1280px) {
+    .mainSwiper {
+        height: 700px;
+    }
 }
