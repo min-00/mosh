@@ -24,7 +24,7 @@ body, html {
     position: fixed;
     top: 0;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #EDF0F5;
     transition: .3s;
 }
@@ -117,10 +117,18 @@ li.search_box {
 
 /*left*/
 
+.left {
+    display: flex;
+    justify-content: flex-end
+}
 .detail_image {
     width: 100%;
-    height: 4000px;
-    background: #eee;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.detail_image img {
+    width: 100%;
 }
 
 /*right - 정보*/
@@ -168,10 +176,10 @@ li.search_box {
     gap: 4px;
 }
 .color_list li {
-    width: 36px;
-    height: 36px;
+    width: 25px;
+    height: 25px;
     background: #eee;
-    border-radius: 10px;
+    border-radius: 5px;
     box-sizing: border-box;
 }
 .color_list li.active {
@@ -211,9 +219,13 @@ li.search_box {
     font-weight: 300;
     width: 36px;
     height: 36px;
-    border-radius: 50%;
+    border-radius: 36px;
     border: 1px solid #EDF0F5;
     color: #757575;
+    transition: .3s;
+}
+.quantity_box button:hover {
+    background: #f7f8fa;
 }
 .quantity_box button.add {
     width: 50px;
@@ -229,7 +241,7 @@ li.search_box {
 /* selected_item_box */
 .selected_item_box {
     width: 100%;
-    padding: 20px;
+    padding: 20px 30px;
     background: #FBFAFA;
     border-radius: 15px;
     box-sizing: border-box;
@@ -285,6 +297,11 @@ p.total_price {
     font-weight: 300;
     padding: 15px 0;
     margin-bottom: 7px;
+    border-radius: 10px;
+    transition: .2s;
+}
+.btn_box .buy:hover {
+    background: #091F5B;
 }
 .btn_wrap {
     display: flex;
@@ -297,6 +314,7 @@ p.total_price {
     border: 1px solid #EDF0F5;
     color: #C1C1C1;
     font-weight: 300;
+    border-radius: 10px;
 }
 
 /* accordion */
@@ -307,6 +325,7 @@ p.total_price {
     align-items: center;
     padding: 10px;
     border-bottom: 1px solid #EDF0F5;
+    cursor: pointer;
 }
 .display .title.active p, .display .title.active button {
     color: #091F5B;
@@ -421,9 +440,14 @@ address {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
     h1.logo {
         position: relative;
@@ -565,11 +589,10 @@ address {
     
     
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;
@@ -588,4 +611,64 @@ address {
         height: calc(100vh - 81px);
     }
 
+
+    /* main */
+
+    /* left */
+    .left {
+        width: 60%;
+    }
+    /* right */
+    .right {
+        width: 40%;
+        padding-left: 0;
+    }
+    /* title_box */
+    .title_box .category {
+        margin-top: 20px;
+    }
+    .title_box .item_name {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .title_box .price {
+        font-size: 16px;
+    }
+    .title_box .price span {
+        font-size: 14px;
+    }
+
+    /* quantity_box */
+    .quantity_box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .quantity_box button {
+        width: 25px;
+        height: 25px;
+    }
+    .quantity_box #quantity {
+        font-size: 16px;
+    }
+    .quantity_box .quantity_price {
+        font-size: 16px;
+    }
+
+    /* selected_item_box */
+    .selected_item_box div {
+        flex-wrap: wrap;
+    }
+
+    /* total_box */
+    .total_box p {
+        font-size: 14px;
+    }
+
+    /* btn_box */
+    .btn_box .buy {
+        font-size: 14px;
+    }
+    .btn_box .btn_wrap button {
+        font-size: 14px;
+    }
 }

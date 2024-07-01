@@ -1,3 +1,27 @@
+$(document).ready(function(){
+    $(".hamburger").click(function(){
+        $(".hamburger").toggleClass("x_hamburger");
+        $(".bg").toggleClass("bg_on");
+        $(".top_menu").toggleClass("top_menu_on");
+        $(".gnb").toggleClass("gnb_on");
+    });
+
+    var header = $('#header');
+    var headerOffset = header.outerHeight();
+
+    $(window).scroll(function() {
+
+        if ($(window).scrollTop() > headerOffset) {
+            header.addClass('fixed');
+            $("body").css({"padding-top": headerOffset})
+        } else {
+            header.removeClass('fixed');
+            $("body").css({"padding-top": ""})
+        }
+        
+    });
+});
+
 /*제품 상세페이지 동시 스크롤*/
 $(document).ready(function(){
     $(".left").on("scroll", function(){
@@ -40,6 +64,8 @@ $(document).ready(function(){
 
         var color = $(this).data("color");
         $(".color_box p span").text("- " + color);
+
+        $(".thumb_box img").attr("src", "../images/products_tumbler_nmt_600_" + color + ".png")
     });
 });
 
@@ -85,7 +111,7 @@ $(document).ready(function() {
         $(".selected_item_box").append(newDiv);
 
 
-        
+        // 모든 수량 합
         let sum = 0;
         $(".selected_item_box .item_num span").each(function(){
             sum += parseInt($(this).text());
