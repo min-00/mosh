@@ -15,6 +15,8 @@ body {
     padding-bottom: 295px;
 }
 
+/* header */
+
 .screen_out {
     overflow: hidden;
     position: absolute;
@@ -23,7 +25,6 @@ body {
     line-height: 0;
     text-indent: -9999px;
 }
-
 /* header */
 
 #header {
@@ -31,22 +32,19 @@ body {
     transition: .3s;
     border-bottom: 1px solid #EDF0F5;
 }
-
 .fixed {
     position: fixed;
     top: 0;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #EDF0F5;
     transition: .3s;
 }
-
 .hide {
     transform: translateY(-100%);
 }
 
-
-.header_wrap {
+.header_wrap{
     display: flex;
     justify-content: space-between;
     max-width: 95%;
@@ -57,14 +55,12 @@ body {
 .logo img {
     width: 150px;
 }
-
 .gnb ul {
     display: flex;
     gap: 48px;
     color: #091F5B;
     font-weight: bold;
 }
-
 .gnb li::after {
     content: "";
     width: 0;
@@ -78,35 +74,28 @@ body {
     border-radius: 3px;
     transition: .3s;
 }
-
 .gnb li:hover::after {
     width: 100%;
 }
-
-.gnb li:hover {
+.gnb li:hover{
     color: #344EAD;
 }
-
 .top_menu ul {
     position: relative;
     display: flex;
     gap: 20px;
     align-items: center;
 }
-
 .top_menu li {
     display: flex;
     font-size: 0;
 }
-
 .top_menu img {
     width: 18px;
 }
-
 .top_menu li:first-child img {
     width: 16px;
 }
-
 li.search_box {
     display: none;
 }
@@ -121,7 +110,10 @@ li.search_box {
 
 @media screen and (max-width:768px) {
     /*header*/
-
+    
+    #header {
+        border-bottom: 1px solid #EDF0F5;
+    }
     #header.fixed {
         position: fixed;
         top: 0;
@@ -129,26 +121,27 @@ li.search_box {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
-
     h1.logo {
         position: relative;
         z-index: 99;
         background: #fff;
         width: 100vw;
     }
-
     h1.logo img {
         position: relative;
         top: 0;
         left: 50%;
         transform: translate(-50%, 0);
     }
-
     .gnb {
         position: absolute;
         z-index: 55;
@@ -158,7 +151,6 @@ li.search_box {
         opacity: 0;
         transition: .5s;
     }
-
     .gnb_on {
         opacity: 1;
         top: 240px;
@@ -169,7 +161,6 @@ li.search_box {
         align-items: center;
         gap: 0;
     }
-
     .gnb ul li {
         width: 100vw;
         padding: 20px 0;
@@ -179,16 +170,13 @@ li.search_box {
         box-sizing: border-box;
         color: #fff;
     }
-
     .gnb ul li:last-child {
         border-bottom: 1px solid #5169c0;
     }
-
     .gnb ul li:hover {
         background: #EDF0F5;
         color: #344EAD;
     }
-
     .top_menu {
         position: absolute;
         z-index: 55;
@@ -198,32 +186,25 @@ li.search_box {
         opacity: 0;
         transition: .5s;
     }
-
     .top_menu_on {
         opacity: 1;
         top: 120px;
     }
-
     .top_menu ul li {
         font-size: 14px;
         color: #fff;
         font-weight: 300;
         transition: .3s;
     }
-
     .top_menu ul li:hover {
         color: #8299ee;
     }
-
-    .top_menu ul li:nth-child(1) img,
-    .top_menu ul li:nth-child(2) img {
+    .top_menu ul li:nth-child(1) img, .top_menu ul li:nth-child(2) img {
         display: none;
     }
-
-    .top_menu ul li:nth-child(3) {
+    .top_menu ul li:nth-child(3){
         display: none;
     }
-
     li.search_box {
         display: flex;
         position: absolute;
@@ -231,15 +212,13 @@ li.search_box {
         left: 50%;
         transform: translate(-50%, 0);
     }
-
-    li.search_box input[type="search"] {
+    li.search_box input[type="search"]{
         width: 350px;
         height: 40px;
         border-radius: 40px;
         border: 1px solid #344EAD;
         padding-left: 20px;
     }
-
     li.search_box button {
         position: absolute;
         border: 0;
@@ -252,11 +231,9 @@ li.search_box {
         cursor: pointer;
         display: flex;
     }
-
     li.search_box button img {
         width: 22px;
     }
-
     .hamburger {
         display: block;
         position: absolute;
@@ -265,7 +242,6 @@ li.search_box {
         right: 25px;
         transform: translate(0, -50%);
     }
-
     .hamburger span {
         width: 25px;
         height: 4px;
@@ -275,42 +251,35 @@ li.search_box {
         border-radius: 10px;
         transition: .3s;
     }
-
     .hamburger span:last-child {
         margin-bottom: 0;
     }
-
     .x_hamburger span {
         position: absolute;
         right: 0;
     }
-
     .x_hamburger span:first-child {
         transform: rotate(45deg);
     }
-
     .x_hamburger span:nth-child(2) {
         display: none;
     }
-
     .x_hamburger span:last-child {
         transform: rotate(-45deg);
     }
-
-
+    
+    
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;
         overflow: hidden;
         transition: .5s;
     }
-
     .bg img {
         width: 60px;
         opacity: .2;
@@ -319,10 +288,10 @@ li.search_box {
         left: 50%;
         transform: translate(-50%, 0);
     }
-
     .bg_on {
         height: calc(100vh - 81px);
     }
+
 }
 
 
@@ -332,7 +301,6 @@ li.search_box {
     box-sizing: border-box;
     position: relative;
     padding-top: 55px;
-    margin-bottom: 120px;
 }
 
 .notice h2 {
@@ -441,11 +409,19 @@ background-size:cover;
     z-index: 10;
 }
 
-.tab_menu ul li {
+.tab_menu ul li a{
+    padding: 16px;
     display: inline-block;
     text-align: center;
     margin: auto;
     cursor: pointer;
+}
+
+.tab_menu ul .tab_on{
+
+    color: #fff;
+    background: #344EAD;
+    border-radius: 20px;
 }
 
 .tab_menu ul li a {
@@ -454,8 +430,7 @@ background-size:cover;
 
 .notice_cont_wrap {
     position: relative;
-    height: 500px;
-
+    margin-bottom: 160px;
 }
 
 .notice_cont_wrap>section {
@@ -483,21 +458,42 @@ background-size:cover;
 
 .notice table td {
     padding: 20px 0;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #C1C1C1;
 }
 
 .table_title {
     padding: 12px 0;
     text-align: center;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+    border-top: 2px solid #344EAD;
+    border-bottom: 2px solid #344EAD;
+}
+
+.notice_cont span{
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 12px;
+    margin: 0 20px;
+    background: #8299ee;
+    color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.notice_cont>table tr td{
+text-align: center;
+}
+.notice_cont>table tr td:first-child{
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .qa_cont{
     width: 100%;
+    padding-bottom: 40px;
 }
 .qa_txt{
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 .qa_cont h3{
     line-height: 20px;
@@ -506,19 +502,54 @@ background-size:cover;
 }
 
 .qa li{
-    padding: 16px 0;
+    cursor: pointer;
+    padding: 4px 0;
     margin-bottom: 16px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #C1C1C1;
 }
 
 .ques{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+.ques::before{
+    content: "Q. ";
+}
+
+.qa li p:last-child{
+    padding-left: 48px;
+}
+.qa li p:last-child::before{
+    content: "A. ";
+}
+
+.contact_cont h3{
+    font-size: 20px;
+}
+
+.contact_cont>div{
+    padding: 20px;
+    margin: 24px auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.contact_cont>div img{
+    display: block;
+    width: 100%;
+}
+
+.contact_cont p {
+    text-align: center;
+}
+.contact_cont p span{
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 24px;
+    padding-bottom: 20px;
 }
 
 .active{display: block;}
-
 
 
 .footer {
@@ -541,15 +572,14 @@ background-size:cover;
 }
 
 .service_num {
-    font-size: 24px;
+    font-size: 24px ;
     line-height: 30px;
     font-size: bold;
 }
 
 .footer h5,
 .footer a,
-.footer p,
-address {
+.footer p, address {
     color: white;
 }
 

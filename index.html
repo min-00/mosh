@@ -14,14 +14,14 @@
     <script src="js/jquery.marquee.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/index.js"></script>
-</head> 
+</head>
 
 <body>
     <div id="wrapper">
         <header id="header" class="header">
             <div class="header_wrap">
-                <h1 class="logo"><a href="#none"><img src="images/logo.svg" alt="모슈"></a></h1>
-                
+                <h1 class="logo"><a href="#"><img src="images/logo.svg" alt="모슈"></a></h1>
+
                 <nav class="gnb">
                     <h2 class="screen_out">주요 메뉴</h2>
                     <ul>
@@ -31,7 +31,7 @@
                         <li><a href="sub/notice/notice.html">NOTICES</a></li>
                     </ul>
                 </nav>
-    
+
                 <div class="top_menu">
                     <h2 class="screen_out">유틸 메뉴</h2>
                     <ul>
@@ -44,12 +44,12 @@
                         </li>
                         <li class="search_box">
                             <label for="search" class="screen_out">검색</label>
-                                <input type="search" id="search" name="search">
-                                <button type="submit"><img src="images/search.png" alt=""></button>
+                            <input type="search" id="search" name="search">
+                            <button type="submit"><img src="images/search.png" alt=""></button>
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -58,8 +58,8 @@
                 <div class="bg"><img src="images/logo_white.svg" alt=""></div>
             </div>
         </header>
-    <main id="main" class="main">
-        <section class="slider">
+        <main id="main" class="main">
+            <section class="slider">
                 <h2 class="screen_out">이미지 슬라이더</h2>
                 <div class="mainSwiper">
                     <div class="slider_box swiper-wrapper">
@@ -73,41 +73,59 @@
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <section class="best_items rev_scroll">
+                <div class="best_wrap">
+                    <div class="best_txt">
+                        <h2>Best items</h2>
+                        <p>바라볼 때마다 즐거워지는 mosh 텀블러<br>
+                            새로 리뉴얼된 모슈를 경험해보세요.
+                        </p>
+                        <a href="sub/product/product.html" class="circle_img"><img src="images/mosh_txtcircle.svg"
+                                alt="상품 페이지 바로가기">
+                        </a>
                     </div>
-        </section>
-        <section class="best_items rev_scroll">
-            <div class="best_wrap">
-                <div class="best_txt">
-                    <h2>Best items</h2>
-                    <p>바라볼 때마다 즐거워지는 mosh 텀블러<br>
-                        새로 리뉴얼된 모슈를 경험해보세요.
-                    </p>
-                    <a href="sub/product/product.html" class="circle_img"><img src="images/mosh_txtcircle.svg" alt="상품 페이지 바로가기"></a>
+                    <ul class="best_ls">
+                        <li>
+                            <a href="sub/product/product.html">
+                                <img src="images/best_item_01.jpg" alt="베스트 아이템 1">
+                                <span class="item_txt">
+                                    <i>mosh! 라떼 텀블러</i>
+                                </span>
+                            </a>
+                            <span class="item_stk">HOT</span>
+                        </li>
+                        <li>
+                            <a href="sub/product/product.html">
+                                <img src="images/best_item_02.jpg" alt="베스트 아이템 2">
+                                <span class="item_txt">
+                                    <i>mosh! 뉴밀크 텀블러</i>
+                                </span>
+                            </a>
+                            <span class="item_stk">NEW</span>
+                        </li>
+                        <li>
+                            <a href="sub/product/product.html">
+                                <img src="images/best_item_03.jpg" alt="베스트 아이템 3">
+                                <span class="item_txt">
+                                    <i>mosh! 원터치 텀블러</i>
+                                </span>
+                            </a>
+                            <span class="item_stk">NEW</span>
+
+                        </li>
+                    </ul>
                 </div>
-                <ul class="best_ls">
-                    <li>
-                        <a href="sub/product/product.html"><img src="images/best_item_01.jpg" alt="베스트 아이템 1"></a>
-                        <span class="item_stk">HOT</span>
-                    </li>
-                    <li>
-                        <a href="sub/product/product.html"><img src="images/best_item_02.jpg" alt="베스트 아이템 2"></a>
-                        <span class="item_stk">NEW</span>
-                    </li>
-                    <li>
-                        <a href="sub/product/product.html"><img src="images/best_item_03.jpg" alt="베스트 아이템 3"></a>
-                        <span class="item_stk">NEW</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="about">
-            <div class="about_wrap">
-                <h2>About</h2>
-                <div class="about_txt rev_scroll">
-                    <h3>일상의 놀라움을!</h3>
-                    <div></div>
-                </div>
-                <div class="about_cont">
+            </section>
+            <section class="about">
+                <div class="about_wrap">
+                    <h2>About</h2>
+                    <div class="about_txt rev_scroll">
+                        <h3>일상의 놀라움을!</h3>
+                        <div></div>
+                    </div>
+                    <div class="about_cont">
                         <div class="about_items"></div>
                         <div class="about_circle rev_scroll"></div>
                         <ul>
@@ -124,118 +142,121 @@
                                 <a href="sub/about/about.html"><img src="images/about_btn.svg" alt="더보기"></a>
                             </li>
                         </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="about_txt_mov">
-                <p class="marquee title">It's time to mosh! &nbsp; It's time to mosh! It's time to mosh! &nbsp; It's time to mosh!</p>
-            </div>
-        </section>
-        <section class="products">
-            <div class="products_wrap">
-                <h2>Products</h2>
-                <div class="products_ls rev_scroll">
-                    <ul class="pdt_cont_right">
-                        <li>
-                            <a href="sub/product/html/tumbler.html"><img src="images/product_st.jpg" alt="">
-                                <span>LATTE STRAW</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sub/product/html/tumbler.html"><img src="images/product_latte.jpg" alt="">
-                                <span>LATTE</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sub/product/html/foodjar.html"><img src="images/product_jar.jpg" alt="">
-                                <span>LATTE FOOD JAR</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sub/product/html/electric.html"><img src="images/product_ect.jpg" alt="">
-                                <span>ELECTRIC</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sub/product/html/table.html"><img src="images/product_table.jpg" alt="">
-                                <span>TABLE</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="sub/product/html/acc.html"><img src="images/product_acc.jpg" alt="">
-                                <span>ACC</span>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="pdt_cont_left">
-                        <li>
-                            <a href="sub/product/html/tumbler.html"><img src="images/product_milk_blue.jpg" alt="">
-                                <span>MILK</span>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="about_txt_mov">
+                    <p class="marquee title">It's time to mosh! &nbsp; It's time to mosh! It's time to mosh! &nbsp; It's
+                        time to mosh!</p>
                 </div>
-                <a href="sub/product/product.html" class="btn">전체보기</a>
-            </div>
-        </section>
-        <section class="story">
-            <h2>Story</h2>
-            <div class="story_wrap">
-                <div class="story_cont_wrap">
-                    <article class="story_cont01 str_cont_lay rev_scroll">
-                        <div class="art_img_wrap">
-                        <img src="images/story_cont01.jpg" alt="">
-                        </div>
-                        <h4>LATTE TABLE POT</h4>
-                        <p>아침에 내린 차가 따뜻하게 유지된다는 것, <br>밤에 만든 얼음물이
-                            다음날 밤까지 남아있다는 것, 써보지 않은 분들께서는 쉽게
-                            이해하기 어렵습니다. 진공 주전자가 있다는 것은 실질적인
-                            생활의 질 개선으로 이어집니다. </p>
+            </section>
+            <section class="products">
+                <div class="products_wrap">
+                    <h2>Products</h2>
+                    <div class="products_ls rev_scroll">
+                        <ul class="pdt_cont_right">
+                            <li>
+                                <a href="sub/product/html/tumbler.html"><img src="images/product_st.jpg" alt="">
+                                    <span>LATTE STRAW</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/product/html/tumbler.html"><img src="images/product_latte.jpg" alt="">
+                                    <span>LATTE</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/product/html/foodjar.html"><img src="images/product_jar.jpg" alt="">
+                                    <span>LATTE FOOD JAR</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/product/html/electric.html"><img src="images/product_ect.jpg" alt="">
+                                    <span>ELECTRIC</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/product/html/table.html"><img src="images/product_table.jpg" alt="">
+                                    <span>TABLE</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="sub/product/html/acc.html"><img src="images/product_acc.jpg" alt="">
+                                    <span>ACC</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="pdt_cont_left">
+                            <li>
+                                <a href="sub/product/html/tumbler.html"><img src="images/product_milk_blue.jpg" alt="">
+                                    <span>MILK</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="sub/product/product.html" class="btn"><span>전체보기</span></a>
+                </div>
+            </section>
+            <section class="story">
+                <h2>Story</h2>
+                <div class="story_wrap">
+                    <div class="story_cont_wrap">
+                        <article class="story_cont01 str_cont_lay rev_scroll">
+                            <div class="art_img_wrap">
+                                <img src="images/story_cont01.jpg" alt="">
+                            </div>
+                            <h4>LATTE TABLE POT</h4>
+                            <p>아침에 내린 차가 따뜻하게 유지된다는 것, <br>밤에 만든 얼음물이
+                                다음날 밤까지 남아있다는 것, 써보지 않은 분들께서는 쉽게
+                                이해하기 어렵습니다. 진공 주전자가 있다는 것은 실질적인
+                                생활의 질 개선으로 이어집니다. </p>
                             <a href="sub/story/story.html#story">
                                 <span class="view_more">더보기</span>
                             </a>
-                    </article>
-                    <article class="story_cont02 str_cont_lay rev_scroll">
-                        <div class="art_img_wrap">
-                        <img src="images/recipe_cont01.jpg" alt="">
-                        </div>
-                        <h4>메이플 시럽 버터 토스트</h4>
-                        <p>식빵을 오븐에 넣고 4단계로 2분 30초에서 5분 정도
-                            구워주세요. 눈으로 보며 굽기 정도를 기호에 맞게 맞춰도
-                            좋습니다. 다 구워진 빵에 버터와 메이플 시럽을 올려
-                            놓아주세요.</p>
+                        </article>
+                        <article class="story_cont02 str_cont_lay rev_scroll">
+                            <div class="art_img_wrap">
+                                <img src="images/recipe_cont01.jpg" alt="">
+                            </div>
+                            <h4>메이플 시럽 버터 토스트</h4>
+                            <p>식빵을 오븐에 넣고 4단계로 2분 30초에서 5분 정도
+                                구워주세요. 눈으로 보며 굽기 정도를 기호에 맞게 맞춰도
+                                좋습니다. 다 구워진 빵에 버터와 메이플 시럽을 올려
+                                놓아주세요.</p>
                             <a href="sub/story/story.html#recipe">
                                 <span class="view_more">더보기</span>
                             </a>
                             <div class="recipe_circle">
                                 <div class="circle_img"></div>
                             </div>
-                    </article>
+                        </article>
+                    </div>
+                    <a href="sub/story/story.html" class="btn"><span>전체보기</span></a>
                 </div>
-                <a href="sub/story/story.html" class="btn">전체보기</a>
-            </div>
-            <div class="cook_with rev_scroll"></div>
-        </section>
-        <section class="sns_insta">
-            <div class="sns_wrap">
-                <h2>Instagram <span></span></h2>
-                <div class="snsSwiper rev_scroll">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_01.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_02.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_03.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_04.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_05.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_06.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_07.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_08.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_09.jpg" alt=""></a></li>
-                    <li class="swiper-slide"><a href="#none"><img src="images/sns_10.jpg" alt=""></a></li>
-                    </ul>
+                <div class="cook_with rev_scroll"></div>
+            </section>
+            <section class="sns_insta">
+                <div class="sns_wrap">
+                    <h2>Instagram <span></span></h2>
+                    <div class="snsSwiper rev_scroll">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_01.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_02.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_03.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_04.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_05.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_06.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_07.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_08.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_09.jpg" alt=""></a></li>
+                            <li class="swiper-slide"><a href="#none"><img src="images/sns_10.jpg" alt=""></a></li>
+                        </ul>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
-</div>
+            </section>
+        </main>
+    </div>
     <footer id="footer" class="footer">
         <div class="footer_wrap">
             <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>

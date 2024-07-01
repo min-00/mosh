@@ -2,31 +2,32 @@
 html {
     scroll-behavior: smooth;
 }
-/*footer 바닥에 붙게*/
+
 html,
 body {
     height: 100%;
 }
 
-h2 {
-    font-size: 18px;
-    line-height: 18px;
-    font-size: bold;
-    font-family: "Yeseva One", serif;
-    color: #4D4239;
-    margin-bottom: 55px;
-    text-align: center;
+.screen_out {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
 }
+/* header */
 
 #header {
     background: #fff;
     transition: .3s;
+    border-bottom: 1px solid #EDF0F5;
 }
 .fixed {
     position: fixed;
     top: 0;
     z-index: 20;
-    width: 100%;
+    width: 100vw;
     border-bottom: 1px solid #EDF0F5;
     transition: .3s;
 }
@@ -101,6 +102,9 @@ li.search_box {
 @media screen and (max-width:768px) {
     /*header*/
     
+    #header {
+        border-bottom: 1px solid #EDF0F5;
+    }
     #header.fixed {
         position: fixed;
         top: 0;
@@ -108,9 +112,14 @@ li.search_box {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
     h1.logo {
         position: relative;
@@ -252,11 +261,10 @@ li.search_box {
     
     
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;
@@ -275,6 +283,17 @@ li.search_box {
         height: calc(100vh - 81px);
     }
 
+}
+
+
+h2 {
+    font-size: 18px;
+    line-height: 18px;
+    font-size: bold;
+    font-family: "Yeseva One", serif;
+    color: #4D4239;
+    margin-bottom: 55px;
+    text-align: center;
 }
 
 .story {
@@ -304,7 +323,14 @@ li.search_box {
     border: 2px solid #746661;
     box-sizing: border-box;
     border-radius: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
+}
+.story_cont a:hover dd>img{
+    transform: scale(1.2,1.2);
+    transition-duration:0.5s;
+}
+.story_cont a dd>img{
+    transition: all 0.5s;
 }
 
 .story_cont dt {
@@ -361,7 +387,14 @@ li.search_box {
     text-align: center;
     padding: 80px 0;
 }
-
+.story_txt p{
+    display: block;
+    margin: 0 auto;
+    width: 1240px;
+    height: 24px;
+    background: url(../images/story_txt_deco.svg) no-repeat center;
+    margin-bottom: 20px;
+}
 .arrow_motion {
     width: 100px;
     height: 100px;
@@ -385,7 +418,7 @@ li.search_box {
     margin: 0 auto;
     position: relative;
     z-index: 5;
-    margin-bottom: 120px;
+    margin-bottom: 300px;
 }
 
 .recipe_list {
@@ -398,14 +431,24 @@ li.search_box {
     position: relative;
     width: 400px;
     height: 500px;
-    margin-bottom: 60px;
+    margin-bottom: 56px;
 }
 
 .recipe_list li a {
     display: block;
 }
 
+.recipe_list li img{
+transition: 0.3s;
+}
+
+.recipe_list li a:hover img{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
 .recipe_list dt {
+    display: block;
     font-size: 16px;
     font-weight: bold;
     line-height: 32px;
@@ -557,6 +600,10 @@ li.search_box {
     position: absolute;
     right: 40px;
     bottom: 40px;
+}
+
+.food_cont p{
+    margin-bottom: 8px;
 }
 
 .recipe_slider>li>dl>dd>img {

@@ -1,6 +1,4 @@
-
-    
-    $(function(){
+$(function(){
             //준비중 페이지
     $('.sns_wrap ul li').click(
         function(){
@@ -45,8 +43,8 @@
     });
     // scroll show
     ScrollReveal().reveal('.rev_scroll',{
-        delay: 500,
-        duration : 1400,
+        delay: 600,
+        duration : 1200,
         distance : '80px',
         interval : 120,
 });
@@ -56,7 +54,6 @@
         distance : '80px',
         interval : 150,
     });
-ScrollReveal().reveal('',);
     //sns slider
     var swiperSns = new Swiper(".snsSwiper", {
         slidesPerView: "auto",
@@ -64,10 +61,6 @@ ScrollReveal().reveal('',);
         freeMode: true,
         loop :true,
         watchSlidesProgress :true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
