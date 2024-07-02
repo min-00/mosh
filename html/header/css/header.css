@@ -158,6 +158,9 @@ li.search_box {
         background: #EDF0F5;
         color: #344EAD;
     }
+    .gnb li::after {
+        display: none;
+    }
     .top_menu {
         position: absolute;
         z-index: 55;
