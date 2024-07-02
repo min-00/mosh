@@ -65,7 +65,7 @@ $(document).ready(function(){
         var color = $(this).data("color");
         $(".color_box p span").text("- " + color);
 
-        $(".thumb_box img").attr("src", "../images/products_tumbler_nmt_600_" + color + ".png")
+        $(".thumb_box img").attr("src", "../images/products_tumbler_lst_350_" + color + ".png")
     });
 });
 
@@ -100,14 +100,14 @@ $(document).ready(function() {
         var total = num*37810
         // 템플릿 리터럴을 사용하여 계산된 값을 HTML에 삽입
         const newDiv = $(`<div>
-        <p>뉴밀크 보온보냉 텀블러 600ml</p>
+        <p>라떼 스트로우 텀블러 350ml</p>
         <p>색상 : ${color}</p>
         <p class="item_num">수량 : <span>${num}</span></p>
         <p>${total.toLocaleString()}원</p>
         <button type="button" class="removeDiv">-</button>
         </div>`);
         
-        // .container 클래스 내부에 새로운 div 요소 추가
+        // 새로운 div 요소 추가
         $(".selected_item_box").append(newDiv);
 
 

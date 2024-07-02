@@ -432,37 +432,45 @@ li.search_box {
 
 /* footer */
 
+html,
+body {
+    height: 100%;
+}
+#wrapper {
+    height: auto;
+    min-height: 100%;
+    padding-bottom: 295px;
+}
 .footer {
     width: 100%;
     background: #091F5B;
-    bottom: 0;
-    position: relative;
-    height: 295px;
     overflow: hidden;
+    height: 295px;
+    position: relative;
+    transform: translateY(-100%);
 }
-
 .footer_wrap {
     display: flex;
-    min-width: 1280px;
+    width: 86%;
     justify-content: space-between;
     margin: 0 auto;
     align-items: flex-start;
-    padding: 70px;
+    padding: 70px 0;
+    box-sizing: border-box;
 }
-
+.service_num {
+    font-size: 24px ;
+    line-height: 30px;
+    font-size: bold;
+}
 .footer h5,
-.footer a,
-.footer p,
-address {
+   footer a,
+.footer p, address {
     color: white;
 }
-
-
 .logo img {
     width: 150px;
-    /* color:white; */
 }
-
 .footer p,
 address {
     font-size: 12px;
@@ -470,9 +478,12 @@ address {
     font-weight: normal;
     font-style: normal;
 }
-
 .footer h5 {
     margin: 0;
+}
+.sns,
+.footer_bottom {
+    margin-bottom: 36px;
 }
 
 
@@ -565,6 +576,9 @@ address {
     .gnb ul li:hover {
         background: #EDF0F5;
         color: #344EAD;
+    }
+    .gnb li::after {
+        display: none;
     }
     .top_menu {
         position: absolute;
