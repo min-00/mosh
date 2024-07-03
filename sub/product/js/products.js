@@ -21,6 +21,12 @@ $(document).ready(function(){
         }
         
     });
+
+    // 검색버튼 토글
+    $(".search_icon").click(function(){
+        $(".search_box").toggleClass("search_slide");
+        $(".search_box button").toggleClass("search_hide");
+    });
 });
 
 
