@@ -8,181 +8,192 @@
     <link rel="stylesheet" href="../css/products_detail.css">
 </head>
 <body>
-    <header id="header" class="header">
-        <div class="header_wrap">
-            <h1 class="logo"><a href="../../../index.html"><img src="../images/logo.svg" alt="모슈"></a></h1>
-            
-            <nav class="gnb">
-                <h2 class="screen_out">주요 메뉴</h2>
-                <ul>
-                    <li><a href="../../about/about.html">ABOUT</a></li>
-                    <li><a href="../../story/story.html">STORY</a></li>
-                    <li><a href="../product.html">PRODUCTS</a></li>
-                    <li><a href="#none">NOTICES</a></li>
-                </ul>
-            </nav>
+    <div id="wrapper">
+        <header id="header" class="header">
+            <div class="header_wrap">
+                <h1 class="logo"><a href="../../../index.html"><img src="../images/logo.svg" alt="모슈"></a></h1>
+                
+                <nav class="gnb">
+                    <h2 class="screen_out">주요 메뉴</h2>
+                    <ul>
+                        <li><a href="../../about/about.html">ABOUT</a></li>
+                        <li><a href="../../story/story.html">STORY</a></li>
+                        <li><a href="../product.html">PRODUCTS</a></li>
+                        <li><a href="#none">NOTICES</a></li>
+                    </ul>
+                </nav>
 
-            <div class="top_menu">
-                <h2 class="screen_out">유틸 메뉴</h2>
-                <ul>
-                    <li><a href="#none"><img src="../images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
-                    <li><a href="#none"><img src="../images/bag-fill.png" alt="장바구니">장바구니</a></li>
-                    <li>
-                        <a href="#none">
-                            <img src="../images/search.png" alt="검색">
-                        </a>
-                    </li>
-                    <li class="search_box">
-                        <label for="search" class="screen_out">검색</label>
-                            <input type="search" id="search" name="search">
-                            <button type="submit"><img src="../images/search.png" alt=""></button>
-                    </li>
-                </ul>
-            </div>
+                <div class="top_menu">
+                    <h2 class="screen_out">유틸 메뉴</h2>
+                    <ul>
+                        <li><a href="#none"><img src="../images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
+                        <li><a href="#none"><img src="../images/bag-fill.png" alt="장바구니">장바구니</a></li>
+                        <li>
+                            <a href="#none">
+                                <img src="../images/search.png" alt="검색">
+                            </a>
+                        </li>
+                        <li class="search_box">
+                            <label for="search" class="screen_out">검색</label>
+                                <input type="search" id="search" name="search">
+                                <button type="submit"><img src="../images/search.png" alt=""></button>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="bg"><img src="../images/logo_white.svg" alt=""></div>
             </div>
-            <div class="bg"><img src="../images/logo_white.svg" alt=""></div>
-        </div>
-    </header>
-    
-    <main id="main" class="main">
-        <div class="container">
-            <div class="left">
-                <section class="detail_image">
-                    <div class="thumb_box">
-                        <img src="../images/products_tumbler_nmt_600_ivory.png" alt="">
-                    </div>
-                    <img src="../images/new_milk_600_pink.jpg" alt="">
-                    <img src="../images/new_milk_total01_01.jpg" alt="">
-                    <img src="../images/new_milk_total01_02.jpg" alt="">
-                </section>
+        </header>
+        
+        <main id="main" class="main">
+            <div class="container">
+                <div class="left">
+                    <section class="detail_image">
+                        <div class="thumb_box">
+                            <img src="../images/products_tumbler_lst_350_white.png" alt="">
+                        </div>
+                        <img src="../images/latte_straw_350_white.jpg" alt="">
+                        <img src="../images/latte_straw_total_01.jpg" alt="">
+                        <img src="../images/latte_straw_total_02.jpg" alt="">
+                        <img src="../images/latte_straw_total_04.jpg" alt="">
+                        <img src="../images/Silicone_coaster_option_04.jpg" alt="">
+                        <img src="../images/faq_coaster_option.jpg" alt="">
+                        <img src="../images/lineup.jpg" alt="">
+                    </section>
+                </div>
+                <div class="right">
+                    <section class="detail_info">
+                        <div class="title_box">
+                            <p class="category">TUMBLER</p>
+                            <p class="item_name">모슈 라떼 스트로우 텀블러 350ml</p>
+                            <p class="price"><span>39,900원</span>37,810원</p>
+                        </div>
+                        <div class="color_box">
+                            <p>COLOR <span>- ivory</span></p>
+                            <ul class="color_list">
+                                <li data-color="white" class="active"><a href="#none"></a></li>
+                                <li data-color="ivory"><a href="#none"></a></li>
+                                <li data-color="pink"><a href="#none"></a></li>
+                                <li data-color="sky"><a href="#none"></a></li>
+                                <li data-color="yellow"><a href="#none"></a></li>
+                                <li data-color="red"><a href="#none"></a></li>
+                                <li data-color="black"><a href="#none"></a></li>
+                            </ul>
+                        </div>
+                        <div class="quantity_box">
+                            <button type="button" class="less">-</button>
+                            <input type="number" id="quantity" value="1" min="1" readonly>
+                            <button type="button" class="more">+</button>
+                            <button type="button" class="add">담기</button>
+                            <p class="quantity_price">37,810원</p>
+                        </div>
+                        <div class="selected_item_box">
+                        </div>
+                        <div class="total_box">
+                            <p>총 상품금액(<span>0</span>개)</p>
+                            <p class="total_price">0원</p>
+                        </div>
+                        <div class="btn_box">
+                            <button type="button" class="buy">BUY NOW</button>
+                            <div class="btn_wrap">
+                                <button type="button" class="cart">ADD TO CART</button>
+                                <button type="button" class="wish">WISH LIST</button>
+                            </div>
+                        </div>
+                        <div class="accordion_wrap">
+                            <div class="item_explain display">
+                                <div class="explain_title title">
+                                    <p>상품설명</p>
+                                    <button type="button">+</button>
+                                </div>
+                                <div class="explain_content content">
+                                    <p>밀크 텀블러는 모슈의 모든 텀블러 라인업 중 가장 오래가는 보온 보냉을 가지고 있습니다. 조건 제약 없이 사용 할 수 있는 기본기가 좋은 텀블러가 필요하시다면, 밀크 텀블러가 가장 적합합니다.</p>
+                                </div>
+                            </div>
+                            <div class="item_info display">
+                                <div class="info_title title">
+                                    <p>제품정보</p>
+                                    <button type="button">+</button>
+                                </div>
+                                <div class="info_content content">
+                                    <ul>
+                                        <li>
+                                            <h6>품명</h6>
+                                            <p>모슈 라떼 스트로우 텀블러</p>
+                                        </li>
+                                        <li>
+                                            <h6>용량</h6>
+                                            <p>350ml, 480ml, 700ml</p>
+                                        </li>
+                                        <li>
+                                            <h6>색상</h6>
+                                            <p>화이트, 아이보리, 핑크, 스카이, 옐로우, 레드, 블랙</p>
+                                        </li>
+                                        <li>
+                                            <h6>재질</h6>
+                                            <p>스테인리스 304, 폴리프로필렌, 고무제</p>
+                                        </li>
+                                        <li>
+                                            <h6>사이즈</h6>
+                                            <p>- 350ml ｜ 95mm x 145mm, 바닥면 70mm<br>- 480ml ｜ 95mm x 175mm, 바닥면 70mm<br>- 700ml ｜ 105mm x 210mm, 바닥면 80mm</p>
+                                        </li>
+                                        <li>
+                                            <h6>무게</h6>
+                                            <p>- 350ml ｜ 215g<br>- 480ml ｜ 275g<br>- 700ml ｜ 405g</p>
+                                        </li>
+                                        <li>
+                                            <h6>온도유지</h6>
+                                            <p>- 350ml ｜ 보온 : 6시간 68˚C, 12시간 후 57˚C 이상 유지<br><span>- 350ml ｜ </span>보냉 : 6시간 9˚C, 12시간 후 13˚C 이하 유지</p>
+                                            <p>- 480ml ｜ 보온 : 6시간 75˚C, 12시간 후 63˚C 이상 유지<br><span>- 480ml ｜ </span>보냉 : 6시간 8˚C, 12시간 후 13˚C 이하 유지</p>
+                                            <p>- 700ml ｜ 보온 : 6시간 80˚C, 12시간 후 71˚C 이상 유지<br><span>- 700ml ｜ </span>보냉 : 6시간 7˚C, 12시간 후 13˚C 이하 유지</p>
+                                        </li>
+                                        <li>
+                                            <h6>제조정보</h6>
+                                            <p>제조국 : 중국 ｜ 제조사 : DOSHISHA CORPORATION</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item_delivery display">
+                                <div class="del_title title">
+                                    <p>배송방법</p>
+                                    <button type="button">+</button>
+                                </div>
+                                <div class="del_content content">
+                                    <ul>
+                                        <li>
+                                            <h6>택배 배송</h6>
+                                            <p>배송비 : 3000원(50,000원 이상 구매시 무료)</p>
+                                            <p>오후 3시까지 결제 완료시 당일 발송(이후 주문 시 익일 배송)<br>영업일 기준 1-3일 내 도착(택배 이동문의는 택배사에 문의)</p>
+                                        </li>
+                                        <li>
+                                            <h6>교환 및 반품</h6>
+                                            <p>단순 변심으로 인항 교환 및 반품은 미 사용 상태에서 수령 후 7일 이내만 가능(왕복 택배비 6,000원)<br>교환 및 반품은 반드시 롯데택배를 이용해 주세요.</p>
+                                            <p></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="right">
-                <section class="detail_info">
-                    <div class="title_box">
-                        <p class="category">TUMBLER</p>
-                        <p class="item_name">모슈 뉴밀크 보온보냉 텀블러 600ml</p>
-                        <p class="price"><span>39,900원</span>37,810원</p>
-                    </div>
-                    <div class="color_box">
-                        <p>COLOR <span>- ivory</span></p>
-                        <ul class="color_list">
-                            <li data-color="ivory" class="active"><a href="#none"></a></li>
-                            <li data-color="pink"><a href="#none"></a></li>
-                            <li data-color="sky"><a href="#none"></a></li>
-                            <li data-color="moka"><a href="#none"></a></li>
-                        </ul>
-                    </div>
-                    <div class="quantity_box">
-                        <button type="button" class="less">-</button>
-                        <input type="number" id="quantity" value="1" min="1" readonly>
-                        <button type="button" class="more">+</button>
-                        <button type="button" class="add">담기</button>
-                        <p class="quantity_price">37,810원</p>
-                    </div>
-                    <div class="selected_item_box">
-                    </div>
-                    <div class="total_box">
-                        <p>총 상품금액(<span>0</span>개)</p>
-                        <p class="total_price">0원</p>
-                    </div>
-                    <div class="btn_box">
-                        <button type="button" class="buy">BUY NOW</button>
-                        <div class="btn_wrap">
-                            <button type="button" class="cart">ADD TO CART</button>
-                            <button type="button" class="wish">WISH LIST</button>
-                        </div>
-                    </div>
-                    <div class="accordion_wrap">
-                        <div class="item_explain display">
-                            <div class="explain_title title">
-                                <p>상품설명</p>
-                                <button type="button">+</button>
-                            </div>
-                            <div class="explain_content content">
-                                <p>밀크 텀블러는 모슈의 모든 텀블러 라인업 중 가장 오래가는 보온 보냉을 가지고 있습니다. 조건 제약 없이 사용 할 수 있는 기본기가 좋은 텀블러가 필요하시다면, 밀크 텀블러가 가장 적합합니다.</p>
-                            </div>
-                        </div>
-                        <div class="item_info display">
-                            <div class="info_title title">
-                                <p>제품정보</p>
-                                <button type="button">+</button>
-                            </div>
-                            <div class="info_content content">
-                                <ul>
-                                    <li>
-                                        <h6>품명</h6>
-                                        <p>모슈 뉴 밀크 보온보냉 텀블러</p>
-                                    </li>
-                                    <li>
-                                        <h6>용량</h6>
-                                        <p>360ml, 600ml</p>
-                                    </li>
-                                    <li>
-                                        <h6>색상</h6>
-                                        <p>아이보리, 모카, 핑크, 스카이</p>
-                                    </li>
-                                    <li>
-                                        <h6>재질</h6>
-                                        <p>스테인리스 304, 폴리프로필렌, 고무제</p>
-                                    </li>
-                                    <li>
-                                        <h6>사이즈</h6>
-                                        <p>- 360ml ｜ 70mm x 70mm x 155mm<br>- 600ml ｜ 80mm x 80mm x 195mm</p>
-                                    </li>
-                                    <li>
-                                        <h6>무게</h6>
-                                        <p>- 360ml ｜ 220g<br>- 600ml ｜ 285g</p>
-                                    </li>
-                                    <li>
-                                        <h6>온도유지</h6>
-                                        <p>- 360ml ｜ 보온 : 6시간 68˚C, 12시간 후 57˚C 이상 유지<br><span>- 360ml ｜ </span>보냉 : 6시간 9˚C, 12시간 후 13˚C 이하 유지</p>
-                                        <p>- 600ml ｜ 보온 : 6시간 75˚C, 12시간 후 63˚C 이상 유지<br><span>- 600ml ｜ </span>보냉 : 6시간 8˚C, 12시간 후 13˚C 이하 유지</p>
-                                    </li>
-                                    <li>
-                                        <h6>제조정보</h6>
-                                        <p>제조국 : 중국 ｜ 제조사 : DOSHISHA CORPORATION</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item_delivery display">
-                            <div class="del_title title">
-                                <p>배송방법</p>
-                                <button type="button">+</button>
-                            </div>
-                            <div class="del_content content">
-                                <ul>
-                                    <li>
-                                        <h6>택배 배송</h6>
-                                        <p>배송비 : 3000원(50,000원 이상 구매시 무료)</p>
-                                        <p>오후 3시까지 결제 완료시 당일 발송(이후 주문 시 익일 배송)<br>영업일 기준 1-3일 내 도착(택배 이동문의는 택배사에 문의)</p>
-                                    </li>
-                                    <li>
-                                        <h6>교환 및 반품</h6>
-                                        <p>단순 변심으로 인항 교환 및 반품은 미 사용 상태에서 수령 후 7일 이내만 가능(왕복 택배비 6,000원)<br>교환 및 반품은 반드시 롯데택배를 이용해 주세요.</p>
-                                        <p></p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
+        
 
     <footer id="footer" class="footer">
         <div class="footer_wrap">
-            <h2 class="logo"><a href="../../../index.html"><img src="../images/logo_white.svg" alt="사이트 이용안내"></a></h2>
+            <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
 
             <div class="service">
                 <h5>CUSTOMER SERVICE</h5>
-                <p class="service_num">070-4618-2788</p>
+                <p class="footer_bottom"><span class="service_num">070-4618-2788</span></p>
                 <p>MON-FRI 09:00~17:00</p>
                 <p>LUNCH 12:00~13:30</p>
                 <p>SAT/SUN/HOLIDAY CLOSED</p>
@@ -197,8 +208,7 @@
                 <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
                 <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
             </div>
-
-            <div>
+            <div class="sns_bank_wrap">
                 <div class="sns">
                     <h5>FOLLOW US</h5>
                     <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
@@ -215,7 +225,7 @@
                 <p><a href="#none">COMPANY</a></p>
                 <p><a href="#none">AGREEMENT</a></p>
                 <p><a href="#none">GUIDE</a></p>
-                <p><a href="#none">FOR PARTNERS</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="">
                 <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
             </div>
 
