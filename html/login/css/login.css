@@ -1,0 +1,107 @@
+/* 공통 */
+.hide2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.blue_text{
+    color: #344EAD;
+}
+/* 제목*/
+.main_title {
+    font-size: 24px;
+    line-height: 30px;
+    font-size: bold;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+/* 레이아웃 */
+.login_wrap {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 160px;
+}
+
+.bottom {
+    margin-bottom: 20px;
+}
+
+/*로그인 공통 */
+.input_box {
+    border: 1px solid #C1C1C1;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* 아이디 */
+.input_box_login {
+    border: 1px solid #C1C1C1;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 305px;
+}
+
+.input_btn {
+    border: 1px solid #C1C1C1;
+    width: 90px;
+    height: 50px;
+    border-radius: 10px;
+    background: #FBFAFA;
+    box-sizing: border-box;
+}
+
+.login_wrap2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login_complete {
+    border: none;
+    color: #fff;
+    background: #344EAD;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.login_etc{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 80px;
+}
+.login_etc li{
+    text-align: center;
+    width: 105px;
+}
+
+/* sns 로그인 */
+.sns_title {
+    font-size: 24px;
+    line-height: 30px;
+    font-size: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sns_wrap{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}

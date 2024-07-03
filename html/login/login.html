@@ -1,93 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
 </head>
+
 <body>
     <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/join.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <title>회원가입</title>
-</head>
-<body>
-    <header id="header" class="header">
-        <div class="header_wrap">
-            <h1 class="logo"><a href="../../index.html"><img src="./images/logo.svg" alt="모슈"></a></h1>
-            
-            <nav class="gnb">
-                <h2 class="screen_out">주요 메뉴</h2>
-                <ul>
-                    <li><a href="../../sub/about/about.html">ABOUT</a></li>
-                    <li><a href="../../sub/story/story.html">STORY</a></li>
-                    <li><a href="../../sub/product/product.html">PRODUCTS</a></li>
-                    <li><a href="../../sub/notice/notice.html">NOTICES</a></li>
-                </ul>
-            </nav>
+    <html lang="ko">
 
-            <div class="top_menu">
-                <h2 class="screen_out">유틸 메뉴</h2>
-                <ul>
-                    <li><a href="login.html"><img src="./images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
-                    <li><a href="#none"><img src="./images/bag-fill.png" alt="장바구니">장바구니</a></li>
-                    <li>
-                        <a href="#none">
-                            <img src="./images/search.png" alt="검색">
-                        </a>
-                    </li>
-                    <li class="search_box">
-                        <label for="search" class="screen_out">검색</label>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./images/favicon_mosh.ico">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <title>회원 로그인</title>
+    </head>
+
+    <body>
+        <header id="header" class="header">
+            <div class="header_wrap">
+                <h1 class="logo"><a href="../../index.html"><img src="./images/logo.svg" alt="모슈"></a></h1>
+
+                <nav class="gnb">
+                    <h2 class="screen_out">주요 메뉴</h2>
+                    <ul>
+                        <li><a href="../../sub/about/about.html">ABOUT</a></li>
+                        <li><a href="../../sub/story/story.html">STORY</a></li>
+                        <li><a href="../../sub/product/product.html">PRODUCTS</a></li>
+                        <li><a href="../../sub/notice/notice.html">NOTICES</a></li>
+                    </ul>
+                </nav>
+
+                <div class="top_menu">
+                    <h2 class="screen_out">유틸 메뉴</h2>
+                    <ul>
+                        <li><a href="login.html"><img src="./images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
+                        <li><a href="#none"><img src="./images/bag-fill.png" alt="장바구니">장바구니</a></li>
+                        <li>
+                            <a href="#none">
+                                <img src="./images/search.png" alt="검색">
+                            </a>
+                        </li>
+                        <li class="search_box">
+                            <label for="search" class="screen_out">검색</label>
                             <input type="search" id="search" name="search">
                             <button type="submit"><img src="./images/search.png" alt=""></button>
-                    </li>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="bg"><img src="./images/logo_white.svg" alt=""></div>
+            </div>
+        </header>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/header.js"></script>
+
+        <main>
+            <div class="login_wrap">
+                <h2 class="main_title">MEMBER LOGIN</h2>
+                <form name="join_form" action="#none" method="get" onsubmit="return login_form_check()">
+                    <fieldset>
+                        <legend class="screen_out">로그인 정보 입력</legend>
+                        <div class="bottom">
+                            <label for="id" class="screen_out">아이디</label>
+                            <input class="input_box" type="text" name="id" id="id" placeholder="아이디">
+                        </div>
+                        <div class="bottom">
+                            <label for="pwd" class="screen_out">비밀번호</label>
+                            <input class="input_box" type="text" name="pwd" id="pwd" placeholder="비밀번호">
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="login_complete">회원가입 완료</button>
+                </form>
+
+                <ul class="login_etc">
+                    <li class="join">회원가입</li>
+                    <li class="id_search">아이디 찾기</li>
+                    <li>비밀번호 찾기</li>
                 </ul>
-            </div>
 
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <h2 class="sns_title">SNS LOGIN</h2>
+                <div class="sns_wrap">
+                <a href="#none"><img src="./images/kakao.png" alt="카카오 로그인"></a>
+                <a href="#none"><img src="./images/naver.png" alt="네이버 로그인"></a>
             </div>
-            <div class="bg"><img src="./images/logo_white.svg" alt=""></div>
-        </div>
-    </header>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/header.js"></script>
+            </div>
+    </body>
 
-    <main>
-    <div class="join_wrap">
-        <h2 class="main_title">개인 회원가입</h2>
-        <form name="join_form" action="insert.php" method="get" onsubmit="return join_form_check()">
-            <fieldset>
-                <legend class="hide2">로그인정보</legend>
-                <div class="bottom ">
-                    <label for="login">아이디<span class="blue_text">*</span></label>
-                    <div class="login_wrap">
-                        <input class="input_box_login" type="text" name="login" id="login"
-                            placeholder="영문소문자/숫자, 4~16자">
-                        <button type="button" class="input_btn" onclick="search_id()" >중복확인</button>
-                    </div>
-                    <p class="login_suc_message hide2">사용가능한 아이디입니다.</p>
-                    <p class="login_fail_message hide2">영문소문자 및 숫자, 4~16자만 사용해주세요.</p>
-                </div>
-                <div class="bottom">
-                    <label for="pwd">비밀번호<span class="blue_text">*</span></label>
-                    <input class="input_box" type="text" name="pwd" id="pwd" placeholder="영문 대소문자/숫자 4자~16자">
-                    <p class="pwd_suc_message hide2">사용가능한 패스워드입니다.</p>
-                    <p class="pwd_fail_message hide2">영문 대소문자 및 숫자 4자~16자만 사용해주세요.</p>
-                </div>
-                <div class="bottom">
-                    <label for="pwd_check">비밀번호 확인<span class="blue_text">*</span></label>
-                    <input class="input_box" type="text" name="pwd_check" id="pwd_check">
-                </div>
-            </fieldset>
+    </html>
 </body>
-</html>
-</body>
+
 </html>

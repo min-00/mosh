@@ -1,10 +1,4 @@
 /* 공통 */
-.hide2 {
-    position: absolute;
-    width: 0;
-    height: 0;
-    overflow: hidden
-}
 
 fieldset {
     margin: 0;
@@ -159,6 +153,7 @@ label {
 
 .terms_wrap {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin: 10px 10px;
 }

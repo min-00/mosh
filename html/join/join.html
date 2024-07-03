@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/join.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="icon" href="./images/favicon_mosh.ico">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>회원가입</title>
 </head>
@@ -58,9 +59,9 @@
     <main>
         <div class="join_wrap">
             <h2 class="main_title">개인 회원가입</h2>
-            <form name="join_form" action="insert.php" method="get" onsubmit="return join_form_check()">
+            <form name="join_form" action="#none" method="get" onsubmit="return join_form_check()">
                 <fieldset>
-                    <legend class="hide2">로그인정보</legend>
+                    <legend class="screen_out">로그인정보</legend>
                     <div class="bottom ">
                         <label for="login">아이디<span class="blue_text">*</span></label>
                         <div class="login_wrap">
@@ -68,14 +69,14 @@
                                 placeholder="영문소문자/숫자, 4~16자">
                             <button type="button" class="input_btn" onclick="search_id()">중복확인</button>
                         </div>
-                        <p class="login_suc_message hide2">사용가능한 아이디입니다.</p>
-                        <p class="login_fail_message hide2">영문소문자 및 숫자, 4~16자만 사용해주세요.</p>
+                        <p class="login_suc_message screen_out">사용가능한 아이디입니다.</p>
+                        <p class="login_fail_message screen_out">영문소문자 및 숫자, 4~16자만 사용해주세요.</p>
                     </div>
                     <div class="bottom">
                         <label for="pwd">비밀번호<span class="blue_text">*</span></label>
                         <input class="input_box" type="text" name="pwd" id="pwd" placeholder="영문 대소문자/숫자 4자~16자">
-                        <p class="pwd_suc_message hide2">사용가능한 패스워드입니다.</p>
-                        <p class="pwd_fail_message hide2">영문 대소문자 및 숫자 4자~16자만 사용해주세요.</p>
+                        <p class="pwd_suc_message screen_out">사용가능한 패스워드입니다.</p>
+                        <p class="pwd_fail_message screen_out">영문 대소문자 및 숫자 4자~16자만 사용해주세요.</p>
                     </div>
                     <div class="bottom">
                         <label for="pwd_check">비밀번호 확인<span class="blue_text">*</span></label>
@@ -83,7 +84,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend class="hide2">사용자 개인정보</legend>
+                    <legend class="screen_out">사용자 개인정보</legend>
                     <div class="bottom">
                         <label for="user_name">이름<span class="blue_text">*</span></label>
                         <input class="input_box" type="text" name="user_name" id="user_name" placeholder="이름">
@@ -124,13 +125,13 @@
                             <!-- <a  href="#none" class="input_btn_address">주소 찾기</a> -->
                             <button type="button" class="input_btn_address" onclick="Postcode_button()">주소 찾기</button>
                         </div>
-                        <label for="user_address_basic" class="hide2">기본주소</label>
+                        <label for="user_address_basic" class="screen_out">기본주소</label>
                         <input class="input_box" type="text" name="user_address_basic" id="user_address_basic"
                             placeholder="기본주소">
-                        <label for="user_address_detail" class="hide2">상세주소</label>
+                        <label for="user_address_detail" class="screen_out">상세주소</label>
                         <input class="input_box" type="text" name="user_address_detail" id="user_address_detail"
                             placeholder="상세주소 입력">
-                        <label for="user_address_extra" class="hide2">참고항목</label>
+                        <label for="user_address_extra" class="screen_out">참고항목</label>
                         <input class="input_box" type="text" name="user_address_extra" id="extraAddress"
                             placeholder="참고항목">
                     </div>
@@ -150,21 +151,21 @@
                                 <input type="checkbox" name="terms" id="terms" value="">
                                 <label for="terms">[필수] 이용약관 동의</label>
                             </div>
-                            <a href="#none"><img src="./img/term_info.png" alt="약관 확인"></a>
+                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
                         </div>
                         <div class="terms_wrap">
                             <div class="term_name">
                                 <input type="checkbox" name="terms2" id="terms2" value="">
                                 <label for="terms2">[필수] 개인정보 수집 및 이용 동의</label>
                             </div>
-                            <a href="#none"><img src="./img/term_info.png" alt="약관 확인"></a>
+                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
                         </div>
                         <div class="terms_wrap">
                             <div class="term_name">
                                 <input type="checkbox" name="terms3" id="terms3" value="">
                                 <label for="terms3">[선택] 쇼핑정보 수신 동의</label>
                             </div>
-                            <a href="#none"><img src="./img/term_info.png" alt="약관 확인"></a>
+                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
                         </div>
                     </div>
                 </fieldset>
