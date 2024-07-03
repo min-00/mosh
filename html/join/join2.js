@@ -85,12 +85,12 @@ function join_form_check() {
     //     }
     // }
 
-    if(!terms.checked){
+    if (!terms.checked) {
         alert("[필수] 만 14세 이상입니다.에 약관동의가 필요합니다.")
         terms.focus;
         return false;
     }
- 
+
     if (!terms2.value) {
         alert("[필수] 약관에 동의하세요")
         terms2.focus();
@@ -108,25 +108,72 @@ function change_email() {
     // console.log(idx);
 
     let selected = user_email_list.options[idx].value;
-   // console.log(selected)
+    // console.log(selected)
     //함수 이름 잘 확인할 것 
 
     u_email_input.value = selected
 
-    if(selected == ""){
+    if (selected == "") {
         u_email_input.readOnly = false;
         u_email_input.focus()
-    } else{
+    } else {
         u_email_input.readOnly = true;
     }
 }
 
-function search_id(){
+function search_id() {
     //window.open("팝업될 문서의 URL", "팝업될 문서의 이름", "옵션(위치, 크기,bar표시 등등)")
     // a 는 팝업창을 하나만 띄울 때 사용
-    window.open("./html/id.html", "a","width=550px, height=500px, left=1000, top=300")
+    window.open("./html/id.html", "a", "width=550px, height=500px, left=1000, top=300")
 }
 
-function search_add(){
-    window.open("./html/add.html", "b","width=550px, height=500px, left=1200, top=300")
+function search_add() {
+    window.open("./html/add.html", "b", "width=550px, height=500px, left=1200, top=300")
 }
+
+
+     function Postcode_button() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var addr = ''; // 주소 변수
+                var extraAddr = ''; // 참고항목 변수
+
+                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    addr = data.roadAddress;
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    addr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+                if(data.userSelectedType === 'R'){
+                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있고, 공동주택일 경우 추가한다.
+                    if(data.buildingName !== '' && data.apartment === 'Y'){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+                    if(extraAddr !== ''){
+                        extraAddr = ' (' + extraAddr + ')';
+                    }
+                    // 조합된 참고항목을 해당 필드에 넣는다.
+                    document.getElementById("extraAddress").value = extraAddr;
+                
+                } else {
+                    document.getElementById("extraAddress").value = '';
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('postcode').value = data.zonecode;
+                document.getElementById("user_address_basic").value = addr;
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById("user_address_detail").focus();
+            }
+        }).open();
+    }

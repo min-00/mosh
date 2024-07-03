@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +19,6 @@
     <script>
         ScrollReveal({ reset: true });
     </script>
-    </style>
 </head>
 
 <body>
@@ -148,14 +146,15 @@
                         독자적인 콜라보레이션 작업을 진행해왔습니다.</p>
                 </div>
                 <div class="coll_cont2">
-                    <div class="coll_img"><img src="images/about_coll01.jpg" alt=""></div>
-                    <div class="coll_img"><img src="images/about_coll02.jpg" alt=""></div>
-                    <div class="coll_img"><img src="images/about_coll03.jpg" alt=""></div>
-                    <div class="coll_img"><img src="images/about_coll04.jpg" alt=""></div>
+                    <div class="coll_img"><img src="images/about_coll01.jpg" alt="디즈니 콜라보"></div>
+                    <div class="coll_img"><img src="images/about_coll02.jpg" alt="트레저 콜라보"></div>
+                    <div class="coll_img"><img src="images/about_coll03.jpg" alt="이디야 콜라보"></div>
+                    <div class="coll_img"><img src="images/about_coll04.jpg" alt="라인프렌즈 콜라보"></div>
                 </div>
             </section>
 
             <section class="partner">
+                <h3 class="screen_out">모슈 파트너십</h3>
                 <p>모슈 텀블러는 그 외 더욱 다양한 수많은 파트너와 함께 하고 있습니다.<br>
                     여러 판매처에서 모슈 텀블러를 만나보세요!</p>
                 <div class="swiper part_bottom" dir="ltr">
@@ -309,10 +308,10 @@
     var map = new kakao.maps.Map(mapContainer, mapOption);
 
     var imageSrc = 'images/about_map_marker.png', // 마커이미지의 주소
-        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크기입니다
-        imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+        imageSize = new kakao.maps.Size(64, 69), // 마커이미지의 크입니다
+        imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정
 
-    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성
     var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
         markerPosition = new kakao.maps.LatLng(37.526159, 127.172601); // 마커가 표시될 위치입니다
 
@@ -322,18 +321,18 @@
         image: markerImage // 마커이미지 설정 
     });
 
-    // 마커가 지도 위에 표시되도록 설정합니다
+    // 마커가 지도 위에 표시되도록 설정
     marker.setMap(map);
 
-    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능
     var content = '<div class="customoverlay">' +
         '    <span class="title">아시컴퍼니</span>' +
         '</div>';
 
-    // 커스텀 오버레이가 표시될 위치입니다 
+    // 커스텀 오버레이가 표시될 위치
     var position = new kakao.maps.LatLng(37.526159, 127.172601);
 
-    // 커스텀 오버레이를 생성합니다
+    // 커스텀 오버레이를 생성
     var customOverlay = new kakao.maps.CustomOverlay({
         map: map,
         position: position,
