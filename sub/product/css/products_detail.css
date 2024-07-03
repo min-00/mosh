@@ -19,6 +19,7 @@ body, html {
     background: #fff;
     transition: .3s;
     border-bottom: 1px solid #EDF0F5;
+    overflow: hidden;
 }
 .fixed {
     position: fixed;
@@ -85,7 +86,36 @@ body, html {
     width: 16px;
 }
 li.search_box {
-    display: none;
+    position: relative;
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+    opacity: 0;
+}
+li.search_box.search_slide {
+    width: 180px;
+    opacity: 1;
+}
+li.search_box button {
+    border: 0;
+    background: none;
+    position: absolute;
+    top: calc(50% + 2px);
+    transform: translate(0, -50%);
+    right: 10px;
+    opacity: 0;
+    transition: .3s;
+}
+li.search_box button.search_hide {
+    opacity: 1;
+}
+li.search_box input {
+    border-radius: 30px;
+    border: 1px solid #091F5B;
+    text-indent: 10px;
+    font-weight: 300;
+    height: 30px;
+    width: 180px;
 }
 
 .hamburger {
@@ -109,9 +139,18 @@ li.search_box {
     padding: 20px;
     box-sizing: border-box;
     -ms-overflow-style: none;
-    scrollbar-width: none;
 }
-.left::-webkit-scrollbar, .right::-webkit-scrollbar {
+.left::-webkit-scrollbar {
+    width: 5px;
+}
+.left::-webkit-scrollbar-thumb {
+    background-color: #344ead57;
+    border-radius: 5px;
+}
+.left::-webkit-scrollbar-thumb:hover {
+    background-color: #344ead;
+}
+.left::-webkit-scrollbar-button {
     display: none;
 }
 
@@ -254,6 +293,8 @@ li.search_box {
     border-radius: 50px;
     font-size: 12px;
     margin-left: 10px;
+    color: #344EAD;
+    border: 1px solid #344EAD55;
 }
 .quantity_price {
     font-size: 20px;
@@ -613,6 +654,8 @@ address {
         top: 40px;
         left: 50%;
         transform: translate(-50%, 0);
+        width: auto;
+        opacity: 1;
     }
     li.search_box input[type="search"]{
         width: 350px;
@@ -620,6 +663,9 @@ address {
         border-radius: 40px;
         border: 1px solid #344EAD;
         padding-left: 20px;
+    }
+    li.search_box.search_slide {
+        width: 350px;
     }
     li.search_box button {
         position: absolute;
@@ -632,6 +678,7 @@ address {
         border-radius: 40px;
         cursor: pointer;
         display: flex;
+        opacity: 1;
     }
     li.search_box button img {
         width: 22px;
