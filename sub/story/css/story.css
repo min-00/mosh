@@ -599,13 +599,36 @@ transition: 0.3s;
     height: 428px;
     position: absolute;
     right: 40px;
-    bottom: 40px;
+    bottom: 20px;
 }
 
+.necesary, .making{
+    display: inline-block;
+    width: 100px;
+    padding: 2px 0;
+    border: 2px solid #344EAD;
+    border-radius: 16px;
+    text-align: center;
+    margin-right: 16px;
+    font-weight: bold;
+}
+
+.food_cont>:nth-child(3){
+    padding: 20px 0;
+}
 .food_cont p{
     margin-bottom: 8px;
+    font-size: 16px;
 }
-
+.recipe_point span{
+    padding: 2px 20px;
+    background: #5169c0;
+    color: #fff;
+    font-style: italic;
+}
+.recipe_point p{
+    font-size: 14px;
+}
 .recipe_slider>li>dl>dd>img {
     width: 100%;
 }

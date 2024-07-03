@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    function notYet(){
+        alert("준비중인 페이지입니다.");
+    }
+    $('.notice_cont td').on('click',notYet);
+    $('.cs_num').on('click',notYet);
+
     var contHigh = $('.notice_cont_wrap>.on').height();
     $('.notice_cont_wrap').height(contHigh);
 

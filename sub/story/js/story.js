@@ -1,4 +1,8 @@
 $(document).ready(function () {
+    
+    $(".story_cont a").on('click',function(){
+        alert("준비중인 페이지입니다.");
+    });
     ScrollReveal().reveal('.story_cont>div',{
         delay: 500,
         duration : 1400,
