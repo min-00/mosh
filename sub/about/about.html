@@ -12,7 +12,7 @@
     <script src="./js/swiper-bundle.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/header.js"></script>
-
+    <link rel="icon" href="./images/favicon_mosh.ico">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
@@ -199,50 +199,54 @@
             </section>
         </main>
     </div>
-    <footer id="footer" class="footer">
-        <div class="footer_wrap">
-            <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
+ <!-- top 버튼 -->
+ <button id="top-btn"><img src="./images/top_btn.png" alt=""></button>
 
-            <div class="service">
-                <h5>CUSTOMER SERVICE</h5>
-                <p class="footer_bottom"><span class="service_num">070-4618-2788</span></p>
-                <p>MON-FRI 09:00~17:00</p>
-                <p>LUNCH 12:00~13:30</p>
-                <p>SAT/SUN/HOLIDAY CLOSED</p>
-            </div>
+ <!-- footer -->
+ <footer id="footer" class="footer">
+     <div class="footer_wrap">
+         <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
 
-            <div class="info">
-                <h5>COMPANY INFO</h5>
-                <p>COMPANY : 주식회사 아시컴퍼니 CEO : 김정권</p>
-                <p>BUSINESS LICENCE : [241-81-01287]</p>
-                <p>ONLINE-LICENCE : 제2021-경기하남-1883</p>
-                <p><a href="#none">[사업자정보확인]</a> CPO : 김정권</p>
-                <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
-                <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
-            </div>
-            <div class="sns_bank_wrap">
-                <div class="sns">
-                    <h5>FOLLOW US</h5>
-                    <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
-                </div>
-                <div class="bank">
-                    <h5>BANK ACCOUNT</h5>
-                    <p>기업은행 130-089422-01-019</p>
-                    <p>예금주 : 주식회사 아시컴퍼니</p>
-                </div>
-            </div>
+         <div class="service">
+             <h5>CUSTOMER SERVICE</h5>
+             <p class="footer_bottom"><span class="service_num">070-4618-2788</span></p>
+             <p>MON-FRI 09:00~17:00</p>
+             <p>LUNCH 12:00~13:30</p>
+             <p>SAT/SUN/HOLIDAY CLOSED</p>
+         </div>
 
-            <div class="privacy">
-                <h5><a href="#none">PRIVACY</a></h5>
-                <p><a href="#none">COMPANY</a></p>
-                <p><a href="#none">AGREEMENT</a></p>
-                <p><a href="#none">GUIDE</a></p>
-                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="">
-                <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
-            </div>
+         <div class="info">
+             <h5>COMPANY INFO</h5>
+             <p>COMPANY : 주식회사 아시컴퍼니 CEO : 김정권</p>
+             <p>BUSINESS LICENCE : [241-81-01287]</p>
+             <p>ONLINE-LICENCE : 제2021-경기하남-1883</p>
+             <p><a href="#none">[사업자정보확인]</a> CPO : 김정권</p>
+             <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
+             <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
+         </div>
+         <div class="sns_bank_wrap">
+             <div class="sns">
+                 <h5>FOLLOW US</h5>
+                 <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
+             </div>
+             <div class="bank">
+                 <h5>BANK ACCOUNT</h5>
+                 <p>기업은행 130-089422-01-019</p>
+                 <p>예금주 : 주식회사 아시컴퍼니</p>
+             </div>
+         </div>
 
-        </div>
-    </footer>
+         <div class="privacy">
+             <h5><a href="#none">PRIVACY</a></h5>
+             <p><a href="#none">COMPANY</a></p>
+             <p><a href="#none">AGREEMENT</a></p>
+             <p><a href="#none">GUIDE</a></p>
+             <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="mo">
+             <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
+         </div>
+
+     </div>
+ </footer>
 </body>
 <script>
     $(document).ready(function () {
@@ -277,6 +281,21 @@
             loop: true, // 반복재생
             autoplay: true // 자동재생
         });
+
+// top 버튼
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 800) {
+                $('#top-btn').fadeIn();
+            } else {
+                $('#top-btn').fadeOut();
+            }
+        });
+
+        $('#top-btn').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
+        });
+
     });
 
     //옆으로 흐르는 이미지

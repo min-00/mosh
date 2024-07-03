@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!--
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>footer</title>
-    <link rel="stylesheet" href="/css/reset.css">
-    <style>
-        /*  
+    css, js 파일 따로 만들어 놨습니다.
+    img / top_btn 추가 되었습니다.
+    768px에는 안 보이게 처리했습니다.
+    하단엔 html 파일만 남겨놓았으니 전체 복사해서 가져가시면 되어요!
+
+       [header 설명]
         footer를 제외한 컨텐츠를 한번 묶고 
         ex)
         <div id='wrapper'>
@@ -17,125 +15,17 @@
 
         하단에 footer를 넣어주세요
         <footer></footer>
-*/
-        html,
-        body {
-            height: 100%;
-        }
 
-        #wrapper {
-            height: auto;
-            min-height: 100%;
-            padding-bottom: 295px;
-        }
-
-        .footer {
-            width: 100%;
-            background: #091F5B;
-            overflow: hidden;
-            height: 295px;
-            position: relative;
-            transform: translateY(-100%);
-        }
-
-        .footer_wrap {
-            display: flex;
-            width: 86%;
-            max-width: 1280px;
-            justify-content: space-between;
-            margin: 0 auto;
-            align-items: flex-start;
-            padding: 70px 0;
-            box-sizing: border-box;
-        }
-
-        .service_num {
-            font-size: 24px;
-            line-height: 30px;
-            font-size: bold;
-        }
-
-        .footer h5,
-        .footer a,
-        .footer p,
-        address {
-            color: white;
-        }
+        [top버튼 설명]
+        top버튼은 jquery 파일 꼭 넣어주세요 ★★ 
+    
+    -->
 
 
-        .logo img {
-            width: 150px;
-        }
+    <!-- top 버튼 -->
+    <button id="top-btn"><img src="./images/top_btn.png" alt=""></button>
 
-        .footer p,
-        address {
-            font-size: 12px;
-            line-height: 20px;
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        .footer h5 {
-            margin: 0;
-        }
-
-        .sns,
-        .footer_bottom {
-            margin-bottom: 36px;
-        }
-
-        @media screen and (max-width:1080px) { 
-            #wrapper {
-                padding-bottom: 600px;
-            }
-
-            footer .logo{
-                margin-bottom: 10px;
-            }
-            .footer {
-                height:600px;
-            }
-
-            footer p {
-                 display: inline-block;
-            }
-
-            footer h5 {
-                font-size: 12px;
-                line-height: 20px;
-                font-weight: bold;
-            }
-
-            .service_num {
-                font-size: 16px;
-                line-height: 32px;
-                font-weight: medium;
-            }
-
-            .footer_wrap {
-            padding: 35px 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            }
-        
-            .service, .info, .sns_bank_wrap{
-                width: 100%;
-                padding-bottom: 10px;
-                margin-bottom: 10px;
-                border-bottom: 0.5px solid white;
-            }
-        
-        
-            .sns,
-            .footer_bottom {
-                margin-bottom: 15px;
-            }
-        }
-    </style>
-</head>
-
-<body>
+    <!-- footer -->
     <footer id="footer" class="footer">
         <div class="footer_wrap">
             <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
@@ -174,12 +64,10 @@
                 <p><a href="#none">COMPANY</a></p>
                 <p><a href="#none">AGREEMENT</a></p>
                 <p><a href="#none">GUIDE</a></p>
-                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="">
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="mo">
                 <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
             </div>
 
         </div>
     </footer>
 </body>
-
-</html>
