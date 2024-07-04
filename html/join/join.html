@@ -55,128 +55,180 @@
     </header>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/header.js"></script>
+    <div id='wrapper'>
+        <main>
+            <div class="join_wrap">
+                <h2 class="main_title">개인 회원가입</h2>
+                <form name="join_form" action="#none" method="get" onsubmit="return join_form_check()">
+                    <fieldset>
+                        <legend class="screen_out">로그인정보</legend>
+                        <div class="bottom ">
+                            <label for="login">아이디<span class="blue_text">*</span></label>
+                            <div class="login_wrap">
+                                <input class="input_box_login" type="text" name="login" id="login"
+                                    placeholder="영문소문자/숫자, 4~16자">
+                                <button type="button" class="input_btn" onclick="search_id()">중복확인</button>
+                            </div>
+                            <p class="login_suc_message screen_out">사용가능한 아이디입니다.</p>
+                            <p class="login_fail_message screen_out">영문소문자 및 숫자, 4~16자만 사용해주세요.</p>
+                        </div>
+                        <div class="bottom">
+                            <label for="pwd">비밀번호<span class="blue_text">*</span></label>
+                            <input class="input_box" type="text" name="pwd" id="pwd" placeholder="영문 대소문자/숫자 4자~16자">
+                            <p class="pwd_suc_message screen_out">사용가능한 패스워드입니다.</p>
+                            <p class="pwd_fail_message screen_out">영문 대소문자 및 숫자 4자~16자만 사용해주세요.</p>
+                        </div>
+                        <div class="bottom">
+                            <label for="pwd_check">비밀번호 확인<span class="blue_text">*</span></label>
+                            <input class="input_box" type="text" name="pwd_check" id="pwd_check">
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="screen_out">사용자 개인정보</legend>
+                        <div class="bottom">
+                            <label for="user_name">이름<span class="blue_text">*</span></label>
+                            <input class="input_box" type="text" name="user_name" id="user_name" placeholder="이름">
+                        </div>
+                        <div class="bottom">
+                            <label for="user_birth">생년월일<span class="blue_text">*</span></label>
+                            <input class="input_box" type="text" name="user_birth" id="user_birth"
+                                placeholder="YYYYMMDD">
+                        </div>
+                        <div class="bottom">
+                            <label for="user_email">이메일<span class="blue_text">*</span></label>
+                            <div class="email_wrap">
+                                <input class="input_box_email" type="text" name="user_email" id="user_email">
+                                <span>@</span>
+                                <input class="input_box_email" type="text" name="user_email2" id="user_email2">
+                            </div>
+                            <br>
+                            <select class="email_list" name="user_email_list" id="user_email_list"
+                                onchange="change_email()">
+                                <option value="">선택</option>
+                                <option value="naver.com">naver.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="daum.com">daum.com</option>
+                                <option value="nate.com">nate.com</option>
+                                <option value="">직접입력</option>
+                            </select>
+                        </div>
+                        <div class="bottom">
+                            <label for="user_number">전화번호<span class="blue_text">*</span></label>
+                            <input class="input_box" type="text" name="user_number" id="user_number"
+                                placeholder="휴대전화 번호( - 제외 )">
+                            <!-- 보류 -->
+                        </div>
+                        <div class="bottom">
+                            <label for="user_address">주소<span class="blue_text">*</span></label>
+                            <div class="address_wrap">
+                                <input id="postcode" class="input_box_address" type="text" name="user_address"
+                                    placeholder="">
+                                <!-- <a  href="#none" class="input_btn_address">주소 찾기</a> -->
+                                <button type="button" class="input_btn_address" onclick="Postcode_button()">주소
+                                    찾기</button>
+                            </div>
+                            <label for="user_address_basic" class="screen_out">기본주소</label>
+                            <input class="input_box" type="text" name="user_address_basic" id="user_address_basic"
+                                placeholder="기본주소">
+                            <label for="user_address_detail" class="screen_out">상세주소</label>
+                            <input class="input_box" type="text" name="user_address_detail" id="user_address_detail"
+                                placeholder="상세주소 입력">
+                            <label for="user_address_extra" class="screen_out">참고항목</label>
+                            <input class="input_box" type="text" name="user_address_extra" id="extraAddress"
+                                placeholder="참고항목">
+                        </div>
+                    </fieldset>
+                    <fieldset class="bottom">
+                        <legend class="terms_title">약관동의</legend>
+                        <div class="terms_border">
+                            <div class="terms_wrap">
+                                <div class="term_name">
+                                    <input type="checkbox" name="terms_all" id="terms_all" value="">
+                                    <label for="terms_all">이용약관 및 개인정보수집 및 이용,<br>쇼핑정보 수신(선택)에 모두 동의합니다.</label>
+                                </div>
+                            </div>
+                            <hr class="term_hr">
+                            <div class="terms_wrap">
+                                <div class="term_name">
+                                    <input type="checkbox" name="terms" id="terms" value="">
+                                    <label for="terms">[필수] 이용약관 동의</label>
+                                </div>
+                                <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
+                            </div>
+                            <div class="terms_wrap">
+                                <div class="term_name">
+                                    <input type="checkbox" name="terms2" id="terms2" value="">
+                                    <label for="terms2">[필수] 개인정보 수집 및 이용 동의</label>
+                                </div>
+                                <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
+                            </div>
+                            <div class="terms_wrap">
+                                <div class="term_name">
+                                    <input type="checkbox" name="terms3" id="terms3" value="">
+                                    <label for="terms3">[선택] 쇼핑정보 수신 동의</label>
+                                </div>
+                                <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="join_si">
+                        <button type="button" class="input_btn" style="width: 195px;">돌아가기</button>
+                        <button type="submit" class="join_complete">회원가입 완료</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="join2.js"></script>
+    <!-- <script src="join.js"></script> -->
+    <!-- top 버튼 -->
+    <button id="top-btn"><img src="./images/top_btn.png" alt=""></button>
 
-    <main>
-        <div class="join_wrap">
-            <h2 class="main_title">개인 회원가입</h2>
-            <form name="join_form" action="#none" method="get" onsubmit="return join_form_check()">
-                <fieldset>
-                    <legend class="screen_out">로그인정보</legend>
-                    <div class="bottom ">
-                        <label for="login">아이디<span class="blue_text">*</span></label>
-                        <div class="login_wrap">
-                            <input class="input_box_login" type="text" name="login" id="login"
-                                placeholder="영문소문자/숫자, 4~16자">
-                            <button type="button" class="input_btn" onclick="search_id()">중복확인</button>
-                        </div>
-                        <p class="login_suc_message screen_out">사용가능한 아이디입니다.</p>
-                        <p class="login_fail_message screen_out">영문소문자 및 숫자, 4~16자만 사용해주세요.</p>
-                    </div>
-                    <div class="bottom">
-                        <label for="pwd">비밀번호<span class="blue_text">*</span></label>
-                        <input class="input_box" type="text" name="pwd" id="pwd" placeholder="영문 대소문자/숫자 4자~16자">
-                        <p class="pwd_suc_message screen_out">사용가능한 패스워드입니다.</p>
-                        <p class="pwd_fail_message screen_out">영문 대소문자 및 숫자 4자~16자만 사용해주세요.</p>
-                    </div>
-                    <div class="bottom">
-                        <label for="pwd_check">비밀번호 확인<span class="blue_text">*</span></label>
-                        <input class="input_box" type="text" name="pwd_check" id="pwd_check">
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend class="screen_out">사용자 개인정보</legend>
-                    <div class="bottom">
-                        <label for="user_name">이름<span class="blue_text">*</span></label>
-                        <input class="input_box" type="text" name="user_name" id="user_name" placeholder="이름">
-                    </div>
-                    <div class="bottom">
-                        <label for="user_birth">생년월일<span class="blue_text">*</span></label>
-                        <input class="input_box" type="text" name="user_birth" id="user_birth" placeholder="YYYYMMDD">
-                    </div>
-                    <div class="bottom">
-                        <label for="user_email">이메일<span class="blue_text">*</span></label>
-                        <div class="email_wrap">
-                            <input class="input_box_email" type="text" name="user_email" id="user_email">
-                            <span>@</span>
-                            <input class="input_box_email" type="text" name="user_email2" id="user_email2">
-                        </div>
-                        <br>
-                        <select class="email_list" name="user_email_list" id="user_email_list"
-                            onchange="change_email()">
-                            <option value="">선택</option>
-                            <option value="naver.com">naver.com</option>
-                            <option value="gmail.com">gmail.com</option>
-                            <option value="daum.com">daum.com</option>
-                            <option value="nate.com">nate.com</option>
-                            <option value="">직접입력</option>
-                        </select>
-                    </div>
-                    <div class="bottom">
-                        <label for="user_number">전화번호<span class="blue_text">*</span></label>
-                        <input class="input_box" type="text" name="user_number" id="user_number"
-                            placeholder="휴대전화 번호( - 제외 )">
-                        <!-- 보류 -->
-                    </div>
-                    <div class="bottom">
-                        <label for="user_address">주소<span class="blue_text">*</span></label>
-                        <div class="address_wrap">
-                            <input id="postcode" class="input_box_address" type="text" name="user_address" 
-                                placeholder="">
-                            <!-- <a  href="#none" class="input_btn_address">주소 찾기</a> -->
-                            <button type="button" class="input_btn_address" onclick="Postcode_button()">주소 찾기</button>
-                        </div>
-                        <label for="user_address_basic" class="screen_out">기본주소</label>
-                        <input class="input_box" type="text" name="user_address_basic" id="user_address_basic"
-                            placeholder="기본주소">
-                        <label for="user_address_detail" class="screen_out">상세주소</label>
-                        <input class="input_box" type="text" name="user_address_detail" id="user_address_detail"
-                            placeholder="상세주소 입력">
-                        <label for="user_address_extra" class="screen_out">참고항목</label>
-                        <input class="input_box" type="text" name="user_address_extra" id="extraAddress"
-                            placeholder="참고항목">
-                    </div>
-                </fieldset>
-                <fieldset class="bottom">
-                    <legend class="terms_title">약관동의</legend>
-                    <div class="terms_border">
-                        <div class="terms_wrap">
-                            <div class="term_name">
-                                <input type="checkbox" name="terms_all" id="terms_all" value="">
-                                <label for="terms_all">이용약관 및 개인정보수집 및 이용,<br>쇼핑정보 수신(선택)에 모두 동의합니다.</label>
-                            </div>
-                        </div>
-                        <hr class="term_hr">
-                        <div class="terms_wrap">
-                            <div class="term_name">
-                                <input type="checkbox" name="terms" id="terms" value="">
-                                <label for="terms">[필수] 이용약관 동의</label>
-                            </div>
-                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
-                        </div>
-                        <div class="terms_wrap">
-                            <div class="term_name">
-                                <input type="checkbox" name="terms2" id="terms2" value="">
-                                <label for="terms2">[필수] 개인정보 수집 및 이용 동의</label>
-                            </div>
-                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
-                        </div>
-                        <div class="terms_wrap">
-                            <div class="term_name">
-                                <input type="checkbox" name="terms3" id="terms3" value="">
-                                <label for="terms3">[선택] 쇼핑정보 수신 동의</label>
-                            </div>
-                            <a href="#none"><img src="./images/arrow.png" alt="약관 확인"></a>
-                        </div>
-                    </div>
-                </fieldset>
-                <div class="join_si">
-                    <button type="button" class="input_btn" style="width: 195px;">돌아가기</button>
-                    <button type="submit" class="join_complete">회원가입 완료</button>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="footer_wrap">
+            <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
+
+            <div class="service">
+                <h5>CUSTOMER SERVICE</h5>
+                <p class="footer_bottom"><span class="service_num">070-4618-2788</span></p>
+                <p>MON-FRI 09:00~17:00</p>
+                <p>LUNCH 12:00~13:30</p>
+                <p>SAT/SUN/HOLIDAY CLOSED</p>
+            </div>
+
+            <div class="info">
+                <h5>COMPANY INFO</h5>
+                <p>COMPANY : 주식회사 아시컴퍼니 CEO : 김정권</p>
+                <p>BUSINESS LICENCE : [241-81-01287]</p>
+                <p>ONLINE-LICENCE : 제2021-경기하남-1883</p>
+                <p><a href="#none">[사업자정보확인]</a> CPO : 김정권</p>
+                <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
+                <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
+            </div>
+            <div class="sns_bank_wrap">
+                <div class="sns">
+                    <h5>FOLLOW US</h5>
+                    <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
                 </div>
-            </form>
+                <div class="bank">
+                    <h5>BANK ACCOUNT</h5>
+                    <p>기업은행 130-089422-01-019</p>
+                    <p>예금주 : 주식회사 아시컴퍼니</p>
+                </div>
+            </div>
+
+            <div class="privacy">
+                <h5><a href="#none">PRIVACY</a></h5>
+                <p><a href="#none">COMPANY</a></p>
+                <p><a href="#none">AGREEMENT</a></p>
+                <p><a href="#none">GUIDE</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="mo">
+                <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
+            </div>
+
         </div>
-        <script src="join2.js"></script>
-        <!-- <script src="join.js"></script> -->
+    </footer>
 </body>
 
 </html>

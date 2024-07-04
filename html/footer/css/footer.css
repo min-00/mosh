@@ -49,8 +49,8 @@ address {
 
 .footer p,
 address {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 1.6;
     font-weight: normal;
     font-style: normal;
 }

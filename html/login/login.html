@@ -64,37 +64,88 @@
         </header>
         <script src="js/jquery-3.7.1.min.js"></script>
         <script src="js/header.js"></script>
+        <div id='wrapper'>
+            <main>
+                <div class="login_wrap">
+                    <h2 class="main_title">MEMBER LOGIN</h2>
+                    <form name="join_form" action="#none" method="get" onsubmit="return login_form_check()">
+                        <fieldset>
+                            <legend class="screen_out">로그인 정보 입력</legend>
+                            <div class="bottom">
+                                <label for="id" class="screen_out">아이디</label>
+                                <input class="input_box" type="text" name="id" id="id" placeholder="아이디">
+                            </div>
+                            <div class="bottom">
+                                <label for="pwd" class="screen_out">비밀번호</label>
+                                <input class="input_box" type="text" name="pwd" id="pwd" placeholder="비밀번호">
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="login_complete">회원가입 완료</button>
+                    </form>
 
-        <main>
-            <div class="login_wrap">
-                <h2 class="main_title">MEMBER LOGIN</h2>
-                <form name="join_form" action="#none" method="get" onsubmit="return login_form_check()">
-                    <fieldset>
-                        <legend class="screen_out">로그인 정보 입력</legend>
-                        <div class="bottom">
-                            <label for="id" class="screen_out">아이디</label>
-                            <input class="input_box" type="text" name="id" id="id" placeholder="아이디">
-                        </div>
-                        <div class="bottom">
-                            <label for="pwd" class="screen_out">비밀번호</label>
-                            <input class="input_box" type="text" name="pwd" id="pwd" placeholder="비밀번호">
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="login_complete">회원가입 완료</button>
-                </form>
+                    <ul class="login_etc">
+                        <li class="join">회원가입</li>
+                        <li class="id_search">아이디 찾기</li>
+                        <li>비밀번호 찾기</li>
+                    </ul>
 
-                <ul class="login_etc">
-                    <li class="join">회원가입</li>
-                    <li class="id_search">아이디 찾기</li>
-                    <li>비밀번호 찾기</li>
-                </ul>
+                    <h2 class="sns_title">SNS LOGIN</h2>
+                    <div class="sns_wrap">
+                        <a href="#none"><img src="./images/kakao.png" alt="카카오 로그인"></a>
+                        <a href="#none"><img src="./images/naver.png" alt="네이버 로그인"></a>
+                    </div>
+                </div>
+            </main>
+        </div>
+         <!-- top 버튼 -->
+    <button id="top-btn"><img src="./images/top_btn.png" alt=""></button>
 
-                <h2 class="sns_title">SNS LOGIN</h2>
-                <div class="sns_wrap">
-                <a href="#none"><img src="./images/kakao.png" alt="카카오 로그인"></a>
-                <a href="#none"><img src="./images/naver.png" alt="네이버 로그인"></a>
+    <!-- footer -->
+    <footer id="footer" class="footer">
+        <div class="footer_wrap">
+            <h2 class="logo"><a href="#none"><img src="images/logo_white.svg" alt="사이트 이용안내"></a></h2>
+
+            <div class="service">
+                <h5>CUSTOMER SERVICE</h5>
+                <p class="footer_bottom"><span class="service_num">070-4618-2788</span></p>
+                <p>MON-FRI 09:00~17:00</p>
+                <p>LUNCH 12:00~13:30</p>
+                <p>SAT/SUN/HOLIDAY CLOSED</p>
             </div>
+
+            <div class="info">
+                <h5>COMPANY INFO</h5>
+                <p>COMPANY : 주식회사 아시컴퍼니 CEO : 김정권</p>
+                <p>BUSINESS LICENCE : [241-81-01287]</p>
+                <p>ONLINE-LICENCE : 제2021-경기하남-1883</p>
+                <p><a href="#none">[사업자정보확인]</a> CPO : 김정권</p>
+                <p>E-Mail :<a href="mailto:sales@asicompany.co.kr">sales@asicompany.co.kr</a></p>
+                <address>ADDRESS : 경기도 하남시 광암동 407-2</address>
             </div>
+            <div class="sns_bank_wrap">
+                <div class="sns">
+                    <h5>FOLLOW US</h5>
+                    <p><a href="https://www.instagram.com/mosh_KOREA/">INSTAGRAM</a></p>
+                </div>
+                <div class="bank">
+                    <h5>BANK ACCOUNT</h5>
+                    <p>기업은행 130-089422-01-019</p>
+                    <p>예금주 : 주식회사 아시컴퍼니</p>
+                </div>
+            </div>
+
+            <div class="privacy">
+                <h5><a href="#none">PRIVACY</a></h5>
+                <p><a href="#none">COMPANY</a></p>
+                <p><a href="#none">AGREEMENT</a></p>
+                <p><a href="#none">GUIDE</a></p>
+                <p class="footer_bottom"><a href="#none">FOR PARTNERS</a></p><br class="mo">
+                <p>Copyright © mosh! 모슈. All Rights Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
     </body>
 
     </html>
