@@ -78,7 +78,37 @@
     width: 16px;
 }
 li.search_box {
-    display: none;
+    position: relative;
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+    opacity: 0;
+}
+li.search_box.search_slide {
+    width: 180px;
+    opacity: 1;
+}
+li.search_box button {
+    border: 0;
+    background: none;
+    position: absolute;
+    top: calc(50% + 2px);
+    transform: translate(0, -50%);
+    right: 10px;
+    opacity: 0;
+    transition: .3s;
+    cursor: pointer;
+}
+li.search_box button.search_hide {
+    opacity: 1;
+}
+li.search_box input {
+    border-radius: 30px;
+    border: 1px solid #091F5B;
+    text-indent: 10px;
+    font-weight: 300;
+    height: 30px;
+    width: 180px;
 }
 
 .hamburger {
@@ -92,6 +122,9 @@ li.search_box {
 @media screen and (max-width:768px) {
     /*header*/
     
+    #header {
+        border-bottom: 1px solid #EDF0F5;
+    }
     #header.fixed {
         position: fixed;
         top: 0;
@@ -99,9 +132,14 @@ li.search_box {
         width: 100%;
         border-bottom: 1px solid #EDF0F5;
     }
-    .header_wrap {
+    .header_wrap{
         position: relative;
+        display: flex;
+        justify-content: space-between;
+        max-width: none;
         width: 100%;
+        margin: 0 auto;
+        align-items: center;
     }
     h1.logo {
         position: relative;
@@ -150,6 +188,9 @@ li.search_box {
         background: #EDF0F5;
         color: #344EAD;
     }
+    .gnb li::after {
+        display: none;
+    }
     .top_menu {
         position: absolute;
         z-index: 55;
@@ -184,6 +225,8 @@ li.search_box {
         top: 40px;
         left: 50%;
         transform: translate(-50%, 0);
+        width: auto;
+        opacity: 1;
     }
     li.search_box input[type="search"]{
         width: 350px;
@@ -191,6 +234,9 @@ li.search_box {
         border-radius: 40px;
         border: 1px solid #344EAD;
         padding-left: 20px;
+    }
+    li.search_box.search_slide {
+        width: 350px;
     }
     li.search_box button {
         position: absolute;
@@ -203,6 +249,7 @@ li.search_box {
         border-radius: 40px;
         cursor: pointer;
         display: flex;
+        opacity: 1;
     }
     li.search_box button img {
         width: 22px;
@@ -243,11 +290,10 @@ li.search_box {
     
     
     .bg {
-        display: block;
+        display: flex;
         position: absolute;
         z-index: 40;
         top: 81px;
-        left: 0;
         width: 100vw;
         height: 0px;
         background: #344EAD;
