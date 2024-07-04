@@ -13,48 +13,51 @@
     </head>
     <body>
         <div id='wrapper'>
-        <header id="header" class="header">
-            <div class="header_wrap">
-                <h1 class="logo"><a href="../../index.html"><img src="./images/logo.svg" alt="모슈"></a></h1>
-
-                <nav class="gnb">
-                    <h2 class="screen_out">주요 메뉴</h2>
-                    <ul>
-                        <li><a href="../../sub/about/about.html">ABOUT</a></li>
-                        <li><a href="../../sub/story/story.html">STORY</a></li>
-                        <li><a href="../../sub/product/product.html">PRODUCTS</a></li>
-                        <li><a href="../../sub/notice/notice.html">NOTICES</a></li>
-                    </ul>
-                </nav>
-
-                <div class="top_menu">
-                    <h2 class="screen_out">유틸 메뉴</h2>
-                    <ul>
-                        <li><a href="login.html"><img src="./images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
-                        <li><a href="#none"><img src="./images/bag-fill.png" alt="장바구니">장바구니</a></li>
-                        <li>
-                            <a href="#none">
-                                <img src="./images/search.png" alt="검색">
-                            </a>
-                        </li>
-                        <li class="search_box">
-                            <label for="search" class="screen_out">검색</label>
-                            <input type="search" id="search" name="search">
-                            <button type="submit"><img src="./images/search.png" alt=""></button>
-                        </li>
-                    </ul>
+            <header id="header" class="header">
+                <div class="header_wrap">
+                    <h1 class="logo"><a href="#none"><img src="images/logo.svg" alt="모슈"></a></h1>
+                    
+                    <nav class="gnb">
+                        <h2 class="screen_out">주요 메뉴</h2>
+                        <ul>
+                            <li><a href="#none">ABOUT</a></li>
+                            <li><a href="#none">STORY</a></li>
+                            <li><a href="#none">PRODUCTS</a></li>
+                            <li><a href="#none">NOTICES</a></li>
+                        </ul>
+                    </nav>
+        
+                    <div class="top_menu">
+                        <h2 class="screen_out">유틸 메뉴</h2>
+                        <ul>
+                            <li><a href="../login/login.html"><img src="images/person-fill.png" alt="로그인">로그인/회원가입</a></li>
+                            <li><a href="#none"><img src="images/bag-fill.png" alt="장바구니">장바구니</a></li>
+                            <li>
+                                <a href="#none" class="search_icon">
+                                    <img src="images/search.png" alt="검색">
+                                </a>
+                            </li>
+                            <li class="search_box">
+                                <form action="" method="get">
+                                    <label for="search" class="screen_out">검색</label>
+                                    <input type="search" id="search" name="search" placeholder="검색어를 입력하세요.">
+                                    <button type="submit"><img src="../../images/search.png" alt="검색"></button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="bg"><img src="images/logo_white.svg" alt=""></div>
                 </div>
-
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="bg"><img src="./images/logo_white.svg" alt=""></div>
-            </div>
-        </header>
-        <script src="js/jquery-3.7.1.min.js"></script>
-        <script src="js/header.js"></script>
+            </header>
+        
+            <script src="js/jquery-3.7.1.min.js"></script>
+            <script src="js/header.js"></script>
             <main>
                 <div class="login_wrap">
                     <h2 class="main_title">MEMBER LOGIN</h2>
