@@ -16,7 +16,7 @@ h2 {
 .story {
     padding-top: 55px;
     background: #FCFAF4;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 }
 
 .story>a {
@@ -396,7 +396,7 @@ transition: 0.3s;
     }
     .recipe_list{
         height: auto;
-        margin-bottom: 300px;
+        margin-bottom: 100px;
     }
     .recipe_list li {
         width: 32%;
@@ -455,7 +455,7 @@ transition: 0.3s;
     }
     .recipe_list{
         height: auto;
-        margin-bottom: 300px;
+        margin-bottom: 80px;
     }
     .recipe_list li {
         width: 32%;
