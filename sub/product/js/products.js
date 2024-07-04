@@ -64,26 +64,56 @@ $(document).ready(function () {
 
 /* ajax - 카테고리 */
 function dspFunc(dsp_cont){
-    document.getElementById("prod_menu_page").innerHTML = dsp_cont;
+    $("#prod_menu_page").html(dsp_cont);
 }
 
 function getFile(url, callbackFunc){
-    const req = new XMLHttpRequest();
-    req.onload = function(){
-        if(req.readyState == 4 && req.status == 200){
-            callbackFunc(this.responseText);
-        } else {
-            callbackFunc("Error : " + req.status);
-        }
+    $.ajax({
+        url: url,
+        method: 'GET',
+        success: function(response){
+            callbackFunc(response);
 
-        /*페이지 로드 후 스크립트 안먹는 오류 해결*/
-        var script = document.createElement("script"); // 스크립트 요소 생성
-        script.src = "js/products.js"; // 스크립트 src 속성 설정
-        document.body.appendChild(script); // 스크립트 요소를 문서의 body에 추가
-    }
-    req.open("GET", url);
-    req.send();
+            /*페이지 로드 후 스크립트 안먹는 오류 해결*/
+            var script = document.createElement("script"); // 스크립트 요소 생성
+            script.src = "js/products.js"; // 스크립트 src 속성 설정
+            script.onload = function (){
+                $(".hamburger").click(function(){
+                    $(".hamburger").toggleClass("x_hamburger");
+                    $(".bg").toggleClass("bg_on");
+                    $(".top_menu").toggleClass("top_menu_on");
+                    $(".gnb").toggleClass("gnb_on");
+                });
+            
+                var header = $('#header');
+                var headerOffset = header.outerHeight();
+            
+                $(window).scroll(function() {
+            
+                    if ($(window).scrollTop() > headerOffset) {
+                        header.addClass('fixed');
+                        $("body").css({"padding-top": headerOffset})
+                    } else {
+                        header.removeClass('fixed');
+                        $("body").css({"padding-top": ""})
+                    }
+                    
+                });
+            
+                // 검색버튼 토글
+                $(".search_icon").click(function(){
+                    $(".search_box").toggleClass("search_slide");
+                    $(".search_box button").toggleClass("search_hide");
+                });
+            };
+            document.body.appendChild(script); // 스크립트 요소를 문서의 body에 추가
+        },
+        error: function(xhr){
+            callbackFunc("Error : " + xhr.status);
+        }
+    });
 }
+
 
 /* 관심상품 아이콘 */
 $(document).ready(function(){
@@ -104,3 +134,20 @@ $(document).ready(function(){
 });
 
 
+/* top_btn */
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 800) {
+            $('#top-btn').fadeIn();
+        } else {
+            $('#top-btn').fadeOut();
+        }
+    });
+
+    $('#top-btn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+
+});

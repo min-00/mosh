@@ -1,3 +1,4 @@
+/* header */
 $(document).ready(function(){
     $(".hamburger").click(function(){
         $(".hamburger").toggleClass("x_hamburger");
@@ -44,7 +45,7 @@ $(document).ready(function(){
     $(".more").click(function(){
         q.val(parseInt(q.val()) + 1);
         //수량에 따른 가격 가져오기
-        var inputNumber = $("#quantity").val();
+        var inputNumber = q.val();
         var result = parseFloat(inputNumber)*37810;
         var fResult = result.toLocaleString();
         $(".quantity_price").text(fResult + "원");
@@ -53,7 +54,7 @@ $(document).ready(function(){
         if (q.val() > 1) {
             q.val(parseInt(q.val()) - 1);
             //수량에 따른 가격 가져오기
-            var inputNumber = $("#quantity").val();
+            var inputNumber = q.val();
             var result = parseFloat(inputNumber)*37810;
             var fResult = result.toLocaleString();
             $(".quantity_price").text(fResult + "원");
@@ -98,7 +99,7 @@ $(document).ready(function() {
 });
 
 
-/* 선택한 아이템 담기 & 빼기 */
+/* 선택한 아이템 담기 & 빼기 */ 
 $(document).ready(function() {
     $(".add").click(function() {
         var color = $(".color_list .active").data("color");
@@ -141,4 +142,22 @@ $(document).ready(function() {
         var totalSum = sum*37810;
         $(".total_price").text(totalSum.toLocaleString() + "원");
     });
+});
+
+/* top_btn */
+
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 800) {
+            $('#top-btn').fadeIn();
+        } else {
+            $('#top-btn').fadeOut();
+        }
+    });
+
+    $('#top-btn').click(function () {
+        $('html, body').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+
 });

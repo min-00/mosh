@@ -19,7 +19,6 @@ body, html {
     background: #fff;
     transition: .3s;
     border-bottom: 1px solid #EDF0F5;
-    overflow: hidden;
 }
 .fixed {
     position: fixed;
@@ -139,6 +138,7 @@ li.search_box input {
     padding: 20px;
     box-sizing: border-box;
     -ms-overflow-style: none;
+    z-index: 2;
 }
 .left::-webkit-scrollbar {
     width: 5px;
@@ -178,7 +178,6 @@ li.search_box input {
 
 .detail_info {
     max-width: 800px;
-    position: sticky;
 }
 
 /* title_box */
@@ -446,11 +445,13 @@ html,
 body {
     height: 100%;
 }
+
 #wrapper {
     height: auto;
     min-height: 100%;
     padding-bottom: 295px;
 }
+
 .footer {
     width: 100%;
     background: #091F5B;
@@ -459,41 +460,67 @@ body {
     position: relative;
     transform: translateY(-100%);
 }
+
 .footer_wrap {
     display: flex;
     width: 86%;
+    max-width: 1280px;
     justify-content: space-between;
     margin: 0 auto;
     align-items: flex-start;
     padding: 70px 0;
     box-sizing: border-box;
 }
+
 .service_num {
-    font-size: 24px ;
+    font-size: 24px;
     line-height: 30px;
     font-size: bold;
 }
+
 .footer h5,
-   footer a,
-.footer p, address {
+.footer a,
+.footer p,
+address {
     color: white;
 }
+
+
 .logo img {
     width: 150px;
 }
+
 .footer p,
 address {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 1.6;
     font-weight: normal;
     font-style: normal;
 }
+
 .footer h5 {
     margin: 0;
 }
+
 .sns,
 .footer_bottom {
     margin-bottom: 36px;
+}
+
+.mo {
+    display: none;
+}
+
+/* top 버튼 */
+#top-btn {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 40px;
+    z-index: 999;
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
 }
 
 
@@ -506,16 +533,18 @@ address {
         padding-bottom: 600px;
     }
 
-    footer .logo{
+    footer .logo {
         margin-bottom: 10px;
     }
+
     .footer {
-        height:600px;
+        height: 600px;
     }
 
     footer p {
-         display: inline-block;
+        display: inline-block;
     }
+
     footer h5 {
         font-size: 12px;
         line-height: 20px;
@@ -535,17 +564,23 @@ address {
         flex-direction: column;
     }
 
-    .service, .info, .sns_bank_wrap{
+    .service,
+    .info,
+    .sns_bank_wrap {
         width: 100%;
         padding-bottom: 10px;
         margin-bottom: 10px;
         border-bottom: 0.5px solid white;
     }
 
-  
+
     .sns,
     .footer_bottom {
         margin-bottom: 15px;
+    }
+
+    .mo {
+        display: block;
     }
 }
 
@@ -673,7 +708,7 @@ address {
         background: transparent;
         font-weight: 300;
         top: 50%;
-        right: 8px;
+        right: 12px;
         transform: translate(0, -50%);
         border-radius: 40px;
         cursor: pointer;
@@ -724,7 +759,7 @@ address {
         z-index: 40;
         top: 81px;
         width: 100vw;
-        height: 0px;
+        height: 0;
         background: #344EAD;
         overflow: hidden;
         transition: .5s;
@@ -751,7 +786,6 @@ address {
     /* right */
     .right {
         width: 40%;
-        padding-left: 0;
     }
     /* title_box */
     .title_box .category {
@@ -800,5 +834,15 @@ address {
     }
     .btn_box .btn_wrap button {
         font-size: 14px;
+    }
+
+    /* footer */
+    #top-btn {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        height: 0;
+        line-height: 0;
+        text-indent: -9999px;
     }
 }

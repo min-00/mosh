@@ -12,7 +12,6 @@
     background: #fff;
     transition: .3s;
     border-bottom: 1px solid #EDF0F5;
-    overflow: hidden;
 }
 .fixed {
     position: fixed;
@@ -98,6 +97,7 @@ li.search_box button {
     right: 10px;
     opacity: 0;
     transition: .3s;
+    cursor: pointer;
 }
 li.search_box button.search_hide {
     opacity: 1;
