@@ -4,6 +4,11 @@ $(document).ready(function () {
     }
     $('.notice_cont td').on('click',notYet);
     $('.cs_num').on('click',notYet);
+    $('.ns_page').on('click',notYet);
+    $('.pre').on('click',function(){
+        alert("첫번째 페이지입니다.");
+    });
+    $('.next').on('click',notYet);
 
     var contHigh = $('.notice_cont_wrap>.on').height();
     $('.notice_cont_wrap').height(contHigh);
