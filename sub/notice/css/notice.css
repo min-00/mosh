@@ -187,6 +187,9 @@ background-size:cover;
     border-radius: 20px;
     box-sizing: border-box;
 }
+.notice_cont>table tr:hover td:first-child{
+    color: #344EAD;
+}
 .notice_cont>table tr td{
 text-align: center;
 }
@@ -260,6 +263,44 @@ text-align: center;
 
 .active{display: block;}
 
+.pager{
+    padding-top: 40px;
+    width: 25%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.pager button{
+    display: block;
+    padding: 20px;
+    font-size: 0;
+    border:none;
+    cursor: pointer;
+}
+.pager .pre{
+    background: url(../images/pre.svg)no-repeat center;
+}
+.pager .next{
+    background:url(../images/next.svg)no-repeat center;
+}
+.pager_idx{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+    color: #4F4F4F;
+}
+
+.now_page {
+    font-weight: bold;
+    background:#344EAD;
+    color: #fff;
+    border-radius: 10px;
+}
+.pager_idx a{
+    display: inline-block;
+    padding: 20px;
+}
 @media screen and (max-width:375px){
     .notice {
         max-width: 375px;
